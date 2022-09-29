@@ -15,3 +15,8 @@ div.headcontainer {
     padding: 10px;
     font-size: 30px;
 }
+
+h1.head {
+    color: white;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.356);
+}
