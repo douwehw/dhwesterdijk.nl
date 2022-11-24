@@ -1,0 +1,27 @@
+#rps-body {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+input {
+    margin: 2px;
+    padding: 1px;
+    border: 1px solid black
+}
+
+#rps-consol {
+    display: absolute;
+    margin: 10px;
+    padding: 2px;
+    width: 190px;
+    height: 230px;
+    border: 1px solid black;
+    word-wrap: break-word;
+    color: #00ff00;
+    background-color: #33333370;
+    overflow-y: auto;
+}

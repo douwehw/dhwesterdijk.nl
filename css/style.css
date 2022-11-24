@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+html {
+    background: linear-gradient(-45deg, #000, #111929);
+    background-attachment: fixed;
+    color: #fff;
+}
+
+#wrapper {
+    width: 45rem;
+    margin: auto;
+}
+
+nav {
+    backdrop-filter: blur(5px);
+    background-color: rgba(32, 46, 56, 0.75);
+    border: 2px solid #4d6e86bf;
+    display: flex;
+    width: 45rem;
+    position: fixed;
+    top: 0;
+    height: 2.5rem;
+    margin-right: 10rem;
+    margin-top: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-width: 1px;
+    border-radius: .375rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overscroll-behavior-y: none;
+    font-family: Roboto, sans-serif;
+    line-height: inherit;
+    line-height: inherit;
+}
+
+main {
+    margin-top: 15vh;
+    margin-bottom: 13vh;
+}
+
+p {
+    color: #bfc4ca;
+    font-family: Arial;
+    line-height: 1.15rem;
+}
+
+i {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+h4 {
+    margin-top: 0.01rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+hr {
+    color: rgba(73, 87, 97, 0.75);
+}
+
+input {
+    padding: 1;
+    border: 1px solid #4d6e86bf;
+}
+
+#horizontal-list-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 2px solid #202e38bf;
+    border-radius: .375rem;
+    height: 2rem;
+    padding: 0.5rem;;
+}
+
+#space-underneath {
+    margin-bottom: 4vh;
+}
+
+.space-underneath {
+    margin-bottom: 5vh;
+}
+
+#nav-btn {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin-right: 0.2rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: .375rem;
+}
+
+#nav-btn:hover {
+    background-color: rgba(186, 186, 236, 0.1);
+    color: #fff;
+}
+
+#buttons-right {
+    font-size: 1.4rem;
+}
+
+#italics {
+    font-style: italic;
+}
+
+#credit {
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+}
+
+#calculator-html-js {
+    margin: auto;
+    border: 2px solid #4d6e86bf;
+    width: 35vw;
+    margin-bottom: 4rem;
+}
+
+#rps-consol {
+    display: absolute;
+    margin: 1rem;
+    padding: 0.3rem;
+    width: 9vw;
+    height: 25vh;
+    border: 1px solid black;
+    word-wrap: break-word;
+    color: #00ff00;
+    background-color: #33333370;
+    overflow-y: auto;
+}
+
+#textField {
+    padding-left: 9rem;
+}
+
+.rps-text {
+    padding-left: 9rem;
+}
+
+#rps-consol {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9rem;
+    width: 20vw;
+}
+
+#inputs {
+    margin-left: 9rem;
+}

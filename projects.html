@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="RPS-JS/rps.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douwe Westerdijk</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="nav-centerer">
+            <nav>
+                <div id="buttons-left">
+                    <a id="nav-btn" href="/index.html">Home</a>
+                    <a id="nav-btn" style="background-color: rgba(186, 186, 236, 0.1);"
+                        href="/projects.html">Projecten</a>
+                </div>
+                <div id="buttons-right">
+                    <a target="_blank" href="https://github.com/48exa">
+                        <i class="bi bi-github" title="Github"></i></a>
+                    <a target="_blank" href="https://discordapp/com/users/350306353702764554">
+                        <i class="bi bi-discord" title="Discord"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/douwe-westerdijk-785b2a252/"><i
+                            class="bi bi-linkedin" title="LinkedIn"></i></a>
+                    <a target="_blank" rel="noreferrer" href="mailto:douwewesterdijk@gmail.com"><i
+                            class="bi bi-envelope-fill" title="Email"></i></a>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <h1>Dit is waar ik aan werk 👷</h1>
+            <p id="space-underneath">
+                Ik heb een aantal dingen gemaakt tot nu toe, ik laat het hier graag zien. Sommige dingen zijn
+                interactief, maar sommige zijn helaas alleen als foto embed-baar. Deze foto's zijn wel klikbaar en deze
+                sturen je door naar waar je het bestand kan downloaden / uitproberen.
+            </p>
+            <h2>Rock paper scissors</h2>
+            <p id="space-underneath">
+                Wanneer ik een nieuwe taal probeer te leren, maak ik altijd als eerste een rock paper scissors spel. Dit
+                is ooit gestart in Python, en sinds dien gebruik ik dit systeem religieus. Ik heb tot nu toe in 4 talen
+                een rock paper scissors spel gemaakt, en ik ben niet van plan om te stoppen.
+            </p>
+            <div id="calculator-html-js">
+                <div id="rps-body">
+                    <h1 id="textField">Rock Paper Scissors</h1>
+                    <div id="inputs">
+                        <input type="text" placeholder="R, P or C." id="guessField">
+                        <input type="submit" value="guess" onclick="play()">
+                    </div>
+                    <h2 class="rps-text" id="score">score: 0/0</h2>
+                    <h3 class="rps-text" id="plays">plays: 0</h3>
+                    <h4 class="rps-text" id="rps-consol">Game info will go here once you start playing</h4>
+                </div>
+            </div>
+            <h2>Links naar andere werken</h2>
+            <p>Deze foto's zijn links naar mijn verschillende github repositories, hier kan je mijn source code en
+                downloads vinden naar projecten die ik over de tijd heb gemaakt.</p>
+            <a href="https://github.com/48exa/things"><img src="img/PythonConsoleGames.png"
+                    title="Various small console based Python games I made."></a>
+            <p id="space-underneath">Dit zijn mijn aller eerste projecten die ik heb gemaakt. Toen ik deze projecten heb
+                gemaakt was in compleet nieuw in de wereld van coding, dit valt uiteraard te merken in de qualiteit van
+                de producten.</p>
+            <a href="https://github.com/48exa/C-Sharp"><img src="img/CsRPS.png"
+                    title="Console based Rock paper scissors game built in C#"></a>
+            <p id="space-underneath">
+                Dit zijn mijn C# projecten, dit is een taal die ik nog aan het leren ben.
+            </p>
+            <a href="https://github.com/48exa/scripts"><img src="img/LuaScripts.png"
+                    title="Lua scripts for Roblox Phantom Forces"></a>
+            <p id="space-underneath">
+                Dit zijn LUA scripts bedoelt om met een C++ injector te injecten in ROBLOX games.
+            </p>
+        </main>
+        <hr>
+        <div id="credit">
+            <h3>Douwe Westerdijk</h3>
+            <h4>Software Developer - 2022</h4>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="script/button-hold.js"></script>
+<script src="script/rps.js"></script>
