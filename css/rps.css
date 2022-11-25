@@ -1,27 +1,82 @@
-#rps-body {
-    margin: 0;
+#rps-html-js {
+    margin: auto;
+    position: relative;
+    border: 2px solid #4d6e86bf;
+    background-color: #202e38bf;
+    width: 35vw;
+    height: 41vh;
+    word-wrap:break-word;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+#rps-center {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    left: 5vw;
 }
 
-input {
-    margin: 2px;
-    padding: 1px;
-    border: 1px solid black
+#text-input-choice {
+    background-color: #4d6e86;
+    color: #fff;
+    border: 1px solid #202e38;
+    border-radius: 0.25rem;
 }
 
-#rps-consol {
-    display: absolute;
-    margin: 10px;
-    padding: 2px;
-    width: 190px;
-    height: 230px;
-    border: 1px solid black;
-    word-wrap: break-word;
-    color: #00ff00;
-    background-color: #33333370;
+#text-input-button {
+    background-color: #4d6e86;
+    color: #ffffffbf;
+    border: 1px solid #202e38;
+    border-radius: 0.25rem;
+}
+
+#text-input-button:hover {
+    color: #fff;
+}
+
+#text-input-button:active {
+    background-color: #446175;
+}
+
+::placeholder { 
+    color: #ffffff80;
+    opacity: 1;
+}
+    
+#gamefeed {
+    text-align: center;
+    color: #82C197;
+    padding: 0.3rem;
+    margin-top: 1.15rem;
+    width: 25vw;
+    height: 18vh;
+    background-color: #111929e1;
+    border: 1px solid #4d6e86;
+    border-radius: 0.75rem;
+    word-wrap:break-word;
     overflow-y: auto;
+    flex-direction: column-reverse;
+}
+
+p#line-nbr {
+    font-family: monospace;
+    font-size: 0.9rem;;
+    margin: 0;
+    float: left;
+    color: #526281;
+}
+
+p#gamefeed-printbox {
+    margin: 0;
+    color: #82C197;
+}
+
+h6 {
+    font-size: 1.3rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+h6#games-played {
+    margin: 0;
+    color: #ffffff66;
 }

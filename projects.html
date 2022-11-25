@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="RPS-JS/rps.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rps.css">
     <link rel="shortcut icon" href="img/favicon.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
                 </div>
                 <div id="buttons-right">
                     <a target="_blank" href="https://github.com/48exa">
-                        <i class="bi bi-github" title="Github"></i></a>
+                        <i class="bi bi-github" title="Github" ></i></a>
                     <a target="_blank" href="https://discordapp/com/users/350306353702764554">
                         <i class="bi bi-discord" title="Discord"></i></a>
                     <a target="_blank" href="https://www.linkedin.com/in/douwe-westerdijk-785b2a252/"><i
@@ -39,25 +39,33 @@
                 interactief, maar sommigen zijn helaas alleen als foto embed-baar. Deze foto's zijn wel klikbaar en deze
                 sturen je door naar waar je het bestand kan downloaden / uitproberen.
             </p>
-            <h2>Rock paper scissors</h2>
+            <h2>Rock paper scissors.</h2>
             <p id="space-underneath">
                 Wanneer ik een nieuwe taal probeer te leren, maak ik altijd als eerste een rock paper scissors spel. Dit
-                is ooit gestart in Python, en sindsdien gebruik ik dit systeem religieus. Ik heb tot nu toe in vier talen
+                is ooit gestart in Python, en sindsdien gebruik ik dit systeem religieus. Ik heb tot nu toe in vier
+                talen
                 een rock paper scissors spel gemaakt, en ik ben niet van plan om te stoppen.
             </p>
-            <div id="calculator-html-js">
-                <div id="rps-body">
-                    <h1 id="textField">Rock Paper Scissors</h1>
-                    <div id="inputs">
-                        <input type="text" placeholder="R, P or C." id="guessField">
-                        <input type="submit" value="guess" onclick="play()">
+
+
+            <div id="rps-html-js">
+                <div id="rps-center">
+                    <h2>Rock, Paper, Scissors.</h2>
+                    <form action="#" onsubmit="run()">
+                        <input id="text-input-choice" type="text" placeholder="Rock paper scissors.">
+                        <button id="text-input-button">Validate</button>
+                    </form>
+                    <h6 id="scoreboard">Score: 0 / 0</h6>
+                    <h6 id="games-played">Games played: 0</h6>
+                    <div id="gamefeed">
+                        <p id="line-nbr">0</p>
+                        <p id="gamefeed-printbox">Your games will be printed here.</p>
                     </div>
-                    <h2 class="rps-text" id="score">score: 0/0</h2>
-                    <h3 class="rps-text" id="plays">plays: 0</h3>
-                    <h4 class="rps-text" id="rps-consol">Game info will go here once you start playing</h4>
                 </div>
             </div>
-            <h2>Links naar andere werken</h2>
+
+
+            <h2>Links naar andere dingen.</h2>
             <p>Deze foto's zijn links naar mijn verschillende github repositories, hier kan je mijn source code en
                 downloads vinden naar projecten die ik over de tijd heb gemaakt.</p>
             <a target="_blank" href="https://github.com/48exa/things"><img src="img/PythonConsoleGames.png"
@@ -77,13 +85,12 @@
             </p>
         </main>
         <hr>
-        <div id="credit">
+        <footer>
             <h3>Douwe Westerdijk</h3>
             <h4>Software Developer - 2022</h4>
-        </div>
+        </footer>
     </div>
 </body>
 
 </html>
-<script src="script/button-hold.js"></script>
 <script src="script/rps.js"></script>

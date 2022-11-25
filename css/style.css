@@ -13,8 +13,10 @@ html {
 }
 
 nav {
+    z-index: 100;
+    position: absolute;
     backdrop-filter: blur(5px);
-    background-color: rgba(32, 46, 56, 0.75);
+    background-color: #202e38bf;
     border: 2px solid #4d6e86bf;
     display: flex;
     width: 45rem;
@@ -74,7 +76,7 @@ h2 {
 }
 
 h3 {
-    color: rgba(255, 255, 255, 0.5);
+    color: #ffffff80;
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -84,18 +86,23 @@ h3 {
 
 h4 {
     margin-top: 0.01rem;
-    color: rgba(255, 255, 255, 0.3);
+    color: #ffffff4d;
     font-size: 1rem;
     line-height: 1.5rem;
 }
 
 hr {
-    color: rgba(73, 87, 97, 0.75);
+    color: #495761bf;
 }
 
 input {
     padding: 1;
     border: 1px solid #4d6e86bf;
+}
+
+footer {
+    margin-top: 3vh;
+    margin-bottom: 10vh;
 }
 
 #horizontal-list-box {
@@ -118,7 +125,7 @@ input {
 }
 
 #nav-btn {
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffffd7;
     font-size: 1rem;
     line-height: 1.25rem;
     margin-right: 0.2rem;
@@ -132,7 +139,7 @@ input {
 }
 
 #nav-btn:hover {
-    background-color: rgba(186, 186, 236, 0.1);
+    background-color: #babaec1a;
     color: #fff;
 }
 
@@ -142,48 +149,4 @@ input {
 
 #italics {
     font-style: italic;
-}
-
-#credit {
-    margin-top: 3vh;
-    margin-bottom: 10vh;
-}
-
-#calculator-html-js {
-    margin: auto;
-    border: 2px solid #4d6e86bf;
-    width: 35vw;
-    margin-bottom: 4rem;
-}
-
-#rps-consol {
-    display: absolute;
-    margin: 1rem;
-    padding: 0.3rem;
-    width: 9vw;
-    height: 25vh;
-    border: 1px solid black;
-    word-wrap: break-word;
-    color: #00ff00;
-    background-color: #33333370;
-    overflow-y: auto;
-}
-
-#textField {
-    padding-left: 9rem;
-}
-
-.rps-text {
-    padding-left: 9rem;
-}
-
-#rps-consol {
-    display: flex;
-    flex-direction: column;
-    margin-left: 9rem;
-    width: 20vw;
-}
-
-#inputs {
-    margin-left: 9rem;
 }
