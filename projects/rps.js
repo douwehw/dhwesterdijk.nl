@@ -47,14 +47,6 @@ function princrement() { //print + increment
     gamefeed.innerHTML += `<em>You chose ${move.value}</em> <br>`
 }
 
-function win() {
-    uScore++
-}
-
-function lose() {
-    pScore++
-}
-
 function validate() {
     lineprint()
     gamefeed.innerHTML += `<em>PC chose ${PCmove}</em> <br>`
@@ -62,19 +54,19 @@ function validate() {
     if (move.value == "rock" && PCmove == "scissors" ||
         move.value == "paper" && PCmove == "rock" ||
         move.value == "scissors" && PCmove == "paper") {
-        win()
+        uScore++
         lineprint()
         gamefeed.innerHTML += `<u>You win! ${move.value} beats ${PCmove}</u><br>`
         scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
     } else if (PCmove == "rock" && move.value == "scissors" ||
         PCmove == "paper" && move.value == "rock" ||
         PCmove == "scissors" && move.value == "paper") {
-        lose()
+        pScore++
         lineprint()
         gamefeed.innerHTML += `<u>You lose! ${PCmove} beats ${move.value}</u><br>`
         scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
     } else if (!choices.includes(move.value)) {
-        lose()
+        pScore++
         lineprint()
         gamefeed.innerHTML += `<u>You lose! ${move.value} is not a valid move!</u><br>`
         scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
