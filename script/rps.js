@@ -23,12 +23,12 @@ function lineprint() {
 function convert() {
     move.value = move.value.toLowerCase()
 
-    if (move.value == "r") {move.value = "rock"}
-    if (move.value == "p") {move.value = "paper"}
-    if (move.value == "s") {move.value = "scissors"}
+    if (move.value == "r") { move.value = "rock" }
+    if (move.value == "p") { move.value = "paper" }
+    if (move.value == "s") { move.value = "scissors" }
 }
 
-function increment() {
+function princrement() { //print + increment
     games++
     line++
 
@@ -54,24 +54,24 @@ function validate() {
     if (move.value == "rock" && PCmove == "scissors" ||
         move.value == "paper" && PCmove == "rock" ||
         move.value == "scissors" && PCmove == "paper") {
-            uScore++
-            lineprint()
-            gamefeed.innerHTML += `<u>You win! ${move.value} beats ${PCmove}</u><br>`
-            scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
+        uScore++
+        lineprint()
+        gamefeed.innerHTML += `<u>You win! ${move.value} beats ${PCmove}</u><br>`
+        scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
     } else if (PCmove == "rock" && move.value == "scissors" ||
         PCmove == "paper" && move.value == "rock" ||
         PCmove == "scissors" && move.value == "paper") {
-            pScore++
-            lineprint()
-            gamefeed.innerHTML += `<u>You lose! ${PCmove} beats ${move.value}</u><br>`
-            scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
+        pScore++
+        lineprint()
+        gamefeed.innerHTML += `<u>You lose! ${PCmove} beats ${move.value}</u><br>`
+        scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
     } else if (!choices.includes(move.value)) {
         pScore++
         lineprint()
         gamefeed.innerHTML += `<u>You lose! ${move.value} is not a valid move!</u><br>`
         scoreboard.innerHTML = `Score: ${uScore} / ${pScore}`
-    } 
-    
+    }
+
     else {
         lineprint()
         gamefeed.innerHTML += `<u>You tied! You both chose ${PCmove}</u><br>`
@@ -81,6 +81,6 @@ function validate() {
 function run() {
     randomize()
     convert()
-    increment()
+    princrement()
     validate()
 }

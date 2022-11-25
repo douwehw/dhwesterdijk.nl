@@ -150,3 +150,7 @@ footer {
 #italics {
     font-style: italic;
 }
+
+#darken-on-hover:hover {
+    color: #afafaf
+}
