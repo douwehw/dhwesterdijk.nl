@@ -4,7 +4,7 @@
     border: 2px solid #4d6e86bf;
     background-color: #202e38bf;
     width: 35vw;
-    height: 41vh;
+    height: 44vh;
     word-wrap:break-word;
     overflow: hidden;
     border-radius: 1rem;
@@ -13,6 +13,7 @@
 #rps-center {
     position: absolute;
     left: 5vw;
+    bottom: 1vw;
 }
 
 #text-input-choice {
@@ -42,6 +43,11 @@
     opacity: 1;
 }
     
+
+#text {
+    flex-direction: row;  /* dit fixed het auto scrollen want uhhhhhh ja!!!! gemaakt door Eva :3  */
+}
+
 #gamefeed {
     text-align: center;
     color: #82C197;
@@ -55,6 +61,7 @@
     word-wrap:break-word;
     overflow-y: auto;
     flex-direction: column-reverse;
+    display: flex;
 }
 
 p#line-nbr {

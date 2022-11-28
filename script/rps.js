@@ -46,6 +46,9 @@ function princrement() { //print + increment
 
     lineprint()
     gamefeed.innerHTML += `<em>You chose ${move.value}</em> <br>`
+
+
+    gamefeed.scrollTop = gamefeed.scrollHeight
 }
 
 function win() {
