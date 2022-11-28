@@ -113,7 +113,8 @@ footer {
     border: 2px solid #202e38bf;
     border-radius: .375rem;
     height: 2rem;
-    padding: 0.5rem;;
+    padding: 0.5rem;
+    ;
 }
 
 .space-underneath {
@@ -153,4 +154,19 @@ footer {
 
 .darken-on-hover:hover {
     color: #afafaf
+}
+
+.sized-box {
+    margin: auto;
+    position: relative;
+    z-index: 99;
+    padding: 0.3rem;
+    width: 44rem;
+    height: 20rem;
+    border: 2px solid #4d6e86bf;
+    background-color: #202e38bf;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 1rem;
 }

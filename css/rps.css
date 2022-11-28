@@ -5,7 +5,7 @@
     background-color: #202e38bf;
     width: 35vw;
     height: 44vh;
-    word-wrap:break-word;
+    word-wrap: break-word;
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -38,14 +38,15 @@
     background-color: #446175;
 }
 
-::placeholder { 
+::placeholder {
     color: #ffffff80;
     opacity: 1;
 }
-    
+
 
 .text {
-    flex-direction: row;  /* dit fixed het auto scrollen!!!! gemaakt door Eva :3  */
+    flex-direction: row;
+    /* dit fixed het auto scrollen!!!! gemaakt door Eva :3  */
 }
 
 .gamefeed {
@@ -58,7 +59,7 @@
     background-color: #111929e1;
     border: 1px solid #4d6e86;
     border-radius: 0.75rem;
-    word-wrap:break-word;
+    word-wrap: break-word;
     overflow-y: auto;
     flex-direction: column-reverse;
     display: flex;
@@ -66,7 +67,8 @@
 
 p#line-nbr {
     font-family: monospace;
-    font-size: 0.9rem;;
+    font-size: 0.9rem;
+    ;
     margin: 0;
     float: left;
     color: #526281;
