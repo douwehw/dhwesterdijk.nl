@@ -1,4 +1,4 @@
-#rps-html-js {
+.rps-html-js {
     margin: auto;
     position: relative;
     border: 2px solid #4d6e86bf;
@@ -10,7 +10,7 @@
     border-radius: 1rem;
 }
 
-#rps-center {
+.rps-center {
     position: absolute;
     left: 5vw;
     bottom: 1vw;
@@ -23,18 +23,18 @@
     border-radius: 0.25rem;
 }
 
-#text-input-button {
+.text-input-button {
     background-color: #4d6e86;
     color: #ffffffbf;
     border: 1px solid #202e38;
     border-radius: 0.25rem;
 }
 
-#text-input-button:hover {
+.text-input-button:hover {
     color: #fff;
 }
 
-#text-input-button:active {
+.text-input-button:active {
     background-color: #446175;
 }
 
@@ -44,11 +44,11 @@
 }
     
 
-#text {
-    flex-direction: row;  /* dit fixed het auto scrollen want uhhhhhh ja!!!! gemaakt door Eva :3  */
+.text {
+    flex-direction: row;  /* dit fixed het auto scrollen!!!! gemaakt door Eva :3  */
 }
 
-#gamefeed {
+.gamefeed {
     text-align: center;
     color: #82C197;
     padding: 0.3rem;

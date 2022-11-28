@@ -7,7 +7,7 @@ html {
     color: #fff;
 }
 
-#wrapper {
+.wrapper {
     width: 45rem;
     margin: auto;
 }
@@ -105,7 +105,7 @@ footer {
     margin-bottom: 10vh;
 }
 
-#horizontal-list-box {
+.horizontal-list-box {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -116,7 +116,7 @@ footer {
     padding: 0.5rem;;
 }
 
-#space-underneath {
+.space-underneath {
     margin-bottom: 4vh;
 }
 
@@ -124,7 +124,7 @@ footer {
     margin-bottom: 5vh;
 }
 
-#nav-btn {
+.nav-btn {
     color: #ffffffd7;
     font-size: 1rem;
     line-height: 1.25rem;
@@ -138,19 +138,19 @@ footer {
     border-radius: .375rem;
 }
 
-#nav-btn:hover {
+.nav-btn:hover {
     background-color: #babaec1a;
     color: #fff;
 }
 
-#buttons-right {
+.buttons-right {
     font-size: 1.4rem;
 }
 
-#italics {
+.italics {
     font-style: italic;
 }
 
-#darken-on-hover:hover {
+.darken-on-hover:hover {
     color: #afafaf
 }
