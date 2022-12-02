@@ -58,7 +58,7 @@ function swapTexts() {          //this is a big one
         if (HTML_PROJECTS_BUTTON.innerHTML == "Projecten") {
             HTML_PROJECTS_BUTTON.innerHTML = "Projects"
         }
-        if (HTML_PROJECTS_BUTTON.innerHTML == "Projects")
+        if (HTML_PROJECTS_BUTTON.innerHTML == "Projects") {
             HTML_PROJECTS_BUTTON.innerHTML = "Projecten"
         }
 
