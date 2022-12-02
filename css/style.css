@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 
+/*#111929*/
+
 html {
     background: linear-gradient(-45deg, #000, #111929);
     background-attachment: fixed;
@@ -137,6 +139,22 @@ footer {
     cursor: pointer;
     text-decoration: none;
     border-radius: .375rem;
+}
+
+.translator-btn {
+    background-color: #4d867528;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-right: 0.33rem;
+    cursor: pointer;
+    border-radius: .375rem;
+    border: none;
+}
+
+.translator-btn:hover {
+    background-color: #4d867560;
 }
 
 .nav-btn:hover {

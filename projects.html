@@ -10,8 +10,8 @@
     <meta name="description" content="Douwe Westerdijk Portfolio Website">
     <meta name="author" content="Douwe Westerdijk">
 
-    <meta content="Embed Title" property="og:title" />
-    <meta content="Site Description" property="og:description" />
+    <meta content="Portfolio Dh Westerdijk" property="og:title" />
+    <meta content="Dit is het portfolio van Douwe Westerdijk, via en voor het Alfa-College" property="og:description" />
     <meta content="https://dhwesterdijk.nl" property="og:url" />
     <meta content="https://dhwesterdijk.nl/img/favicon.ico" property="og:image" />
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
@@ -27,8 +27,9 @@
         <div class="nav-centerer">
             <nav>
                 <div class="buttons-left">
+                    <button class="translator-btn" onclick="translate()">🇳🇱</button>
                     <a class="nav-btn" href="/index.html">Home</a>
-                    <a class="nav-btn" style="background-color: rgba(186, 186, 236, 0.1);"
+                    <a id="projects-btn" class="nav-btn" style="background-color: rgba(186, 186, 236, 0.1);"
                         href="/projects.html">Projecten</a>
                 </div>
                 <div class="buttons-right">
@@ -44,18 +45,29 @@
             </nav>
         </div>
         <main>
-            <h1>Dit is waar ik aan werk 👷</h1>
-            <p class="space-underneath">
+            <h1 id="what-i-work-on-title_NL">Dit is waar ik aan werk 👷</h1>
+            <h1 id="what-i-work-on-title_EN" style="display: none;">This is what I'm working on 👷</h1>
+            <p class="space-underneath" id="what-i-work-on-text_NL">
                 Ik heb een aantal dingen gemaakt tot nu toe, ik laat het hier graag zien. Sommige dingen zijn
-                interactief, maar sommigen zijn helaas alleen als foto embed-baar. Deze foto's zijn wel klikbaar en deze
+                interactief, maar sommigen zijn helaas alleen als text embed-baar. Deze texten zijn wel klikbaar en deze
                 sturen je door naar waar je het bestand kan downloaden / uitproberen.
             </p>
+            <p class="space-underneath" id="what-i-work-on-text_EN" style="display: none;">
+                I've learnt a fair few things and I'd like to showcase them here. Some things are interactive, but
+                others sadly are only embeddable as text-areas. You can click on these textareas to be redirected to my
+                personal GitHub repositories where you can download and try out the various things I made.
+            </p>
             <h2>Rock paper scissors.</h2>
-            <p class="space-underneath">
+            <p id="rps-text_NL" class="space-underneath">
                 Wanneer ik een nieuwe taal probeer te leren, maak ik altijd als eerste een rock paper scissors spel. Dit
                 is ooit gestart in Python, en sindsdien gebruik ik dit systeem religieus. Ik heb tot nu toe in vier
                 talen
                 een rock paper scissors spel gemaakt, en ik ben niet van plan om te stoppen.
+            </p>
+            <p id="rps-text_EN" class="space-underneath" style="display: none;">
+                When I learn a new coding language, I always make a Rock Paper Scissors game as my first project. This
+                all started when I was learning Python, and ever since I use this system to test my knowledge
+                religiously. So far I've made the game in four languages, and I have no intention of stopping.
             </p>
 
 
@@ -78,9 +90,16 @@
             </div>
 
 
-            <h1>Links naar andere dingen.</h1>
-            <p>Deze text-areas zijn links naar mijn verschillende github repositories, hier kan je mijn source code en
-                downloads vinden naar projecten die ik over de tijd heb gemaakt.</p>
+            <h1 id="other-links-title_NL">Links naar andere dingen.</h1>
+            <h1 id="other-links-title_EN" style="display: none;">Links to other projects.</h1>
+            <p id="other-links-text_NL">
+                Deze text-areas zijn links naar mijn verschillende GitHub repositories, hier kan je mijn source code en
+                downloads vinden naar projecten die ik over de tijd heb gemaakt.
+            </p>
+            <p id="other-links-text_EN" style="display: none;">
+                These text-areas are links to my miscellaneous GitHub repositories, here you can find my source code and
+                downloads to my projects that I've made over the course of time.
+            </p>
             <h2>Python Projects</h2>
             <a class="darken-on-hover" target="_blank" style="overflow-x: hidden"
                 href="https://github.com/48exa/things">
@@ -183,10 +202,15 @@ while play == True:
                     </pre>
                 </div>
             </a>
-            <p class="space-underneath">Dit zijn mijn aller eerste projecten die ik heb gemaakt. Toen ik deze projecten
+            <p id="python-text_NL" class="space-underneath">Dit zijn mijn aller eerste projecten die ik heb gemaakt.
+                Toen ik deze projecten
                 heb
                 gemaakt was in compleet nieuw in de wereld van coding, dit valt uiteraard te merken in de qualiteit van
                 de producten.</p>
+            <p id="python-text_EN" class="space-underneath" style="display: none;">
+                These are the first projects I ever made. When I learnt Python I was totally new to coding, this is made
+                abundantly clear in the quality of the code.
+            </p>
             <h2>C# Projects</h2>
             <a class="darken-on-hover" target="_blank" href="https://github.com/48exa/C-Sharp">
                 <div class="sized-box" style="overflow-x: hidden">
@@ -347,8 +371,11 @@ class RPS
                     </pre>
                 </div>
             </a>
-            <p class="space-underneath">
+            <p id="cs-text_NL" class="space-underneath">
                 Dit zijn mijn C# projecten, dit is een taal die ik nog aan het leren ben.
+            </p>
+            <p id="cs-text_EN" class="space-underneath" style="display: none;">
+                These are my C# projects, this is a language I am still new to and learning.
             </p>
             <h2>Lua Projects</h2>
             <a target="_blank" href="https://github.com/48exa/scripts">
@@ -482,8 +509,11 @@ end)
                     </pre>
                 </div>
             </a>
-            <p class="space-underneath">
+            <p id="lua-text_NL" class="space-underneath">
                 Dit zijn LUA scripts bedoelt om met een C++ injector te injecten in ROBLOX games.
+            </p>
+            <p id="lua-text_EN" class="space-underneath" style="display: none;">
+                These are LUA scripts meant to be injected into ROBLOX using a C++ injector.
             </p>
         </main>
         <hr>
@@ -497,3 +527,4 @@ end)
 </html>
 <script src="script/rps.js"></script>
 <script src="/plugin/prism.js"></script>
+<script src="/script/index.js"></script>
