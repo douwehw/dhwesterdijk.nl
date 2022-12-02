@@ -57,7 +57,8 @@ function swapTexts() {          //this is a big one
     if (isDutch) {
         if (HTML_PROJECTS_BUTTON.innerHTML == "Projecten") {
             HTML_PROJECTS_BUTTON.innerHTML = "Projects"
-        } else {
+        }
+        if (HTML_PROJECTS_BUTTON.innerHTML == "Projects")
             HTML_PROJECTS_BUTTON.innerHTML = "Projecten"
         }
 
