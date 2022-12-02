@@ -55,7 +55,7 @@ function changeFlag() {
 
 function swapTexts() {          //this is a big one
     if (isDutch) {
-        if (isDutch) {
+        if (HTML_PROJECTS_BUTTON.innerHTML == "Projecten") {
             HTML_PROJECTS_BUTTON.innerHTML = "Projects"
         } else {
             HTML_PROJECTS_BUTTON.innerHTML = "Projecten"
