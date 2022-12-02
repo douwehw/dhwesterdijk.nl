@@ -43,6 +43,7 @@ const HTML_CSHARP_TEXT_EN = document.querySelector('#cs-text_EN')
 const HTML_LUA_TEXT_EN = document.querySelector('#lua-text_EN')
 
 var page = window.location.pathname.split("/").pop();
+console.log(page)
 let isDutch = true;
 
 function changeFlag() {
