@@ -43,7 +43,6 @@ const HTML_CSHARP_TEXT_EN = document.querySelector('#cs-text_EN')
 const HTML_LUA_TEXT_EN = document.querySelector('#lua-text_EN')
 
 var page = window.location.pathname.split("/").pop();
-console.log(page)
 let isDutch = true;
 
 function changeFlag() {
@@ -62,7 +61,7 @@ function swapTexts() {          //this is a big one
             HTML_PROJECTS_BUTTON.innerHTML = "Projecten"
         }
 
-        if (page == "index.html") {
+        if (page == "index.html" || page == "") {
             HTML_GREETING_NL.style.display = "none";
             HTML_GREETING_EN.style.display = "block";
 
@@ -117,7 +116,7 @@ function swapTexts() {          //this is a big one
             HTML_LUA_TEXT_EN.style.display = "block";
         }
     } else {
-        if (page == "index.html") {
+        if (page == "index.html" || page == "") {
             HTML_GREETING_NL.style.display = "block";
             HTML_GREETING_EN.style.display = "none";
 
