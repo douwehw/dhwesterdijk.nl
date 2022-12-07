@@ -1,3 +1,11 @@
+/*
+    YES I AM AWARE THIS IS A HORRIBLE WAY TO DO THIS.
+    I DID TRIED TO FIX IT BY ADDING EVERYTHING IN AN ID FOR NL AND EN.
+    THIS BROKE THE ENTIRE SCRIPT.
+    UNTIL I FIGURE OUT HOW TO FIX IT WITHOUT BREAKING THE ENTIRE FUNCTION IT'S
+    GONNA HAVE TO BE A TEXTWALL. SORRY 
+*/
+
 const HTML_HTML = document.querySelector('html');
 const HTML_FLAG = document.querySelector("nav .buttons-left .translator-btn")
 const HTML_PROJECTS_BUTTON = document.querySelector('#projects-btn')

@@ -3,17 +3,15 @@
     position: relative;
     border: 2px solid #4d6e86bf;
     background-color: #202E38;
-    width: 35vw;
-    height: 44vh;
-    word-wrap:break-word;
+    width: 40rem;
+    height: 20rem;
+    word-wrap: break-word;
     overflow: hidden;
     border-radius: 1rem;
 }
 
 .rps-center {
-    position: absolute;
-    left: 5vw;
-    bottom: 1vw;
+    margin-left: 10rem;
 }
 
 #text-input-choice {
@@ -53,8 +51,8 @@
     color: #82C197;
     padding: 0.3rem;
     margin-top: 1.15rem;
-    width: 25vw;
-    height: 18vh;
+    width: 20rem;
+    height: 7rem;
     background-color: #111929e1;
     border: 1px solid #4d6e86;
     border-radius: 0.75rem;
@@ -86,4 +84,38 @@ h6 {
 h6#games-played {
     margin: 0;
     color: #ffffff66;
+}
+
+@media only screen and (max-width: 720px) {
+    .rps-html-js {
+        margin: auto;
+        position: relative;
+        border: 2px solid #4d6e86bf;
+        background-color: #202E38;
+        width: 20rem;
+        height: 22rem;
+        word-wrap:break-word;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .rps-center {
+        margin-left: 2rem;
+    }
+
+    .gamefeed {
+        text-align: center;
+        color: #82C197;
+        padding: 0.3rem;
+        margin-top: 1.15rem;
+        width: 15rem;
+        height: 8rem;
+        background-color: #111929e1;
+        border: 1px solid #4d6e86;
+        border-radius: 0.75rem;
+        word-wrap:break-word;
+        overflow-y: auto;
+        flex-direction: column-reverse;
+        display: flex;
+    }    
 }

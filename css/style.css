@@ -15,6 +15,7 @@ html {
 }
 
 nav {
+    margin: 10rem;
     z-index: 100;
     backdrop-filter: blur(5px);
     background-color: #202e38bf;
@@ -36,6 +37,12 @@ nav {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+.nav-centerer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -186,4 +193,86 @@ footer {
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 1rem;
+}
+
+@media only screen and (max-width: 720px) {
+    h1, h2 {
+        line-height: 2.5rem;
+    }
+
+    .wrapper {
+        width: 20rem;
+        margin: auto;
+    }
+
+    nav {
+        z-index: 100;
+        backdrop-filter: blur(5px);
+        background-color: #202e38bf;
+        border: 2px solid #4d6e86bf;
+        display: flex;
+        width: 20rem;
+        position: fixed;
+        top: 0;
+        height: 2.5rem;
+        border-width: 1px;
+        border-radius: .375rem;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .nav-btn {
+        color: #ffffffd7;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-right: 0.2rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: .375rem;
+    }
+    
+    .translator-btn {
+        background-color: #4d867528;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-right: 0.33rem;
+        cursor: pointer;
+        border-radius: .375rem;
+        border: none;
+    }
+
+    .buttons-right {
+        font-size: 1rem;
+    }
+
+    .buttons-left {
+        width: 12rem;
+    }
+
+    .sized-box {
+        margin: auto;
+        position: relative;
+        z-index: 99;
+        padding: 0.3rem;
+        width: 19rem;
+        height: 20rem;
+        border: 2px solid #4d6e86bf;
+        background-color: #202e38bf;
+        word-wrap: break-word;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        border-radius: 1rem;
+    }    
+
+    .sized-box code {
+        font-size: 0.8rem;
+    }
 }
