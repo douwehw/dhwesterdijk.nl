@@ -94,4 +94,5 @@ function run() {
     convert()
     princrement()
     validate()
+    move.value = ""
 }

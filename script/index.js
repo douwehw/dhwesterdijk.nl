@@ -181,3 +181,12 @@ function translate() {
 
     isDutch = !isDutch
 }
+
+/* ENTER TO SUBMIT FORM */
+
+document.getElementById("text-input-choice").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    run() 
+  }
+});
