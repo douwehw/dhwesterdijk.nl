@@ -190,7 +190,3 @@ document.getElementById("text-input-choice").addEventListener("keypress", functi
         run()
     }
 });
-
-document.querySelector(".translator-btn").addEventListener("click", function (event) {
-    translateSite()
-})
