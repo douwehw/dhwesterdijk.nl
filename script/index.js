@@ -183,10 +183,15 @@ function translateSite() {
 }
 
 /* ENTER TO SUBMIT FORM */
+if (page == "projects.html") {
+    document.getElementById("text-input-choice").addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            run()
+        }
+    });
+}
 
-document.getElementById("text-input-choice").addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        run()
-    }
+document.querySelector(".translator-btn").addEventListener("click", function (event) {
+    translateSite()
 });
