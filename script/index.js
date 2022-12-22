@@ -175,7 +175,7 @@ function swapTexts() {          //this is a big one
     }
 }
 
-function translate() {
+function translateSite() {
     changeFlag()
     swapTexts()
 
