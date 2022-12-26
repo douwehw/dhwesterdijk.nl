@@ -63,7 +63,7 @@ function changeFlag() {
 
 function swapTexts() {          //this is a big one
     if (isDutch) {
-        if (page == "/home/" || page == "") {
+        if (page == "/" || page == "") {
             HTML_GREETING_NL.style.display = "none";
             HTML_GREETING_EN.style.display = "block";
 
@@ -118,7 +118,7 @@ function swapTexts() {          //this is a big one
             HTML_LUA_TEXT_EN.style.display = "block";
         }
     } else {
-        if (page == "/home/" || page == "") {
+        if (page == "/" || page == "") {
             HTML_GREETING_NL.style.display = "block";
             HTML_GREETING_EN.style.display = "none";
 
