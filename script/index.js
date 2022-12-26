@@ -50,7 +50,7 @@ const HTML_WHAT_AM_I_WORKING_ON_TITLE_EN = document.querySelector('#what-i-work-
     HTML_CSHARP_TEXT_EN = document.querySelector('#cs-text_EN'),
     HTML_LUA_TEXT_EN = document.querySelector('#lua-text_EN');
 
-var page = window.location.pathname.split("/").pop();
+var page = window.location.pathname;
 let isDutch = true;
 
 function changeFlag() {
@@ -63,7 +63,7 @@ function changeFlag() {
 
 function swapTexts() {          //this is a big one
     if (isDutch) {
-        if (page == "index.html" || page == "") {
+        if (page == "/home/" || page == "") {
             HTML_GREETING_NL.style.display = "none";
             HTML_GREETING_EN.style.display = "block";
 
@@ -92,7 +92,7 @@ function swapTexts() {          //this is a big one
             HTML_HOBBIES_TEXT_EN.style.display = "block";
         }
 
-        if (page == "projects.html") {
+        if (page == "/projects/") {
             HTML_WHAT_AM_I_WORKING_ON_TITLE_NL.style.display = "none";
             HTML_WHAT_AM_I_WORKING_ON_TITLE_EN.style.display = "block";
 
@@ -118,7 +118,7 @@ function swapTexts() {          //this is a big one
             HTML_LUA_TEXT_EN.style.display = "block";
         }
     } else {
-        if (page == "index.html" || page == "") {
+        if (page == "/home/" || page == "") {
             HTML_GREETING_NL.style.display = "block";
             HTML_GREETING_EN.style.display = "none";
 
@@ -147,7 +147,7 @@ function swapTexts() {          //this is a big one
             HTML_HOBBIES_TEXT_EN.style.display = "none";
         }
 
-        if (page == "projects.html") {
+        if (page == "/projects/") {
             HTML_WHAT_AM_I_WORKING_ON_TITLE_NL.style.display = "block";
             HTML_WHAT_AM_I_WORKING_ON_TITLE_EN.style.display = "none";
 
@@ -183,7 +183,7 @@ function translateSite() {
 }
 
 /* ENTER TO SUBMIT FORM */
-if (page == "projects.html") {
+if (page == "/projects/") {
     document.getElementById("text-input-choice").addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
@@ -192,6 +192,7 @@ if (page == "projects.html") {
     });
 }
 
+/* TRANSLATE BUTTON FIX */
 document.querySelector(".translator-btn").addEventListener("click", function (event) {
     translateSite()
 });
