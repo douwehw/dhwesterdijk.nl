@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <script src="/script/rps.js" defer></script>
+    <script src="/plugin/prism.js" defer></script>
+    <script src="/script/index.js" defer></script>
+    <link rel="stylesheet" href="/plugin/prism.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/rps.css">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="keywords" content="Douwe Westerdijk, Douwe, Westerdijk, Portfolio, Software Developer">
+    <meta name="description" content="Douwe Westerdijk Portfolio Website">
+    <meta name="author" content="Douwe Westerdijk">
+
+    <meta content="Douwe Westerdijk" property="og:title" />
+    <meta content="Dit is het portfolio van Douwe Westerdijk, via en voor het Alfa-College" property="og:description" />
+    <meta content="https://dhwesterdijk.nl" property="og:url" />
+    <meta content="https://dhwesterdijk.nl/img/embed-image.jpg" property="og:image" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douwe Westerdijk</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav-centerer">
+            <nav>
+                <div class="buttons-left">
+                    <button class="translator-btn">🇳🇱</button>
+                    <a class="nav-btn" href="/">Home</a>
+                    <a id="projects-btn" class="nav-btn" style="background-color: rgba(186, 186, 236, 0.1);"
+                        href="/projects/">Projects</a>
+                </div>
+                <div class="buttons-right">
+                    <a target="_blank" href="https://github.com/48exa">
+                        <i class="bi bi-github darken-on-hover" title="Github"></i></a>
+                    <a target="_blank" href="https://discordapp/com/users/350306353702764554">
+                        <i class="bi bi-discord darken-on-hover" title="Discord"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/douwe-westerdijk-785b2a252/"><i
+                            class="bi bi-linkedin darken-on-hover" title="LinkedIn"></i></a>
+                    <a target="_blank" rel="noreferrer" href="mailto:douwewesterdijk@gmail.com"><i
+                            class="bi bi-envelope-fill darken-on-hover" title="Email"></i></a>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <h1 id="NL">Dit is waar ik aan werk 👷</h1>
+            <h1 id="EN" style="display: none;">This is what I'm working on 👷</h1>
+            <p class="space-underneath" id="NL">
+                Ik heb een aantal dingen gemaakt tot nu toe, ik laat het hier graag zien. Sommige dingen zijn
+                interactief, maar sommigen zijn helaas alleen als text embed-baar. Deze texten zijn wel klikbaar en deze
+                sturen je door naar waar je het bestand kan downloaden / uitproberen.
+            </p>
+            <p class="space-underneath" id="EN" style="display: none;">
+                I've learnt a fair few things and I'd like to showcase them here. Some things are interactive, but
+                others sadly are only embeddable as text-areas. You can click on these textareas to be redirected to my
+                personal GitHub repositories where you can download and try out the various things I made.
+            </p>
+            <h2>Rock paper scissors.</h2>
+            <p id="NL" class="space-underneath">
+                Wanneer ik een nieuwe taal probeer te leren, maak ik altijd als eerste een rock paper scissors spel. Dit
+                is ooit gestart in Python, en sindsdien gebruik ik dit systeem religieus. Ik heb tot nu toe in vier
+                talen
+                een rock paper scissors spel gemaakt, en ik ben niet van plan om te stoppen.
+            </p>
+            <p id="EN" class="space-underneath" style="display: none;">
+                When I learn a new coding language, I always make a Rock Paper Scissors game as my first project. This
+                all started when I was learning Python, and ever since I use this system to test my knowledge
+                religiously. So far I've made the game in four languages, and I have no intention of stopping.
+            </p>
+
+
+            <div class="rps-html-js">
+                <div class="rps-center">
+                    <h2>Rock, Paper, Scissors.</h2>
+                        <input id="text-input-choice" type="text" placeholder="Rock paper scissors.">
+                        <button onclick="run()" class="text-input-button">Validate</button>
+                    <h6 id="scoreboard">Score: 0 / 0</h6>
+                    <h6 id="games-played">Games played: 0</h6>
+                    <div class="gamefeed">
+                        <div class="text">
+                            <p id="line-nbr">0</p>
+                            <p id="gamefeed-printbox">Your games will be printed here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h1 id="NL">Links naar andere dingen.</h1>
+            <h1 id="EN" style="display: none;">Links to other projects.</h1>
+            <p id="NL">
+                Deze text-areas zijn links naar mijn verschillende GitHub repositories, hier kan je mijn source code en
+                downloads vinden naar projecten die ik over de tijd heb gemaakt.
+            </p>
+            <p id="EN" style="display: none;">
+                These text-areas are links to my miscellaneous GitHub repositories, here you can find my source code and
+                downloads to my projects that I've made over the course of time.
+            </p>
+            <h2>Python Projects</h2>
+            <a class="darken-on-hover" target="_blank" style="overflow-x: hidden"
+                href="https://github.com/48exa/things">
+                <div class="sized-box" style="overflow-x: hidden">
+                    <pre style="overflow-x: hidden">
+                        <code class="language-python" style="overflow-x: hidden">
+import random
+
+# Quicker way to print a bunch of lines
+d = "-----------------------------------"
+
+# Leaderboard
+compScore = 0
+userScore = 0
+
+# Input a score at which the program ends
+score_input = input("To what score do you want to play?: ")
+final_score = int(score_input)
+
+# "Play" had a different function before I changed my code, techinically this variable is obsolete now,
+# but the code still runs so why would I bother to change it
+play = True
+while play == True:
+    possible_choices = ["rock", "paper", "scissors"] # List of all possible plays
+    computer_choice = random.choice(possible_choices) # Decent way to randomise plays, I just copied this from online
+    print(d) 
+    user_choice = input("Choose! (rock, paper or scissors): ") # User input for choice
+    print(d)
+    # This was mainly for debugging, but I thought it was nice to know your own choice after you typed it so I left it in
+    print("You chose: ", user_choice)
+    print("The computer chose: ", computer_choice)
+
+    print("") # Empty line to make everything less cluttered
+
+    # I am very sure that this is not even close to the best way to do this. I just don't know how to
+    # write the code smaller as of now, and its only like, 70 lines total so it really doesn't matter regardless
+    if user_choice not in possible_choices:
+        compScore += 1
+        print("The computer won as you did not enter a valid choice (",user_choice,")")
+    if computer_choice == "rock" and user_choice == "scissors":
+        compScore += 1
+        print("The computer won, as rock beats scissors")
+    if computer_choice == "paper" and user_choice == "rock":
+        compScore += 1
+        print("The computer won, as paper beats rock")
+    if computer_choice == "scissors" and user_choice == "paper":
+        compScore += 1
+        print("The computer won, as scissors beats paper")
+    if computer_choice == "scissors" and user_choice == "rock":
+        userScore += 1
+        print("You won, as rock beats scissors")
+    if computer_choice == "rock" and user_choice == "paper":
+        userScore += 1
+        print("You won, as paper beats rock")
+    if computer_choice == "paper" and user_choice == "scissors":
+        userScore += 1
+        print("You won, as scissors beats paper")
+    if computer_choice == user_choice:
+        print("you tied")
+
+    print(d)
+
+    # The actual leaderboard being printed
+    print("Your score: ", userScore)
+    print("Computer score: ", compScore)
+
+    # Once again, there is definitely a way to do this that is easier
+    # and takes up less lines, but this is what I came up with,
+    # and it works, so why would I bother changing it
+    if compScore >= final_score:
+        print("")
+        print("Final Scores!")
+        print("Your score: ", userScore)
+        print("Computer's score: ", compScore)
+        if userScore > compScore:
+            print("You win!")
+        elif userScore < compScore:
+            print("You lose!")
+        print(d)
+        print("I hope you enjoyed!")
+        death = input()
+        if death == death:
+            break
+
+    if userScore >= final_score:
+        print("")
+        print("Final Scores!")
+        print("Your score: ", userScore)
+        print("Computer's score: ", compScore)
+        if userScore > compScore:
+            print("You win!")
+        elif userScore < compScore:
+            print("You lose!")
+        print(d)
+        print("I hope you enjoyed!")
+        death = input()
+        if death == death:
+            break
+                        </code>
+                    </pre>
+                </div>
+            </a>
+            <p id="NL" class="space-underneath">Dit zijn mijn aller eerste projecten die ik heb gemaakt.
+                Toen ik deze projecten
+                heb
+                gemaakt was in compleet nieuw in de wereld van coding, dit valt uiteraard te merken in de qualiteit van
+                de producten.</p>
+            <p id="EN" class="space-underneath" style="display: none;">
+                These are the first projects I ever made. When I learnt Python I was totally new to coding, this is made
+                abundantly clear in the quality of the code.
+            </p>
+            <h2>C# Projects</h2>
+            <a class="darken-on-hover" target="_blank" href="https://github.com/48exa/C-Sharp">
+                <div class="sized-box" style="overflow-x: hidden">
+                    <pre style="overflow-x: hidden">
+                        <code class="language-csharp" style="overflow-x: hidden">
+namespace RpsTest;
+using System.Linq;
+
+//Global class to ensure all variables used in different functions can be called and edited within each other.
+class Global 
+{
+    public static String[] moves = { "rock", "paper", "scissors" }; //All possible moves in Rock Paper Scissors.
+
+    public static int uScore = 0; //User Score.
+    public static int pScore = 0; //PC Score.
+    public static int fScore = 0; //Final Score.
+    public static int gamesPlayed = 1;
+
+    public static string uMove = ""; //User Move.
+    public static string pMove = ""; //PC Move.
+    public static string iMove = ""; //Invalid move, all uMoves are automatically stored in here.
+
+    //This token served a greater purpose than it does now, could be replaced by any word or string. I chose this base64 encoded string for some reason.
+    //The original reason for this token was for if a uMove was invalid, the uMove would be changed to this token, and if the uMove was this token, then you'd lose the round.
+    //This has been fixed, but I did not want to remove the token. Consider this an artifact or the early builds.
+    public static string token = "TnVsbGVkIHN0cmluZyBkdWUgdG8gaW52YWxpZCBwYXJhbWV0ZXJzLg"; 
+
+    public static Random random = new();
+}
+
+class RPS
+{
+    public static void Main() 
+    {
+        FirstGameScreen();
+        Randomise();
+        GetUserMove();
+        Validate();
+        CompareMoves();
+        PrintScores();
+        ContinuePlayingPrompt();
+    }
+
+    public static void FirstGameScreen() //Basic welcome text.
+    {
+        if (Global.gamesPlayed == 1) {
+            Console.WriteLine("Hi, welcomle to RPS.cs!");
+            Console.Write("Please enter to what score you wish to play: ");
+            Global.fScore = Convert.ToInt32(Console.ReadLine()); //Final score input automatically converted to an interger.
+        }
+    }
+
+    public static string Randomise() //Generate the pMove using a randomised number from 0 to 2 (length of the Global.moves string).
+    {
+        int rIndexMoves = Global.random.Next(Global.moves.Length);
+        Global.pMove = Global.moves[rIndexMoves];
+
+        return Global.pMove;
+    }
+
+    public static string GetUserMove() //Get the uMove by changing the empty variable of uMove to an input field.
+    {
+        Console.WriteLine("Rock, paper, scissors:");
+        Console.Write("> ");
+
+#pragma warning disable CS8602
+        Global.uMove = Console.ReadLine().ToLower();
+#pragma warning restore CS8602
+        Global.iMove = Global.uMove; //Storing the uMove in iMove incase the move is invalid.
+        Global.gamesPlayed += 1;
+        return Global.uMove;
+#pragma warning disable CS0162
+        return Global.iMove;
+#pragma warning restore CS0162 
+
+    }
+
+    public static void Validate() //Checking is the uMove is an allowed move.
+    {
+        //if (uMove in moves) return;
+        if (Global.moves.Any(Global.uMove.Contains)) {
+            return;
+        } else {
+            Console.WriteLine($"Invalid move. ({Global.iMove})"); //If the uMove is not in the list of allowed moves, the uMove gets converted to the token.
+        }
+
+        if (Global.uMove == Global.token) { //If the uMove is the token, can be simplified.
+            Console.WriteLine($"Invalid move. ({Global.iMove})");
+        }
+    }
+
+    public static void CompareMoves() //Core of the game, comparing the uMove and the pMove to see which wins.
+    {
+        //Boolean variables to not create a textwall inside the actual checking code. Instead of if (Global.uMove == "rock" && Global.pMove == "scissors") its now (uRock && pScissors).
+        bool uRock = (Global.uMove == "rock");
+        bool uPaper = (Global.uMove == "paper");
+        bool uScissors = (Global.uMove == "scissors");
+        bool pRock = (Global.pMove == "rock");
+        bool pPaper = (Global.pMove == "paper");
+        bool pScissors = (Global.pMove == "scissors");
+
+        if (Global.uMove != Global.token) Console.WriteLine($"PC chose {Global.pMove}"); //If (uMove is not invalid) print the pMove.
+
+        //Case for where the user wins, this could techinically also be made into a Switch statement, but for only 3 options an else-if works fine.
+        if (uRock && pScissors || uPaper && pRock || uScissors && pPaper) {
+            Console.WriteLine($"You win! {Global.uMove} beats {Global.pMove}");
+            Global.uScore += 1;
+
+        //Case where the user loses.
+        } else if (pRock && uScissors || pPaper && uRock || pScissors && uPaper || Global.uMove == Global.token) {
+            Console.WriteLine($"You lose. {Global.pMove} beats {Global.uMove}");
+            Global.pScore += 1;
+
+        //If the user does not win or lose it automatically has to be a tie.
+        } else {
+            Console.WriteLine("You tied.");
+        }
+    }
+
+    public static void PrintScores() //This function describes itself.
+    {
+        //Little gimmick I added, the '>' and '<' change based on whose score is higher.
+        if (Global.uScore > 0 || Global.pScore > 0) {
+            if (Global.uScore > Global.pScore) {
+                Console.WriteLine($"Current score: User: {Global.uScore} > PC: {Global.pScore}");
+            } else {
+                Console.WriteLine($"Current score: User: {Global.uScore} < PC: {Global.pScore}");
+            }
+        }
+    }
+
+    //This function used to give you a (y/n) prompt after every single round, but due to this slowing down the pace of the game significantly I
+    //Turned it into a check for if the fScore had been reached, and if it did, the game would end.
+    //If the final score was not reached it executes Main(), thereby starting the loop over again. By putting the "loop" in the else part of this statment it-
+    //Also ensures that there can't be a weird bug where the game continues after the final score being reached.
+    public static void ContinuePlayingPrompt()
+    {
+        if (Global.uScore == Global.fScore || Global.pScore == Global.fScore)
+        {
+            Console.WriteLine("Final score reached!");
+        
+            if (Global.uScore > Global.pScore) {
+                Console.WriteLine("You are the winner!");
+            } else {
+                Console.WriteLine("You lost!");
+            }
+
+            Console.WriteLine("Thanks for playing! Hope you enjoyed!");
+            Console.Write("Press enter to quit.");
+            Console.ReadLine();
+            return;
+        } else { 
+            Main(); 
+        }
+    }
+}
+                        </code>
+                    </pre>
+                </div>
+            </a>
+            <p id="NL" class="space-underneath">
+                Dit zijn mijn C# projecten, dit is een taal die ik nog aan het leren ben.
+            </p>
+            <p id="EN" class="space-underneath" style="display: none;">
+                These are my C# projects, this is a language I am still new to and learning.
+            </p>
+            <h2>Lua Projects</h2>
+            <a target="_blank" href="https://github.com/48exa/scripts">
+                <div class="sized-box" style="overflow-x: hidden">
+                    <pre style="overflow-x: hidden">
+                        <code class="language-lua" style="overflow-x: hidden">
+local Camera = game:GetService("Workspace").CurrentCamera
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local FontValue = 3
+local Visibility = true
+
+local function CycleFont()
+    if FontValue + 1 > 3 then
+        FontValue = 1
+    else
+        FontValue = FontValue + 1
+    end
+end
+
+local function ModelTemplate()
+    local Objects = {
+        Box = Drawing.new("Quad"),
+        Name = Drawing.new("Text"),
+    }
+
+    return Objects
+end
+
+local function GetPartCorners(Part)
+    local Size = Part.Size * Vector3.new(1, 1.5) / 2.5
+    return {
+        TR = (Part.CFrame * CFrame.new(-Size.X, -Size.Y, 0)).Position,
+        BR = (Part.CFrame * CFrame.new(-Size.X, Size.Y, 0)).Position,
+        TL = (Part.CFrame * CFrame.new(Size.X, -Size.Y, 0)).Position,
+        BL = (Part.CFrame * CFrame.new(Size.X, Size.Y, 0)).Position,
+    }
+end
+
+local function ApplyModel(Model)
+    local Objects = ModelTemplate()
+    local CurrentParent = Model.Parent
+
+    spawn(function()
+        Objects.Name.Center = true
+        Objects.Name.Visible = true
+        Objects.Name.Outline = true
+        Objects.Name.Transparency = 1
+        Objects.Box.Visible = true
+        Objects.Box.Transparency = 1
+
+        while Model.Parent == CurrentParent do
+            local Vector, OnScreen = Camera:WorldToScreenPoint(Model.Head.Position)
+            local Distance = (Camera.CFrame.Position - Model.Torso.Position).Magnitude
+
+            if OnScreen and Model.Parent.Name ~= game:GetService("Players").LocalPlayer.Team.Name and Visibility then
+                Objects.Name.Position = Vector2.new(Vector.X, Vector.Y + math.clamp(Distance / 10, 10, 30) - 10)
+                Objects.Name.Size = math.clamp(30 - Distance / 10, 10, 30)
+                Objects.Name.Color = Color3.fromHSV(math.clamp(Distance / 5, 0, 125) / 255, 0.75, 1)
+                Objects.Name.Visible = true
+                Objects.Name.Font = FontValue
+                Objects.Name.Transparency = math.clamp((500 - Distance) / 200, 0.2, 1)
+            else
+                Objects.Name.Visible = false
+            end
+
+            Objects.Name.Text = string.format(" ")
+
+            local PartCorners = GetPartCorners(Model.Torso)
+            local VectorTR, OnScreenTR = Camera:WorldToScreenPoint(PartCorners.TR)
+            local VectorBR, OnScreenBR = Camera:WorldToScreenPoint(PartCorners.BR)
+            local VectorTL, OnScreenTL = Camera:WorldToScreenPoint(PartCorners.TL)
+            local VectorBL, OnScreenBL = Camera:WorldToScreenPoint(PartCorners.BL)
+
+            if (OnScreenBL or OnScreenTL or OnScreenBR or OnScreenTR) and Model.Parent.Name ~= game:GetService("Players").LocalPlayer.Team.Name and Visibility then
+                Objects.Box.PointA = Vector2.new(VectorTR.X, VectorTR.Y + 36)
+                Objects.Box.PointB = Vector2.new(VectorTL.X, VectorTL.Y + 36)
+                Objects.Box.PointC = Vector2.new(VectorBL.X, VectorBL.Y + 36)
+                Objects.Box.PointD = Vector2.new(VectorBR.X, VectorBR.Y + 36)
+                Objects.Box.Color = Color3.fromHSV(math.clamp(255, 0, 255) / 255, 0, 255)
+                Objects.Box.Thickness = math.clamp(3 - (Distance / 100), 0, 3)
+                Objects.Box.Transparency = math.clamp((500 - Distance) / 200, 0.2, 1)
+                Objects.Box.Visible = true
+            else
+                Objects.Box.Visible = false
+            end
+
+            RunService.RenderStepped:Wait()
+        end
+
+        Objects.Name:Remove()
+        Objects.Box:Remove()
+    end)
+end
+
+for _, Player in next, game:GetService("Workspace").Players["Bright orange"]:GetChildren() do
+    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
+        ApplyModel(Player)
+    end
+end
+
+for _, Player in next, game:GetService("Workspace").Players["Bright blue"]:GetChildren() do
+    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
+        ApplyModel(Player)
+    end
+end
+
+game:GetService("Workspace").Players["Bright orange"].ChildAdded:Connect(function(Player)
+    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
+        delay(0.5, function()ApplyModel(Player)end)
+    end
+end)
+
+game:GetService("Workspace").Players["Bright blue"].ChildAdded:Connect(function(Player)
+    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
+        delay(0.5, function()ApplyModel(Player)end)
+    end
+end)
+
+UserInputService.InputBegan:Connect(function(Input, GP)
+    if not GP and Input.KeyCode == Enum.KeyCode.Five then
+        Visibility = not Visibility
+    end
+
+    if not GP and Input.KeyCode == Enum.KeyCode.Four then
+        CycleFont()
+    end
+end)
+
+                        </code>
+                    </pre>
+                </div>
+            </a>
+            <p id="NL" class="space-underneath">
+                Dit zijn LUA scripts bedoelt om met een C++ injector te injecten in ROBLOX games.
+            </p>
+            <p id="EN" class="space-underneath" style="display: none;">
+                These are LUA scripts meant to be injected into ROBLOX using a C++ injector.
+            </p>
+        </main>
+        <hr>
+        <footer>
+            <h3>Douwe Westerdijk</h3>
+            <h4>Software Developer • 2022</h4>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="img/logo.svg">
+<html lang="en">
+
+<head>
+    <title>Annoying ass OnePager</title>
+</head>
+
+<body>
+
+    <div class="background-blur">
+
+        <div class="cookies-popup">
+            <h3>We value your privacy</h3>
+            <p>We use cookies to enhance your browsing expenence. serve
+                personalized ads or content, and analyze our traffic. By
+                Clicking "Accept All", you consent to our use of cookies. By accepting cookies, you also accept our
+                <a target="_blank" href="https://google.com" class="blue">privacy policy</a>.
+            </p>
+            <div class="cookie-buttons-wrapper">
+                <button class="cookie-btn reject-btn" onclick="cookieReject()">Reject all</button>
+                <button class="cookie-btn accept-btn" onclick="cookieAccept()">Accept all</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup">
+        <h1>Watch this ad</h1>
+        <button onclick="closeAd()" class="closeAd">X</button>
+        <video src="/ads/1.mp4"></video>
+    </div>
+
+    <div class="wrapper-onepager">
+        <div class="left-panel">
+            <div class="wrapper">
+                <img src="/img/logo.svg" alt="Logo" class="logo">
+                <h1>
+                    Daily tappable tech news <br> and stories
+                </h1>
+                <p>
+                    Every weekday Sio surfaces the most interesting and important tech stories of the day, from breaking
+                    news to profiles on favorite tech products.
+                </p>
+                <div class="downloads-wrapper">
+                    <img onclick="popUpAd()" class="ios download-btn" src="img/download-ios.svg"
+                        alt="Download on the app store">
+                    <img onclick="popUpAd()" class="android download-btn" src="/img/download-android.svg"
+                        alt="Download on the play store">
+                </div>
+                <p class="bottom-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo magnam corporis consequatur
+                    voluptates,
+                    sed
+                    cumque!
+                </p>
+            </div>
+        </div>
+        <div id="rightbg" class="right-panel">
+            <img onclick="popUpAd()" class="iphone" src="/img/iphone.png" alt="iPhone.png">
+        </div>
+    </div>
+</body>
+<script src="/script/index.js" defer></script>
+
+</html>

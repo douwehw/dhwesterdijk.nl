@@ -1,0 +1,121 @@
+.rps-html-js {
+    margin: auto;
+    position: relative;
+    border: 2px solid #4d6e86bf;
+    background-color: #202E38;
+    width: 40rem;
+    height: 20rem;
+    word-wrap: break-word;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.rps-center {
+    margin-left: 10rem;
+}
+
+#text-input-choice {
+    background-color: #4d6e86;
+    color: #fff;
+    border: 1px solid #202e38;
+    border-radius: 0.25rem;
+}
+
+.text-input-button {
+    background-color: #4d6e86;
+    color: #ffffffbf;
+    border: 1px solid #202e38;
+    border-radius: 0.25rem;
+}
+
+.text-input-button:hover {
+    color: #fff;
+}
+
+.text-input-button:active {
+    background-color: #446175;
+}
+
+::placeholder { 
+    color: #ffffff80;
+    opacity: 1;
+}
+    
+
+.text {
+    flex-direction: row;  /* dit fixed het auto scrollen!!!! gemaakt door Eva :3  */
+}
+
+.gamefeed {
+    text-align: center;
+    color: #82C197;
+    padding: 0.3rem;
+    margin-top: 1.15rem;
+    width: 20rem;
+    height: 7rem;
+    background-color: #111929e1;
+    border: 1px solid #4d6e86;
+    border-radius: 0.75rem;
+    word-wrap:break-word;
+    overflow-y: auto;
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+p#line-nbr {
+    font-family: monospace;
+    font-size: 0.9rem;;
+    margin: 0;
+    float: left;
+    color: #526281;
+}
+
+p#gamefeed-printbox {
+    margin: 0;
+    color: #82C197;
+}
+
+h6 {
+    font-size: 1.3rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+h6#games-played {
+    margin: 0;
+    color: #ffffff66;
+}
+
+@media only screen and (max-width: 720px) {
+    .rps-html-js {
+        margin: auto;
+        position: relative;
+        border: 2px solid #4d6e86bf;
+        background-color: #202E38;
+        width: 20rem;
+        height: 22rem;
+        word-wrap:break-word;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .rps-center {
+        margin-left: 2rem;
+    }
+
+    .gamefeed {
+        text-align: center;
+        color: #82C197;
+        padding: 0.3rem;
+        margin-top: 1.15rem;
+        width: 15rem;
+        height: 8rem;
+        background-color: #111929e1;
+        border: 1px solid #4d6e86;
+        border-radius: 0.75rem;
+        word-wrap:break-word;
+        overflow-y: auto;
+        flex-direction: column-reverse;
+        display: flex;
+    }    
+}

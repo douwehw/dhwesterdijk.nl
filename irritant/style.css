@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.left-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 100vh;
+    float: left;
+}
+
+.wrapper {
+    width: 65%;
+    max-height: 100%;
+}
+
+.wrapper-downloads {
+    width: 50%
+}
+
+.right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c62146;
+    width: 60vw;
+    height: 100vh;
+    float: right;
+}
+
+img.logo {
+    margin-bottom: 3vh;
+    width: 10%;
+}
+
+img.iphone {
+    height: 95vh;
+    rotate: 2deg;
+    z-index: 1;
+}
+
+.ios {
+    margin-right: 0.3vw;
+}
+
+.android {
+    margin-left: 0.3vw;
+}
+
+.download-btn {
+    z-index: 1;
+    cursor: pointer;
+    width: 30%;
+}
+
+.click {
+    z-index: 2;
+}
+
+p {
+    font-family: Tahoma, sans-serif;
+    font-size: 1vw;
+    margin-bottom: 3vh;
+}
+
+p.bottom-text {
+    color: #00000054;
+    margin-top: 5vh;
+    font-size: 0.75vw;
+}
+
+h1 {
+    font-family: Tahoma, sans-serif;
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+.background-blur {
+    z-index: 900;
+    background-color: #00000050;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+/* <-- Cookies Pop-up Screen --> */
+
+.cookies-popup {
+    padding: 8px;
+    z-index: 1000;
+    position: absolute;
+    width: 450px;
+    height: 225px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
+.cookies-bar {
+    background-color: #000;
+    color: #000;
+    border: none;
+    height: 2px;
+}
+
+.cookies-popup h3 {
+    font-size: 1.15vw;
+    font-weight: bolder;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.cookies-popup p {
+    font-weight: lighter;
+    padding: 10px;
+    font-size: 0.8vw;
+}
+
+a.blue {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cookie-btn {
+    padding: 15px 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.accept-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #1863DC;
+    color: #fff;
+    border: 2px solid #1863DC;
+    border-radius: 5px;
+}
+
+.accept-btn:hover {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #2b72e6;
+    color: #fff;
+    border: 2px solid #2b72e6;
+    border-radius: 5px;
+}
+
+.reject-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fff;
+    color: #1863DC;
+    border: 2px solid #1863DC;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.reject-btn:hover {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #2b72e6;
+    color: #fff;
+    border: 2px solid #2b72e6;
+    border-radius: 5px;
+}
+
+.cookie-buttons-wrapper {
+    margin-left: 40px;
+}
+
+/* <-- Pop Up ad --> */
+
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 900;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width: 500px;
+    height: 650px;
+}
+
+.closeAd {
+    z-index: 1000;
+    position: absolute;
+    cursor: pointer;
+    background-color: #000;
+    border: none;
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 430px;
+}
+
+.closeAd:active {
+    z-index: 1000;
+    position: absolute;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 430px;
+}
+
+.popup video {
+    z-index: 901;
+    margin: auto;
+    height: 680px;
+    border: 10px solid #fff;
+}
+
+.popup h1 {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+}
