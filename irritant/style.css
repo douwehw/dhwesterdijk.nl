@@ -6,6 +6,10 @@
 
 body {
     display: grid;
+}
+
+.wrapper-all {
+    display: grid;
     place-items: center;
 }
 
@@ -96,8 +100,8 @@ h1 {
     backdrop-filter: blur(5px);
     display: grid;
     place-items: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     border: 1px solid blue;
 }
 
@@ -236,4 +240,25 @@ a.blue {
     color: #fff;
     background-color: #000;
     border: 2px solid #fff;
+}
+
+/* <-- Notifications --> */
+
+.notification-wrapper {
+    margin: 3px;
+    margin-left: 73%;
+    border: 1px solid blue;
+    width: 25vw;
+    height: 95vh;
+    position: absolute;
+    z-index: 1000000;
+}
+
+ul.notifications li {
+    list-style: none;
+    width: 100%;
+    height: 160px;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
 }

@@ -90,3 +90,10 @@ document.querySelector('.popup video').addEventListener('ended', myHandler, fals
 function myHandler(e) {
     hardClose()
 }
+
+function function1() {
+    let ul = document.querySelector(".notifications");
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode("Element"));
+    ul.appendChild(li);
+  }
