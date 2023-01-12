@@ -27,15 +27,11 @@ function translateSite() {
 }
 
 function swapLocalStorage() {
-    if (localStorage.getItem('siteLanguage') == 'english') {
-        localStorage.setItem('siteLanguage', 'dutch')
-    } else {
-        localStorage.setItem('siteLanguage', 'english')
-    }
+    localStorage.setItem('siteLanguage', localStorage.getItem('siteLanguage') == 'english' ? 'dutch' : 'english')
 }
 
 /* ENTER TO SUBMIT FORM */
-if (page == "/projects/") {
+if (page == "/portfolio/projects/") {
     document.getElementById("text-input-choice").addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             event.preventDefault();
@@ -44,7 +40,7 @@ if (page == "/projects/") {
     });
 }
 
-/* TRANSLATE BUTTON FIX */
+/* TRANSLATE BUTTON */
 document.querySelector(".translator-btn").addEventListener("click", function (event) {
     swapLocalStorage()
     translateSite()
