@@ -1,0 +1,26 @@
+.portfolio {
+    font-size: 3.2em;
+    margin-left: 22%;
+    margin-top: 26%;
+}
+
+.irritante-webpagina {
+    font-size: 3.2em;
+    margin-left: 16%;
+    margin-top: 16%;
+}
+
+@media only screen and (max-width: 720px) {
+    .portfolio {
+        font-size: 3em;
+        margin-left: 20%;
+        margin-top: 30%;
+    }
+    
+    .irritante-webpagina {
+        font-size: 3em;
+        margin-left: 17%;
+        margin-top: 20%;
+        line-height: 1em;
+    }
+}

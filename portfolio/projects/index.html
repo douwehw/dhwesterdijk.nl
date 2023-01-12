@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/portfolio/css/prism.css">
     <link rel="stylesheet" href="/portfolio/css/main.css">
     <link rel="stylesheet" href="/portfolio/css/rps.css">
+    <link rel="stylesheet" href="/portfolio/css/schoolbox.css">
     <link rel="shortcut icon" href="/portfolio/img/favicon.ico">
     <meta name="keywords" content="Douwe Westerdijk, Douwe, Westerdijk, Portfolio, Software Developer">
     <meta name="description" content="Douwe Westerdijk Portfolio Website">
@@ -60,6 +61,193 @@
                 others sadly are only embeddable as text-areas. You can click on these textareas to be redirected to my
                 personal GitHub repositories where you can download and try out the various things I made.
             </p>
+
+            <hr class="bright-hr">
+            <h1 id="NL">Schoolwerk 🏫</h1>
+            <h1 id="EN" style="display: none;">Schoolwork 🏫</h1>
+            <p id="NL">
+                Dit is een lijst aan al mijn projecten die ik voor school heb gemaakt. De staan op volgorde van datum,
+                met het eerste project als eerste.
+            </p>
+            <p id="EN" style="display: none;">
+                This is a list of al the projects that I've made for school. The list is ordered by date, with the first
+                entries being my first projects.
+            </p>
+
+            <div class="grid-container">
+                <a class="darken-on-hover" target="_blank" style="overflow-x: hidden"
+                    href="https://dhwesterdijk.nl/portfolio">
+                    <div class="grid-item sized-box-small">
+                        <h2 class="project-overlay portfolio">Portfolio</h2>
+                        <pre style="overflow-x: hidden">
+                        <code class="language-javascript text-small" style="overflow-x: hidden">
+    const HTML_HTML = document.querySelector('html'),
+    HTML_FLAG = document.querySelector("nav .buttons-left .translator-btn"),
+    HTML_PROJECTS_BUTTON = document.querySelector('#projects-btn'),
+    NL = Array.from(document.querySelectorAll('#NL')),
+    EN = Array.from(document.querySelectorAll('#EN'));
+
+let page = window.location.pathname;
+
+function translateSite() {
+    if (localStorage.getItem('siteLanguage') == 'english') {
+        for (let i = 0; i < NL.length; i++) {
+            NL[i].style.display = "block";
+        }
+        for (let i = 0; i < EN.length; i++) {
+            EN[i].style.display = "none";
+        }
+        HTML_FLAG.innerHTML = "🇳🇱"
+    } else {
+        for (let i = 0; i < NL.length; i++) {
+            NL[i].style.display = "none";
+        }
+        for (let i = 0; i < EN.length; i++) {
+            EN[i].style.display = "block";
+        }
+        HTML_FLAG.innerHTML = "🇬🇧"
+    }
+}
+
+function swapLocalStorage() {
+    localStorage.setItem('siteLanguage', localStorage.getItem('siteLanguage') == 'english' ? 'dutch' : 'english')
+}
+
+/* ENTER TO SUBMIT FORM */
+if (page == "/portfolio/projects/") {
+    document.getElementById("text-input-choice").addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            run()
+        }
+    });
+}
+
+/* TRANSLATE BUTTON */
+document.querySelector(".translator-btn").addEventListener("click", function (event) {
+    swapLocalStorage()
+    translateSite()
+});
+
+translateSite()
+                        </code>
+                    </pre>
+                    </div>
+                </a>
+                <a class="darken-on-hover" target="_blank" style="overflow-x: hidden"
+                    href="https://dhwesterdijk.nl/irritant">
+                    <div class="grid-item sized-box-small">
+                        <h2 class="project-overlay irritante-webpagina">Irritante<br>Onepager</h2>
+                        <pre style="overflow-x: hidden">
+                        <code class="language-javascript text-small" style="overflow-x: hidden">
+/* <-- LOAD TIME --> */
+
+function color() {
+
+}
+
+/* <-- LOAD TIME --> */
+const bgBlur = document.querySelector(".background-blur"),
+    cookiePopup = document.querySelector(".cookies-popup"),
+    cookieH3 = document.querySelector(".cookies-popup h3"),
+    cookieP = document.querySelector(".cookies-popup p"),
+    popupScreen = document.querySelector(".popup"),
+    vid = document.querySelector(".popup video"),
+    adText = document.querySelector(".popup h1");
+
+popupScreen.style.display = "none"
+
+let cookies = "not set",
+    randInt = 0,
+    placeholder = 12034,
+    src = vid.getAttribute('src');
+
+/* <-- COOKIES --> */
+
+document.querySelector(".download-btn").onclick = function () {
+    popUpAd()
+}
+
+function clear() {
+    localStorage.clear()
+}
+
+function cookieAccept() {
+    cookies = "working"
+    localStorage.setItem('value', cookies)
+    cookieCheck()
+}
+
+function cookieReject() {
+    cookies = "not working"
+    localStorage.setItem('value', cookies)
+    cookieCheck()
+}
+
+function cookieCheck() {
+    if (localStorage.getItem('value') == "not working") {
+        cookieH3.innerHTML = "We don't value your privacy."
+        cookieP.innerHTML = "Accept the cookies."
+        cookiePopup.style.height = "175px"
+    } else if (localStorage.getItem('value') == "working") {
+        bgBlur.style.display = "none"
+        cookiePopup.style.display = "none"
+    }
+}
+
+if (localStorage.getItem('value') == "not working") {
+    cookieH3.innerHTML = "We don't value your privacy."
+    cookieP.innerHTML = "Accept the cookies."
+    cookiePopup.style.height = "175px"
+} else if (localStorage.getItem('value') == "working") {
+    bgBlur.style.display = "none"
+    cookiePopup.style.display = "none"
+}
+
+/* <-- POP UP AD --> */
+
+function randomInt() {
+    randInt = Math.floor(Math.random() * 7) + 1
+}
+
+function hardClose() {
+    bgBlur.style.display = "none"
+    popupScreen.style.display = "none"
+    vid.pause()
+}
+
+function closeAd() {
+    if (placeholder > 50) {
+        placeholder = Math.floor(Math.random() * 20)
+    }
+    if (placeholder == 0) {
+        hardClose()
+        placeholder = 12034
+    }
+    --placeholder
+}
+
+function popUpAd() {
+    randomInt()
+    vid.src = `/ads/${randInt}.mp4`
+    vid.autoplay = true;
+    bgBlur.style.display = "grid"
+    popupScreen.style.display = "grid"
+}
+
+document.querySelector('.popup video').addEventListener('ended', myHandler, false);
+function myHandler(e) {
+    hardClose()
+}
+
+/* <-- END --> */
+                        </code>
+                    </pre>
+                    </div>
+                </a>
+            </div>
+            <hr class="bright-hr">
+
             <h2>Rock paper scissors.</h2>
             <p id="NL" class="space-underneath">
                 Wanneer ik een nieuwe taal probeer te leren, maak ik altijd als eerste een rock paper scissors spel. Dit
@@ -77,8 +265,8 @@
             <div class="rps-html-js">
                 <div class="rps-center">
                     <h2>Rock, Paper, Scissors.</h2>
-                        <input id="text-input-choice" type="text" placeholder="Rock paper scissors.">
-                        <button onclick="run()" class="text-input-button">Validate</button>
+                    <input id="text-input-choice" type="text" placeholder="Rock paper scissors.">
+                    <button onclick="run()" class="text-input-button">Validate</button>
                     <h6 id="scoreboard">Score: 0 / 0</h6>
                     <h6 id="games-played">Games played: 0</h6>
                     <div class="gamefeed">
