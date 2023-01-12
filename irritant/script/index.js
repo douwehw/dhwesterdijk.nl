@@ -1,10 +1,3 @@
-/* <-- LOAD TIME --> */
-
-function color() {
-
-}
-
-/* <-- LOAD TIME --> */
 const bgBlur = document.querySelector(".background-blur"),
     cookiePopup = document.querySelector(".cookies-popup"),
     cookieH3 = document.querySelector(".cookies-popup h3"),
@@ -65,7 +58,7 @@ if (localStorage.getItem('value') == "not working") {
 /* <-- POP UP AD --> */
 
 function randomInt() {
-    randInt = Math.floor(Math.random() * 7) + 1
+    randInt = Math.floor(Math.random() * 5) + 1
 }
 
 function hardClose() {
@@ -87,7 +80,7 @@ function closeAd() {
 
 function popUpAd() {
     randomInt()
-    vid.src = `/ads/${randInt}.mp4`
+    vid.src = `ads/${randInt}.mp4`
     vid.autoplay = true;
     bgBlur.style.display = "grid"
     popupScreen.style.display = "grid"
@@ -97,5 +90,3 @@ document.querySelector('.popup video').addEventListener('ended', myHandler, fals
 function myHandler(e) {
     hardClose()
 }
-
-/* <-- END --> */
