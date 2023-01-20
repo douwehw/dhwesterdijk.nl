@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/irritant/style.css">
-<link rel="icon" type="image/x-icon" href="/irritant/img/goofy.ico">
-<html lang="en">
 
 <head>
+    <link rel="stylesheet" href="/irritant/style.css">
+    <link rel="icon" type="image/x-icon" href="/irritant/img/goofy.ico">
+    <html lang="nl">
+
+    <meta name="keywords" content="onepager, irritant, Software Developer">
+    <meta name="description" content="Irritante webpagina Module 04">
+    <meta name="author" content="Douwe Westerdijk & Nolan Bijmholt">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="/irritant/script/index.js" defer></script>
     <title>Annoying ass OnePager</title>
 </head>
 
 <body>
 
-    <div class="background-blur">
+    <div class="background-blur"> <!-- Div die over alle items heen rendered zodat alles een blur heeft -->
 
         <div class="cookies-popup">
             <h3>We value your privacy</h3>
@@ -25,13 +34,18 @@
         </div>
     </div>
 
+
+    <!-- Wrapper die over de video heen gaat om een pseudo pop-up scherm te maken -->
     <div class="popup">
         <h1>Watch this ad</h1>
         <button onclick="closeAd()" class="closeAd">X</button>
         <video src="/irritant/ads/1.mp4"></video>
     </div>
 
+    <!-- Wrapper die de oorspronkelijke onepager bevat, opgedeelt in twee divs voor de rechter kant en de linker kant -->
     <div class="wrapper-onepager">
+
+        <!-- De linker kant van de onepager -->
         <div class="left-panel">
             <div class="wrapper">
                 <img src="/irritant/img/logo.svg" alt="Logo" class="logo">
@@ -56,11 +70,14 @@
                 </p>
             </div>
         </div>
+
+        <!-- De rechter kant van de onepager -->
         <div id="rightbg" class="right-panel">
             <img onclick="popUpAd()" class="iphone" src="/irritant/img/iphone.png" alt="iPhone.png">
         </div>
+
     </div>
+
 </body>
-<script src="/irritant/script/index.js" defer></script>
 
 </html>
