@@ -7,6 +7,10 @@
 body {
     display: grid;
     place-items: center;
+    background-color: #c62146;
+    animation-name: backgr;
+    animation-iteration-count: infinite;
+    animation-duration: 20ms;
 }
 
 html {
@@ -18,9 +22,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40vw;
+    width: 40%;
     height: 100vh;
     float: left;
+    background-color: #fff;
 }
 
 .wrapper {
@@ -37,9 +42,12 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #c62146;
-    width: 60vw;
+    width: 50vw;
     height: 100vh;
     float: right;
+    animation-name: backgr;
+    animation-iteration-count: infinite;
+    animation-duration: 20ms;
 }
 
 img.logo {
@@ -50,7 +58,8 @@ img.logo {
 img.iphone {
     height: 95vh;
     rotate: 2deg;
-    z-index: 1;
+    z-index: 1; 
+    margin-right: 10vw;
 }
 
 .ios {
@@ -236,4 +245,42 @@ a.blue {
     color: #fff;
     background-color: #000;
     border: 2px solid #fff;
+}
+
+@keyframes example {
+    0% {font-family: papyrus;
+    font-size: 1vw;}
+    50% {font-family: comic-sans;
+    font-size: 2.5vw;}
+    100% {font-family: papyrus;
+    font-size: 1vw;}
+}
+.priv {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.1vw;
+    font-family: papyrus;
+    font-size: 150%;
+    text-shadow: 0px 0px 1000vw white;
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+/* Background color change */
+@keyframes backgr{
+    0% {background-color: rgb(198, 33, 70);}
+    25% {background-color: rgb(203, 38, 75);}
+    26% {background-color: rgb(208, 43, 80);}
+    27% {background-color: rgb(213, 48, 85);}
+    28% {background-color: rgb(203, 38, 75);}
+    29% {background-color: rgb(208, 43, 80);}
+    30% {background-color: rgb(213, 48, 85);}
+    31% {background-color: rgb(203, 38, 75);}
+    32% {background-color: rgb(208, 43, 80);}
+    33% {background-color: rgb(213, 48, 85);}
+    34% {background-color: rgb(0, 0, 0);}
+    100% {background-color: rgb(218, 53, 90);}
 }
