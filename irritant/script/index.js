@@ -117,7 +117,7 @@ function closeAd() {
 
 function popUpAd() {
     randomInt()
-    vid.src = `/irritant/ads/${randInt}.mp4`
+    vid.src = `/ads/${randInt}.mp4`
     vid.autoplay = true;
     bgBlur.style.display = "grid"
     popupScreen.style.display = "grid"
