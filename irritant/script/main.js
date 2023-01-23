@@ -137,7 +137,7 @@ function popUpAd() {
 
 //Grabbing your ip and ip-tied geolocation through ipapi's check api
 fetch('http://api.ipapi.com/api/check?access_key=69e810ec7f10244f64064f36479ac161').then(function (results) {
-    results.json().then(function (data) { scrollingText.innerHTML = `Your ${data.type} is ${data.ip}. Pinging to ${data.zip}, ${data.city}, ${data.region_name}, ${data.country_name}, ${data.continent_name}. Geocoordinates are: Lat: ${data.latitude}, Long: ${data.longitude}. Your privacy is safe with us :) We promise!` })
+    results.json().then(function (data) { marquee.innerHTML = `Your ${data.type} is ${data.ip}. Pinging to ${data.zip}, ${data.city}, ${data.region_name}, ${data.country_name}, ${data.continent_name}. Geocoordinates are: Lat: ${data.latitude}, Long: ${data.longitude}. Your privacy is safe with us :) We promise!` })
 }).catch(function (err) {
-    console.warn('Something went wrong.', err);
+    console.warn('Unable to process API fetch request. Resorting to placeholder text.', err);
 });
