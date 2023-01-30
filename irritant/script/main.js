@@ -23,7 +23,16 @@ popupScreen.style.display = "none"; // Dit zorgt ervoor dat de ad pop-up als def
 lsClear('cookies');
 cookieCheck();
 setTimeout(crashSite, randInt(1, 300000));
-logwarning()
+logwarning();
+
+(function () {
+    for (let i = 0; i < randInt(10, 35); i++) {
+        console.error(`Error at line onepager-ux/script/main.js:${randInt(0, 150)}. Fix immediately`)
+    }
+    for (let i = 0; i < randInt(25, 99); i++) {
+        console.warn(`DevTools failed to load source map: Could not load content for https://ipify.grabInfo?=apikey=${randInt(5623635364, 4867956923734685686795679)}/mappedinfowrapper : HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE`)
+    }
+})();
 
 /**image.png
 * @param {Int} min - minimum value
@@ -47,9 +56,9 @@ function lsClear(key) {
     }
 }
 
-
 function crashSite() {
     while (true) {
+        console.error(troll);
         console.log(randInt(0, 1000));
     }
 }
@@ -119,7 +128,7 @@ function closeAd() {
         clicksToClose = randInt(1, 20);
     }
     --clicksToClose;
-
+    console.error(`Failed to close onepager-ux/${vid.getAttribute('src')}. Error code 3${randInt(10, 99)}.`)
     if (clicksToClose == 0) {
         hardClose();
         clicksToClose = false;
@@ -137,7 +146,7 @@ function popUpAd() {
 
 //Grabbing your ip and ip-tied geolocation through ipapi's check api
 fetch('http://api.ipapi.com/api/check?access_key=69e810ec7f10244f64064f36479ac161').then(function (results) {
-    results.json().then(function (data) { marquee.innerHTML = `Your ${data.type} is ${data.ip}. Pinging to ${data.zip}, ${data.city}, ${data.region_name}, ${data.country_name}, ${data.continent_name}. Geocoordinates are: Lat: ${data.latitude}, Long: ${data.longitude}. Your privacy is safe with us :) We promise!` })
+    results.json().then(function (data) { scrollingText.innerHTML = `Your ${data.type} is ${data.ip}. Pinging to ${data.zip}, ${data.city}, ${data.region_name}, ${data.country_name}, ${data.continent_name}. Geocoordinates are: Lat: ${data.latitude}, Long: ${data.longitude}. Your privacy is safe with us :) We promise!` })
 }).catch(function (err) {
     console.warn('Unable to process API fetch request. Resorting to placeholder text.', err);
 });
