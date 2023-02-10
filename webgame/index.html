@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <head>
     <title>Snake🐍</title>
-    <style>
-        body {
-            display: grid;
-            justify-content: center;
-            align-items: center;
-        }
-
-        h2 {
-            border: 1px solid black;
-            overflow-wrap: break-word;
-            width: 500px;
-        }
-    </style>
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/index.js" defer></script>
 </head>
-<body>
-    <canvas></canvas>
-    <h2>event output</h2>
-    <h1>logged data</h1>
+<body style="background-image: url(background.jpg);">
+
+  <button class="start-btn" onclick="start()">
+    <h3>Start</h3>
+  </button>
+
+    <div class="blur-bg">
+      <nav>
+          <form>
+              <label>Choose a max score</label>
+              <select id="score">
+                <option>20</option>
+                <option>30</option>
+                <option>50</option>
+                <option>75</option>
+                <option>125</option>
+              </select>
+              <button type="button" onclick="changeValue()">submit</button>
+            </form>
+            <form>
+              <label>Board color mode</label>
+              <select id="theme">
+                <option>dark</option>
+                <option>light</option>
+              </select>
+              <button type="button" onclick="changeValue()">submit</button>
+            </form>
+
+      </nav>
+      <canvas></canvas>
+      <div class="scoreboard">
+          <h1>Length: <span class="length">0</span></h1>
+          <h1>Time played: <span class="time">0s</span></h1>
+      </div>
+      <h2 style="display: none;"></h2>
+    </div>
 </body>
 </html>
