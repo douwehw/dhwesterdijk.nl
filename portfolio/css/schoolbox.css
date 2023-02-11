@@ -10,17 +10,31 @@
     margin-top: 16%;
 }
 
+.webgame {
+    font-size: 3.2em;
+    margin-left: 18%;
+    margin-top: 27%;
+}
+
 @media only screen and (max-width: 720px) {
     .portfolio {
         font-size: 3em;
         margin-left: 20%;
         margin-top: 30%;
+        line-height: 1em;
     }
     
     .irritante-webpagina {
         font-size: 3em;
         margin-left: 17%;
         margin-top: 20%;
+        line-height: 1em;
+    }
+
+    .webgame {
+        font-size: 3em;
+        margin-left: 16%;
+        margin-top: 32%;
         line-height: 1em;
     }
 }
