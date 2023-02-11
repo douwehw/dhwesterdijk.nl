@@ -105,26 +105,41 @@ function main() {
                 document.querySelector(".deathScreen h3").innerHTML = "You went out of bounds!";
                 document.querySelector(".deathScreen h4").style.color = "red";
                 document.querySelector(".deathScreen h4").innerHTML = "You lost";
+                renderFinalScores();
                 break;
             case "Self-cannibalism":
                 audioDie.play();
                 document.querySelector(".deathScreen h3").innerHTML = "You ate yourself!";
                 document.querySelector(".deathScreen h4").style.color = "red";
                 document.querySelector(".deathScreen h4").innerHTML = "You lost";
+                renderFinalScores();
                 break;
             case "Final score reached":
                 audioWin.play();
                 document.querySelector(".deathScreen h3").innerHTML = "You reached the final score!";
                 document.querySelector(".deathScreen h4").style.color = "green";
                 document.querySelector(".deathScreen h4").innerHTML = "You won!";
+                renderFinalScores();
             default:
                 audioDie.play();
                 document.querySelector("deathScreen h3").innerHTML = "Game end."
                 document.querySelector(".deathScreen h4").innerHTML = "Undefined";
+                renderFinalScores();
+                break;
         }
 
-        document.querySelector(".deathScreen #points").innerHTML = `Points: ${snakeSize}`;
-        document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${secondsPassed}s`;
+        function renderFinalScores() {
+            document.querySelector(".deathScreen #points").innerHTML = `Points: ${snakeSize}`;
+            if (minutesPassed) {
+                if (secondsPassed < 10) {
+                    document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${minutesPassed}:0${secondsPassed}`;
+                } else {
+                    document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${minutesPassed}:${secondsPassed}`;
+                }
+            } else {
+                document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${secondsPassed}s`;
+            }
+        }
         return;
     }
 
@@ -183,8 +198,11 @@ function main() {
             default:
                 break;
         }
-        audioMove.play()
-    };
+        let allowedKeys = ["KeyW", "KeyA", "KeyS", "KeyD", "ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft"]
+        if (allowedKeys.includes(event.code)) {
+            audioMove.play();
+        }
+    }
 
     if (snakeX == foodX && snakeY == foodY) {
         snakeSize++;
@@ -195,10 +213,10 @@ function main() {
     createCells();
     document.querySelector(".length").innerHTML = snakeSize;
     setTimeout(main, snakeSpeed);
-}
+};
 
 /** Updates the time played in an ongoing session.*/
-function updateGameTime() {
+function timer() {
     if (secondsPassed > 59) {
         secondsPassed = 0;
         minutesPassed++;
@@ -214,7 +232,7 @@ function updateGameTime() {
     }
     secondsPassed++;
     if (!gameOver) {
-        setTimeout(updateGameTime, 1000);
+        setTimeout(timer, 1000);
     }
 }
 
@@ -337,7 +355,7 @@ let changeValue = () => {
 /** Starts the game when the button is pressed.*/
 function start() {
     audioPlay.play();
-    updateGameTime();
+    timer();
     document.querySelector("button.start-btn").style.display = "none";
     document.querySelector(".blur-bg").style.filter = "blur(0px)";
     main();
