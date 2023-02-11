@@ -109,6 +109,8 @@ function main() {
         document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${secondsPassed}s`;
     }
 
+    changeValue();
+
     onkeydown = (event) => {
         switch (event.code) {
             case "KeyW":
