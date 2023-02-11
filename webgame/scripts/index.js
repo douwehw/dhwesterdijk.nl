@@ -1,3 +1,11 @@
+/*! *****************************************************************************
+ * SPECIAL THANKS TO https://github.com/Medikenji
+ * FOR THE SOUND DESIGN OF THE VARIOUS MOVEMENT AND ACTIONS
+ * 
+ * MADE BY https://github.com/48exa WITH HELP OF KENNY YIP 
+ * FROM https://www.youtube.com/@KennyYipCoding/
+ **************************************************************************** **/
+
 let cellSize = 25;
 let rows = 22;
 let cols = 22;
@@ -5,6 +13,12 @@ let board = document.querySelector("canvas");
 let boardColor = localStorage.getItem("theme");
 /** Declaration of the rendering type of the `<canvas>`*/
 let context;
+
+let audioPlay = new Audio("sounds/play.wav");
+let audioMove = new Audio("sounds/movement.wav");
+let audioEat = new Audio("sounds/pickup.wav");
+let audioDie = new Audio("sounds/death.wav");
+let audioWin = new Audio("sounds/victory.wav")
 
 let snakeX = cellSize * 5;
 let snakeY = cellSize * 5;
@@ -87,26 +101,31 @@ function main() {
 
         switch (gameOverType) {
             case "Out of bounds":
+                audioDie.play();
                 document.querySelector(".deathScreen h3").innerHTML = "You went out of bounds!";
                 document.querySelector(".deathScreen h4").style.color = "red";
                 document.querySelector(".deathScreen h4").innerHTML = "You lost";
                 break;
             case "Self-cannibalism":
+                audioDie.play();
                 document.querySelector(".deathScreen h3").innerHTML = "You ate yourself!";
                 document.querySelector(".deathScreen h4").style.color = "red";
                 document.querySelector(".deathScreen h4").innerHTML = "You lost";
                 break;
             case "Final score reached":
+                audioWin.play();
                 document.querySelector(".deathScreen h3").innerHTML = "You reached the final score!";
                 document.querySelector(".deathScreen h4").style.color = "green";
                 document.querySelector(".deathScreen h4").innerHTML = "You won!";
             default:
+                audioDie.play();
                 document.querySelector("deathScreen h3").innerHTML = "Game end."
                 document.querySelector(".deathScreen h4").innerHTML = "Undefined";
         }
 
         document.querySelector(".deathScreen #points").innerHTML = `Points: ${snakeSize}`;
         document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${secondsPassed}s`;
+        return;
     }
 
     changeValue();
@@ -164,6 +183,7 @@ function main() {
             default:
                 break;
         }
+        audioMove.play()
     };
 
     if (snakeX == foodX && snakeY == foodY) {
@@ -227,6 +247,7 @@ function checkGameState() {
  * the red border, that it is moved to be next to it instead of inside it.
  */
 function placeFood() {
+    audioEat.play()
     foodX = Math.floor(Math.random() * 21) * cellSize;
     foodY = Math.floor(Math.random() * 21) * cellSize;
     if (!foodX) {
@@ -315,6 +336,7 @@ let changeValue = () => {
 
 /** Starts the game when the button is pressed.*/
 function start() {
+    audioPlay.play();
     updateGameTime();
     document.querySelector("button.start-btn").style.display = "none";
     document.querySelector(".blur-bg").style.filter = "blur(0px)";
