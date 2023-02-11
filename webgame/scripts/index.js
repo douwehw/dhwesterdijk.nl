@@ -3,19 +3,14 @@ let rows = 22;
 let cols = 22;
 let board = document.querySelector("canvas");
 let boardColor = localStorage.getItem("theme");
-/**
- * Declaration of the rendering type of the `<canvas>`
- */
+/** Declaration of the rendering type of the `<canvas>`*/
 let context;
 
 let snakeX = cellSize * 5;
 let snakeY = cellSize * 5;
 let snake = [snakeX, snakeY];
 
-let snakeBody = [];
-/**
- * @type Color
- */
+/** @type Color*/
 let snakeColor = "lime";
 let snakeSize = 0;
 
@@ -41,7 +36,9 @@ let gameOverType;
  * The value of this variable is equal to the amount of seconds passed in a running game.
  * @type seconds
  */
-let timePassed = 0;
+let secondsPassed = 0;
+/** @type minutes */
+let minutesPassed = 0;
 
 window.onload = () => {
     /**
@@ -50,7 +47,7 @@ window.onload = () => {
      */
     let CellList = [];
     for (let i = 0; i < 526; i++) {
-        CellList.push([i])
+        CellList.push([i]);
     }
     board.height = rows * cellSize;
     board.width = cols * cellSize;
@@ -69,6 +66,8 @@ window.onload = () => {
         context.fillRect(itemInArray, 525, cellSize, cellSize);
         context.fillRect(525, itemInArray, cellSize, cellSize);
     });
+
+    snakeBody = [];
 }
 
 /**
@@ -81,7 +80,33 @@ window.onload = () => {
  */
 function main() {
     if (gameOver) {
+        velocityX = 0;
+        velocityY = 0;
         document.querySelector(".blur-bg").style.filter = "blur(5px)";
+        document.querySelector(".deathScreen").style.display = "block";
+
+        switch (gameOverType) {
+            case "Out of bounds":
+                document.querySelector(".deathScreen h3").innerHTML = "You went out of bounds!";
+                document.querySelector(".deathScreen h4").style.color = "red";
+                document.querySelector(".deathScreen h4").innerHTML = "You lost";
+                break;
+            case "Self-cannibalism":
+                document.querySelector(".deathScreen h3").innerHTML = "You ate yourself!";
+                document.querySelector(".deathScreen h4").style.color = "red";
+                document.querySelector(".deathScreen h4").innerHTML = "You lost";
+                break;
+            case "Final score reached":
+                document.querySelector(".deathScreen h3").innerHTML = "You reached the final score!";
+                document.querySelector(".deathScreen h4").style.color = "green";
+                document.querySelector(".deathScreen h4").innerHTML = "You won!";
+            default:
+                document.querySelector("deathScreen h3").innerHTML = "Game end."
+                document.querySelector(".deathScreen h4").innerHTML = "Undefined";
+        }
+
+        document.querySelector(".deathScreen #points").innerHTML = `Points: ${snakeSize}`;
+        document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${secondsPassed}s`;
     }
 
     onkeydown = (event) => {
@@ -150,12 +175,22 @@ function main() {
     setTimeout(main, snakeSpeed);
 }
 
-/**
- * Updates the time played in an ongoing session.
- */
+/** Updates the time played in an ongoing session.*/
 function updateGameTime() {
-    document.querySelector(".time").innerHTML = `${timePassed}s`;
-    timePassed++;
+    if (secondsPassed > 59) {
+        secondsPassed = 0;
+        minutesPassed++;
+        document.querySelector(".time").innerHTML = `${minutesPassed}:0${secondsPassed}`;
+    } else if (minutesPassed) {
+        if (secondsPassed < 10) {
+            document.querySelector(".time").innerHTML = `${minutesPassed}:0${secondsPassed}`;
+        } else {
+            document.querySelector(".time").innerHTML = `${minutesPassed}:${secondsPassed}`;
+        }
+    } else {
+        document.querySelector(".time").innerHTML = `${secondsPassed}s`;
+    }
+    secondsPassed++;
     if (!gameOver) {
         setTimeout(updateGameTime, 1000);
     }
@@ -170,14 +205,14 @@ function updateGameTime() {
  */
 function checkGameState() {
     if (snakeX > 500 || snakeX < 25 || snakeY > 500 || snakeY < 25) {
-        gameOverType = "Out of bounds"
+        gameOverType = "Out of bounds";
         gameOver = true;
         velocityX = 0;
         velocityY = 0;
     }
 
     if (snakeSize == maxScore) {
-        gameOverType = "Final score reached"
+        gameOverType = "Final score reached";
         gameOver = true;
         velocityX = 0;
         velocityY = 0;
@@ -210,21 +245,28 @@ function placeFood() {
  * the trailing body of the snake.
  */
 function createCells() {
-    context.fillStyle = localStorage.getItem("theme")
+    /**Board rendering */
+    context.fillStyle = localStorage.getItem("theme");
     context.fillRect(25, 25, board.width - 50, board.height - 50);
 
+    /**Grid rendering */
+    for (let i = 25; i < 501; i += 25) {
+        context.fillStyle = "rgb(30, 30, 30)";
+        context.fillRect(i, 25, 1, 500);
+        context.fillRect(25, i, 500, 1);
+    }
+
+    /**Snake head rendering */
     context.fillStyle = snakeColor;
     snakeX += velocityX * cellSize;
     snakeY += velocityY * cellSize;
     context.fillRect(snakeX, snakeY, cellSize, cellSize);
 
-    context.fillStyle = "blue";
-    context.fillRect(foodX, foodY, cellSize, cellSize);
-
+    /**Snake tail rendering & self-eating check */
     for (let i = 0; i < snakeBody.length; i++) {
         context.fillStyle = "green";
         context.fillRect(snakeBody[i][0], snakeBody[i][1], cellSize, cellSize);
-        if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
+        if (snakeSize > 1 && snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
             gameOverType = "Self-cannibalism"
             gameOver = true;
             velocityX = 0;
@@ -232,10 +274,16 @@ function createCells() {
         }
     }
 
+    /**Food rendering */
+    context.fillStyle = "blue";
+    context.fillRect(foodX, foodY, cellSize, cellSize);
+
+    /**Check to make sure the body grows beyond 1 block */
     for (let i = snakeBody.length - 1; i > 0; i--) {
         snakeBody[i] = snakeBody[i - 1];
     }
 
+    /**Check to make sure the head is always lime and the tail is green */
     if (snakeBody.length) {
         snakeColor = "green";
         snakeBody[0] = [snakeX, snakeY];
@@ -263,9 +311,7 @@ let changeValue = () => {
     localStorage.setItem("maxScore", maxScoreCheck);
 }
 
-/**
- * Starts the game when the button is pressed.
- */
+/** Starts the game when the button is pressed.*/
 function start() {
     updateGameTime();
     document.querySelector("button.start-btn").style.display = "none";
