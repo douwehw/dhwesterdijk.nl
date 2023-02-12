@@ -90,7 +90,7 @@ window.onload = () => {
  * @contains - Event-based check for the WASD and arrow keys to move the snake
  * - Food generation when the snake is over a food square.
  * This also makes the snake grow 1 unit in size
- * @returns void
+ * @returns null
  */
 function main() {
     if (gameOver) {
@@ -140,7 +140,7 @@ function main() {
                 document.querySelector(".deathScreen #time").innerHTML = `Time spent: ${secondsPassed}s`;
             }
         }
-        return;
+        return null;
     }
 
     changeValue();
