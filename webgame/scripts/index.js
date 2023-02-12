@@ -36,7 +36,7 @@ let velocityY = 0;
  * Speed is calculated in ms/update, the lower the ms the faster it updates.
  * @type milliseconds
  */
-let snakeSpeed = 100;
+let snakeSpeed = 67;
 
 let foodX;
 let foodY;
