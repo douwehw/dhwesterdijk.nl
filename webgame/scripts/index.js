@@ -265,7 +265,7 @@ function checkGameState() {
  * the red border, that it is moved to be next to it instead of inside it.
  */
 function placeFood() {
-    audioEat.play()
+    audioEat.play();
     foodX = Math.floor(Math.random() * 21) * cellSize;
     foodY = Math.floor(Math.random() * 21) * cellSize;
     if (!foodX) {
