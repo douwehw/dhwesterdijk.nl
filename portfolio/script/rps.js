@@ -28,7 +28,6 @@ function convert() {
     if (move.value == "s") { move.value = "scissors" }
 }
 
-
 function princrement() { //print + increment
     games++
     line++
@@ -46,7 +45,6 @@ function princrement() { //print + increment
 
     lineprint()
     gamefeed.innerHTML += `<em>You chose ${move.value}</em> <br>`
-
 
     gamefeed.scrollTop = gamefeed.scrollHeight
 }
