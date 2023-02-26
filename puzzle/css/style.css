@@ -1,0 +1,71 @@
+/* 
+    ty ev for the grid setup i did the rest of the styling tho
+*/
+
+body {
+    padding: 10px;
+    background: url(../img/background.png);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+    padding: 10px;
+    box-shadow:
+    0 0 60px 30px #fff,
+    0 0 100px 60px #c9f6c9,
+    0 0 140px 90px #c9f6c9;
+}
+
+.box {
+    background-color: #f0ebef;
+    border: 1px solid #34343a;
+    padding: 20px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.solve {
+    font: Arial;
+}
+
+.six {
+    background-color: #ffd45c;
+}
+
+.eleven {
+    background-color: #ffd45c;
+}
+
+.seven {
+    background-color: #c9f6c9;
+}
+
+.ten {
+    background-color: #c9f6c9;
+}
+
+.input {
+    border: #000000;
+    background-color: #000000;
+}
+
+.button {
+    margin: 10px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-family: "Arial";
+    padding: 10px;
+    font-size: 20px;
+}
