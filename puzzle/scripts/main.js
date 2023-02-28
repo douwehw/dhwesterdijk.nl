@@ -25,7 +25,7 @@ function solvefast() {
   while (opl23 + opl33 != input6.value ||
     opl22 + opl33 != input1.value ||
     opl32 + opl23 != input2.value) {
-    
+
     opl32 += 0.5;
     opl22 = input5.value - opl32;
     opl23 = input3.value - opl22;
@@ -50,15 +50,22 @@ function solvefast() {
 async function solve() { // 10
   let opl22 = -100;
   let opl23 = -100;
-  let opl32 = -100;
+  let opl32 = -100.5;
   let opl33 = -100;
+
+  if (parseInt(input1.value) > 0 && parseInt(input2.value) > 0 && parseInt(input3.value) > 0 && parseInt(input4.value) > 0 && parseInt(input5.value) > 0 && parseInt(input6.value)) {
+    opl22 = 0;
+    opl23 = 0;
+    opl32 = -0.5;
+    opl33 = 0;
+  }
 
   while (opl23 + opl33 != input6.value ||
     opl22 + opl33 != input1.value ||
     opl32 + opl23 != input2.value) {
 
-      await sleep(0)
-    
+    await sleep(0)
+
     opl32 += 0.5;
     opl22 = input5.value - opl32;
     opl23 = input3.value - opl22;
@@ -69,7 +76,7 @@ async function solve() { // 10
     opl3.innerText = opl32;
     opl4.innerText = opl33
 
-    if (opl32 > (parseInt(input1.value) + parseInt(input2.value) + parseInt(input3.value) + parseInt(input4.value) + parseInt(input5.value) + parseInt(input6.value)) * 2.5) {
+    if ((opl32 > Math.abs((parseInt(input1.value) + parseInt(input2.value) + parseInt(input3.value) + parseInt(input4.value) + parseInt(input5.value) + parseInt(input6.value) * 2.5)))) {
       alert("not solveable");
       break
     }
