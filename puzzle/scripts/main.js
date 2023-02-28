@@ -26,7 +26,7 @@ function solvefast() {
     opl22 + opl33 != input1.value ||
     opl32 + opl23 != input2.value) {
     
-    opl32++
+    opl32 += 0.5;
     opl22 = input5.value - opl32;
     opl23 = input3.value - opl22;
     opl33 = input4.value - opl32;
@@ -59,7 +59,7 @@ async function solve() { // 10
 
       await sleep(0)
     
-    opl32++
+    opl32 += 0.5;
     opl22 = input5.value - opl32;
     opl23 = input3.value - opl22;
     opl33 = input4.value - opl32;

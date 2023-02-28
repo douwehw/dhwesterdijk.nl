@@ -16,6 +16,12 @@
     margin-top: 27%;
 }
 
+.puzzle {
+    font-size: 3.2em;
+    margin-top: 17%;
+    text-align: center;
+}
+
 @media only screen and (max-width: 720px) {
     .portfolio {
         font-size: 3em;
@@ -36,5 +42,13 @@
         margin-left: 16%;
         margin-top: 32%;
         line-height: 1em;
+    }
+
+    .puzzle {
+        line-height: 1.1em;
+        font-size: 3em;
+        margin-left: 15%;
+        margin-top: 23%;
+        text-align: unset;
     }
 }

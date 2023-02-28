@@ -245,12 +245,11 @@ function myHandler(e) {
                     </pre>
                     </div>
                 </a>
-                <div class="grid-container">
-                    <a class="darken-on-hover" target="_blank" style="overflow-x: hidden"
-                        href="https://dhwesterdijk.nl/webgame">
-                        <div class="grid-item sized-box-small">
-                            <h2 class="project-overlay webgame">Webgame</h2>
-                            <pre style="overflow-x: hidden">
+                <a class="darken-on-hover" target="_blank" style="overflow-x: hidden"
+                    href="https://dhwesterdijk.nl/webgame">
+                    <div class="grid-item sized-box-small">
+                        <h2 class="project-overlay webgame">Webgame</h2>
+                        <pre style="overflow-x: hidden">
                             <code class="language-javascript text-small" style="overflow-x: hidden">
 /*! *****************************************************************************
  * SPECIAL THANKS TO https://github.com/Medikenji
@@ -616,9 +615,99 @@ function start() {
 }
                             </code>
                             </pre>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+                <a class="darken-on-hover" target="_blank" style="overflow-x: hidden"
+                    href="https://dhwesterdijk.nl/puzzle">
+                    <div class="grid-item sized-box-small">
+                        <h2 class="project-overlay puzzle">Som-Som Magie</h2>
+                        <pre style="overflow-x: hidden">
+                        <code class="language-javascript text-small" style="overflow-x: hidden">
+/*!*
+ * ty ev for the js
+ */
+
+let opl1 = document.getElementById("solve1") // 2 2
+let opl2 = document.getElementById("solve2") // 2 3
+let opl3 = document.getElementById("solve3") // 3 2
+let opl4 = document.getElementById("solve4") // 3 3
+
+let input1 = document.getElementById("num1") // 1 1
+let input2 = document.getElementById("num2") // 1 4
+let input3 = document.getElementById("num3") // 2 4
+let input4 = document.getElementById("num4") // 3 4
+let input5 = document.getElementById("num5") // 4 2
+let input6 = document.getElementById("num6") // 4 3
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+function solvefast() {
+  let opl22 = -100;
+  let opl23 = -100;
+  let opl32 = -100;
+  let opl33 = -100;
+
+  while (opl23 + opl33 != input6.value ||
+    opl22 + opl33 != input1.value ||
+    opl32 + opl23 != input2.value) {
+    
+    opl32++
+    opl22 = input5.value - opl32;
+    opl23 = input3.value - opl22;
+    opl33 = input4.value - opl32;
+
+    opl1.innerText = opl22;
+    opl2.innerText = opl23;
+    opl3.innerText = opl32;
+    opl4.innerText = opl33
+
+    if (opl32 > (parseInt(input1.value) + parseInt(input2.value) + parseInt(input3.value) + parseInt(input4.value) + parseInt(input5.value) + parseInt(input6.value)) * 2.5) {
+      alert("not solveable");
+      break
+    }
+  }
+  opl1.innerText = opl22;
+  opl2.innerText = opl23;
+  opl3.innerText = opl32;
+  opl4.innerText = opl33;
+}
+
+async function solve() { // 10
+  let opl22 = -100;
+  let opl23 = -100;
+  let opl32 = -100;
+  let opl33 = -100;
+
+  while (opl23 + opl33 != input6.value ||
+    opl22 + opl33 != input1.value ||
+    opl32 + opl23 != input2.value) {
+
+      await sleep(0)
+    
+    opl32++
+    opl22 = input5.value - opl32;
+    opl23 = input3.value - opl22;
+    opl33 = input4.value - opl32;
+
+    opl1.innerText = opl22;
+    opl2.innerText = opl23;
+    opl3.innerText = opl32;
+    opl4.innerText = opl33
+
+    if (opl32 > (parseInt(input1.value) + parseInt(input2.value) + parseInt(input3.value) + parseInt(input4.value) + parseInt(input5.value) + parseInt(input6.value)) * 2.5) {
+      alert("not solveable");
+      break
+    }
+  }
+  opl1.innerText = opl22;
+  opl2.innerText = opl23;
+  opl3.innerText = opl32;
+  opl4.innerText = opl33;
+}
+                        </code>
+                    </pre>
+                    </div>
+                </a>
             </div>
             <hr class="bright-hr">
 
@@ -940,143 +1029,161 @@ class RPS
             <p id="EN" class="space-underneath" style="display: none;">
                 These are my C# projects, this is a language I am still new to and learning.
             </p>
-            <h2>Lua Projects</h2>
-            <a target="_blank" href="https://github.com/48exa/scripts">
+            <h2>Rust projects</h2>
+            <a target="_blank" href="https://github.com/48exa/projects">
                 <div class="sized-box" style="overflow-x: hidden">
                     <pre style="overflow-x: hidden">
-                        <code class="language-lua" style="overflow-x: hidden">
-local Camera = game:GetService("Workspace").CurrentCamera
-local RunService = game:GetService("RunService")
-local UserInputService = game:GetService("UserInputService")
-local FontValue = 3
-local Visibility = true
+                        <code class="language-rust" style="overflow-x: hidden">
+use std::io;
+use std::io::stdin;
+use std::sync::Mutex;
 
-local function CycleFont()
-    if FontValue + 1 > 3 then
-        FontValue = 1
-    else
-        FontValue = FontValue + 1
-    end
-end
+use rand::Rng;
 
-local function ModelTemplate()
-    local Objects = {
-        Box = Drawing.new("Quad"),
-        Name = Drawing.new("Text"),
+static MOVES: [&str; 3] = ["rock", "paper", "scissors"];
+static WINS: Mutex<u32> = Mutex::new(0);
+static LOSSES: Mutex<u32> = Mutex::new(0);
+static GAMES: Mutex<u32> = Mutex::new(0);
+
+/// Compares the moves against each other and increments the wins, losses and games
+fn compare() -> String {
+    let usermove: String = get_input();
+    let pcmove: String = generate();
+
+    //-1 for a loss, 0 for a tie, 1 for a win
+    let mut _win: i8 = 0;
+
+    // all winning cases
+    if usermove == "rock" && pcmove == "scissors"
+        || usermove == "paper" && pcmove == "rock"
+        || usermove == "scissors" && pcmove == "paper"
+    {
+        _win = 1;
+    } else if pcmove == "rock" && usermove == "scissors"
+        || pcmove == "paper" && usermove == "rock"
+        || pcmove == "scissors" && usermove == "paper"
+    {
+        _win = -1;
+    } else {
+        _win = 0;
     }
 
-    return Objects
-end
-
-local function GetPartCorners(Part)
-    local Size = Part.Size * Vector3.new(1, 1.5) / 2.5
-    return {
-        TR = (Part.CFrame * CFrame.new(-Size.X, -Size.Y, 0)).Position,
-        BR = (Part.CFrame * CFrame.new(-Size.X, Size.Y, 0)).Position,
-        TL = (Part.CFrame * CFrame.new(Size.X, -Size.Y, 0)).Position,
-        BL = (Part.CFrame * CFrame.new(Size.X, Size.Y, 0)).Position,
+    match _win {
+        1 => {
+            *WINS.lock().unwrap() += 1;
+        }
+        -1 => {
+            *LOSSES.lock().unwrap() += 1;
+        }
+        0 => {
+            println!("You tied!");
+        }
+        _ => println!(
+            "I am required to check for all, but my value can't be anything other than these"
+        ),
     }
-end
 
-local function ApplyModel(Model)
-    local Objects = ModelTemplate()
-    local CurrentParent = Model.Parent
+    *GAMES.lock().unwrap() += 1;
 
-    spawn(function()
-        Objects.Name.Center = true
-        Objects.Name.Visible = true
-        Objects.Name.Outline = true
-        Objects.Name.Transparency = 1
-        Objects.Box.Visible = true
-        Objects.Box.Transparency = 1
+    pcmove
+}
 
-        while Model.Parent == CurrentParent do
-            local Vector, OnScreen = Camera:WorldToScreenPoint(Model.Head.Position)
-            local Distance = (Camera.CFrame.Position - Model.Torso.Position).Magnitude
+/// Generates a move for the PC
+fn generate() -> String {
+    let r#move: String = MOVES[rand::thread_rng().gen_range(0..=2)].to_owned();
+    r#move
+}
 
-            if OnScreen and Model.Parent.Name ~= game:GetService("Players").LocalPlayer.Team.Name and Visibility then
-                Objects.Name.Position = Vector2.new(Vector.X, Vector.Y + math.clamp(Distance / 10, 10, 30) - 10)
-                Objects.Name.Size = math.clamp(30 - Distance / 10, 10, 30)
-                Objects.Name.Color = Color3.fromHSV(math.clamp(Distance / 5, 0, 125) / 255, 0.75, 1)
-                Objects.Name.Visible = true
-                Objects.Name.Font = FontValue
-                Objects.Name.Transparency = math.clamp((500 - Distance) / 200, 0.2, 1)
-            else
-                Objects.Name.Visible = false
-            end
+/// Gets the user input and returns the String `input` containing it
+fn get_input() -> String {
+    loop {
+        let mut input: String = String::new();
 
-            Objects.Name.Text = string.format(" ")
+        stdin().read_line(&mut input).expect("Failed to read line.");
 
-            local PartCorners = GetPartCorners(Model.Torso)
-            local VectorTR, OnScreenTR = Camera:WorldToScreenPoint(PartCorners.TR)
-            local VectorBR, OnScreenBR = Camera:WorldToScreenPoint(PartCorners.BR)
-            local VectorTL, OnScreenTL = Camera:WorldToScreenPoint(PartCorners.TL)
-            local VectorBL, OnScreenBL = Camera:WorldToScreenPoint(PartCorners.BL)
+        if !MOVES.contains(&input.trim()) {
+            println!("invalid move. Choose rock, paper or scissors.");
+        } else {
+            input = input.trim().to_owned();
+            break input;
+        }
+    }
+}
 
-            if (OnScreenBL or OnScreenTL or OnScreenBR or OnScreenTR) and Model.Parent.Name ~= game:GetService("Players").LocalPlayer.Team.Name and Visibility then
-                Objects.Box.PointA = Vector2.new(VectorTR.X, VectorTR.Y + 36)
-                Objects.Box.PointB = Vector2.new(VectorTL.X, VectorTL.Y + 36)
-                Objects.Box.PointC = Vector2.new(VectorBL.X, VectorBL.Y + 36)
-                Objects.Box.PointD = Vector2.new(VectorBR.X, VectorBR.Y + 36)
-                Objects.Box.Color = Color3.fromHSV(math.clamp(255, 0, 255) / 255, 0, 255)
-                Objects.Box.Thickness = math.clamp(3 - (Distance / 100), 0, 3)
-                Objects.Box.Transparency = math.clamp((500 - Distance) / 200, 0.2, 1)
-                Objects.Box.Visible = true
-            else
-                Objects.Box.Visible = false
-            end
+/// Gets the user defined max score once and never again
+fn get_max_score() -> String {
+    println!("To what score do you wish to play?");
 
-            RunService.RenderStepped:Wait()
-        end
+    let mut input: String = String::new();
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Failed to read line");
 
-        Objects.Name:Remove()
-        Objects.Box:Remove()
-    end)
-end
+    input
+}
 
-for _, Player in next, game:GetService("Workspace").Players["Bright orange"]:GetChildren() do
-    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
-        ApplyModel(Player)
-    end
-end
+fn main() {
+    println!("Let's play Rock Paper Scissors :)");
+    let mut ask_max: bool = true;
+    let mut max_score: u32 = 0;
+    loop {
+        if ask_max {
+            println!("Choose a max score!");
+            max_score = match get_max_score().trim().parse() {
+                Ok(num) => {
+                    ask_max = false;
+                    num
+                }
+                Err(_) => {
+                    println!("Invalid guess! Make sure you enter a number");
+                    continue;
+                }
+            };
+        }
 
-for _, Player in next, game:GetService("Workspace").Players["Bright blue"]:GetChildren() do
-    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
-        ApplyModel(Player)
-    end
-end
+        println!("Choose! rock, paper, scissors");
+        let pcmove: String = compare();
 
-game:GetService("Workspace").Players["Bright orange"].ChildAdded:Connect(function(Player)
-    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
-        delay(0.5, function()ApplyModel(Player)end)
-    end
-end)
+        match pcmove.as_str() {
+            "rock" => println!("I chose rock"),
+            "paper" => println!("I chose paper"),
+            "scissors" => println!("I chose scissors"),
+            _ => println!(
+                "I am required to check for all, but my value can't be anything other than these"
+            ),
+        }
 
-game:GetService("Workspace").Players["Bright blue"].ChildAdded:Connect(function(Player)
-    if tostring(Player.Parent) ~= tostring(game:GetService("Players").LocalPlayer.TeamColor) then
-        delay(0.5, function()ApplyModel(Player)end)
-    end
-end)
+        println!(
+            "wins: {}. losses: {}. games: {}\n",
+            WINS.lock().unwrap(),
+            LOSSES.lock().unwrap(),
+            GAMES.lock().unwrap()
+        );
 
-UserInputService.InputBegan:Connect(function(Input, GP)
-    if not GP and Input.KeyCode == Enum.KeyCode.Five then
-        Visibility = not Visibility
-    end
-
-    if not GP and Input.KeyCode == Enum.KeyCode.Four then
-        CycleFont()
-    end
-end)
-
+        if *WINS.lock().unwrap() > max_score - 1 {
+            println!("You won!");
+            break;
+        } else if *LOSSES.lock().unwrap() > max_score - 1 {
+            println!("You lost!");
+            break;
+        }
+    }
+    println!("Thanks for playing! Hope you enjoyed\nPress [ENTER] to quit!");
+    io::stdin()
+        .read_line(&mut String::new())
+        .expect("Failed to read line");
+}
                         </code>
                     </pre>
                 </div>
             </a>
             <p id="NL" class="space-underneath">
-                Dit zijn LUA scripts bedoelt om met een C++ injector te injecten in ROBLOX games.
+                Dit zijn mijn eerste Rust projecten. Ik hoop Rust te leren omdat ik denk dat dit later een heel
+                belangrijke taal gaat worden. (2023 geschreven)
             </p>
             <p id="EN" class="space-underneath" style="display: none;">
-                These are LUA scripts meant to be injected into ROBLOX using a C++ injector.
+                These are my first Rust projects. I hope to learn Rust because I think that it is going to be a very
+                important language in the future. (written in 2023)
             </p>
         </main>
         <hr>
