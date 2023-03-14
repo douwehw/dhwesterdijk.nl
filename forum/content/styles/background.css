@@ -1,0 +1,58 @@
+/* 
+   https://codepen.io/bencarr/pen/pgXvLb 
+   -- I changed the colors and converted the SCSS to regular CSS to use -- \
+*/
+
+.wrap {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   overflow-y: hidden;
+   z-index: -1;
+}
+@keyframes rotate360 {
+   0% {
+      transform: rotate(0deg) scale(1);
+  }
+   100% {
+      transform: rotate(360deg) scale(1.5);
+  }
+}
+@keyframes rotate180 {
+   0% {
+      transform: rotate(0deg) scale(1.25);
+  }
+   100% {
+      transform: rotate(180deg) skewX(1);
+  }
+}
+@keyframes rotate90 {
+   0% {
+      transform: rotate(0deg) scale(1);
+  }
+   100% {
+      transform: rotate(90deg) scale(1.5);
+  }
+}
+polygon {
+   fill: white;
+   opacity: 0.05;
+   transform-origin: center center;
+   backface-visibility: hidden;
+   animation: rotate360 30s linear infinite alternate-reverse;
+}
+polygon:nth-child(2n) {
+   animation-name: rotate180;
+   animation-duration: 15s;
+   animation-direction: alternate;
+}
+polygon:nth-child(3n) {
+   animation-name: rotate90;
+   animation-duration: 10s;
+}
+polygon:nth-child(5n) {
+   animation-duration: 30s;
+   animation-direction: alternate-reverse;
+}

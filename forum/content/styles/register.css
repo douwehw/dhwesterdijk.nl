@@ -1,0 +1,39 @@
+div.register-wrapper {
+   background-color: #fff;
+   border: 2px solid #fff;
+   border-radius: 10px;
+   width: 30vw;
+   height: 60vh;
+}
+
+div.reg-welcome-txt {
+   margin: 20px auto auto 20px;
+   font-size: 48px;
+}
+
+input.register {
+   font-size: 22px;
+   width: 80%;
+   margin: 30px 40px 30px 40px;
+   border: none;
+   border-bottom: 1px solid black;
+   cursor: pointer;
+}
+
+input:focus {
+   outline: none;
+}
+
+input.register[type="submit"] {
+   border: none;
+   width: 80%;
+   padding: 10px;
+   margin: none none none none;
+}
+
+input#register {
+   background-color: #0876f7;
+   border: 3px solid #000000;
+   border-radius: 10px;
+   color: #fff;
+}

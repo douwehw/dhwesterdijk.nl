@@ -1,0 +1,56 @@
+div.topic-wrapper {
+   display: grid;
+   justify-content: center;
+   background-color: #fff;
+   border: 2px solid #fff;
+   border-radius: 10px;
+   width: 60vw;
+   height: 60vh;
+   grid-template-columns: 1fr;
+   align-items: center;
+   overflow-y: scroll;
+}
+
+div.topic-wrapper div.topic {
+   margin: 5px auto 15px 30px;
+   border: 2px solid #000;
+   border-radius: 5px;
+   height: 10vh;
+   width: 90%;
+   display: grid;
+   grid-template-columns: 3fr 0.5fr;
+}
+
+div.statistics.wrapper {
+   display: flex;
+}
+
+div.info-wrapper {
+   position: relative;
+}
+
+h1.topic-name, h4.topic-description, h6.posted-by {
+   margin-left: 15%;
+}
+
+h6.posted-by {
+   margin-top: 1%;
+}
+
+img.topic-icon {
+   margin: 5px auto auto 5px;
+   position: absolute;
+}
+
+div.statistics-wrapper {
+   text-align: center;
+   margin-right: 15px;
+}
+
+h4.stats-text {
+   margin-top: 5px;
+}
+
+h1.topics-count {
+   margin-top: 10px;
+}

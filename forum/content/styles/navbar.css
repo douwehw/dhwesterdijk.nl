@@ -1,0 +1,27 @@
+nav {
+   background-color: #fff;
+   overflow: hidden;
+}
+
+nav img {
+   height: 50px;
+   margin: auto auto auto 10px;
+}
+
+nav a {
+   float: right;
+   color: black;
+   text-align: center;
+   padding: 18px 25px;
+   text-decoration: none;
+   font-size: 21px;
+   font-weight: 600;
+}
+
+nav a:hover {
+   background-color: #cacaca;
+} 
+
+div.account-buttons {
+   margin: auto 20px auto auto; 
+}

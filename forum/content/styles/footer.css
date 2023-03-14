@@ -1,0 +1,43 @@
+footer div.credit {
+   position: absolute;
+   z-index: 2;
+   margin: 185px auto auto 50px;
+   font-size: 16px;
+   opacity: 0.3;
+}
+
+footer div.buttons {
+   z-index: 2;
+   position: absolute;
+   margin: 185px auto auto 60%;
+}
+
+div.buttons a {
+   text-decoration: none;
+   margin: 20px;
+   color: #000;
+   opacity: 0.5;
+}
+
+/* https://www.shapedivider.app/ */
+
+.custom-shape-divider-bottom-1678735433 {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   overflow: hidden;
+   line-height: 0;
+   transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678735433 svg {
+   position: relative;
+   display: block;
+   width: calc(114% + 1.3px);
+   height: 167px;
+}
+
+.custom-shape-divider-bottom-1678735433 .shape-fill {
+   fill: #FFFFFF;
+}
