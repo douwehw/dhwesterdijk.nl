@@ -1,4 +1,4 @@
-div.topic-wrapper {
+div.topic-wrapper, div.thread-wrapper {
    display: grid;
    justify-content: center;
    background-color: #fff;
@@ -53,4 +53,9 @@ h4.stats-text {
 
 h1.topics-count {
    margin-top: 10px;
+}
+
+a.open-thread {
+   all: unset;
+   cursor: pointer;
 }

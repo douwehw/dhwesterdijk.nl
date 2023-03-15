@@ -12,6 +12,7 @@
    <link rel="stylesheet" href="content/styles/login.css">
    <link rel="stylesheet" href="content/styles/topics.css">
    <link rel="stylesheet" href="content/styles/register.css">
+   <link rel="stylesheet" href="content/styles/thread.css">
    <title>Forum</title>
 </head>
 

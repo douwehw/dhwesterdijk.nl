@@ -1,0 +1,14 @@
+div.thread-wrapper {
+   display: block;
+   overflow-x: hidden;
+}
+
+h1.thread-name {
+   text-align: center;
+   margin-top: 10px;
+}
+
+hr.thread-name-underline {
+   border: 1px solid black;
+   margin-top: 5px;
+}
