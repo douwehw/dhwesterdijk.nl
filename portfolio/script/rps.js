@@ -16,7 +16,7 @@ let pScore = 0;
 
 
 function convert() {
-    move.value = move.value.toLowerCase()
+    move.value = move.value.toLowerCase();
 
     switch (move.value) {
         case "r":
@@ -26,9 +26,9 @@ function convert() {
             move.value = "paper";
             break;
         case "s":
-            move.value = "s";
+            move.value = "scissors";
             break;
-    }
+    } return move.value;
 }
 
 function princrement() { //print + increment
