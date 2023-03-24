@@ -1,32 +1,27 @@
 <?php
 
-require_once('boilerplate/header.php');
+require_once('app/boilerplate/header.php');
 
-$topic_template = file_get_contents('boilerplate/topic.php');
+@require_once('app/database/Database.php');
+@require_once('app/helpers/Auth.php');
+
+
+if (!Auth::loggedIn()) {
+   header('location: login.php');
+}
+
+$thread_template = file_get_contents('app/boilerplate/threads.php')
 
 ?>
 
 <main>
-   <div class="topic-wrapper">
-
-      <?php
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      echo $topic_template;
-      ?>
-
+   <div class="thread-wrapper">
+      <?= $thread_template ?>
    </div>
 </main>
 
 <?php
 
-require_once('boilerplate/footer.php');
+require_once('app/boilerplate/footer.php');
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-require_once('boilerplate/header.php')
+require_once('app/boilerplate/header.php')
 
 ?>
 
@@ -21,6 +21,6 @@ require_once('boilerplate/header.php')
 
 <?php
 
-require_once('boilerplate/footer.php')
+require_once('app/boilerplate/footer.php')
 
 ?>

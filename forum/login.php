@@ -1,13 +1,13 @@
 <?php
 
-require('boilerplate/header.php');
+require('app/boilerplate/header.php');
 
 ?>
 
 <main>
    <div class="login-wrapper">
       <div class="welcome-txt">Welcome back</div>
-      <form action="" method="POST">
+      <form action="app/handlers/login.php" method="POST">
          <input id="username" type="text" name="username" placeholder="Username">
          <input id="password" type="password" name="password" placeholder="Password">
          <input id="login" type="submit" value="login">
@@ -19,6 +19,6 @@ require('boilerplate/header.php');
 
 <?php
 
-require('boilerplate/footer.php');
+require('app/boilerplate/footer.php');
 
 ?>
