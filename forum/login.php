@@ -17,8 +17,4 @@ require('app/boilerplate/header.php');
 </main>
 
 
-<?php
-
-require('app/boilerplate/footer.php');
-
-?>
+<?php require('app/boilerplate/footer.php'); ?>

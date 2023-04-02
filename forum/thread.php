@@ -19,8 +19,4 @@ require_once('app/boilerplate/header.php')
    </div>
 </main>
 
-<?php
-
-require_once('app/boilerplate/footer.php')
-
-?>
+<?php require_once('app/boilerplate/footer.php') ?>

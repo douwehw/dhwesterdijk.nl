@@ -12,7 +12,7 @@ div.thread-wrapper {
 }
 
 div.thread-wrapper div.thread {
-   margin: 5px auto 15px 30px;
+   margin: 20px auto auto 30px;
    border: 2px solid #000;
    border-radius: 5px;
    height: 10vh;

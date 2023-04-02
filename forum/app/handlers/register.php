@@ -28,4 +28,3 @@ if(Database::query($sql, $placeholders)) {
    header('location: ../../index.php');
    exit(0);
 }
-

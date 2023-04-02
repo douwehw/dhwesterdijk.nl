@@ -5,7 +5,10 @@
 }
 
 body {
-   background-color: #054085;
+   background-color: hsl(212, 93%, 27%);
+   /* nolan mode
+   background-image: url("../images/nolan-compressed-slowed.gif");
+   background-size: contain; */
 }
 
 main {
@@ -13,4 +16,86 @@ main {
    justify-content: center;
    align-items: center;
    height: 70vh;
+}
+
+.wrapper {
+   margin-top: 25px;
+   display: grid;
+   grid-template-columns: auto;
+}
+
+button.new-topic {
+   background-color: #0764d1;
+   color: #fff;
+   font-size: 16px;
+   font-weight: 500;
+   border-radius: 10px;
+   margin: 5px;
+   top: 90px;
+   z-index: 3;
+   left: 69vw;
+   width: fit-content;
+   position: absolute;
+}
+
+button.new-topic:hover {
+   background-color: #054b9e;
+   color: #fff;
+   font-size: 16px;
+   font-weight: 500;
+   border-radius: 10px;
+   margin: 5px;
+   top: 90px;
+   z-index: 3;
+   left: 69vw;
+   width: fit-content;
+   position: absolute;
+}
+
+.thread-bar {
+   top: 90px;
+   position: absolute;
+   z-index: 2;
+   height: 5vh;
+   width: 60.3vw;
+   background-color: #fff;
+   border-radius: 10px;
+}
+
+.create-new-topic {
+   display: none;
+   place-items: center;
+   right: 25%;
+   border: 2px solid black;
+   border-radius: 10px;
+   position: absolute;
+   background-color: #fff;
+   z-index: 10;
+   width: 50vw;
+   height: 50vh;
+   word-wrap: break-word;
+}
+
+.create-new-topic form input#topic-name {
+   border: 1px solid black;
+   padding: 5px;
+   font-weight: bold;
+   margin: 5px;
+}
+
+.create-new-topic form textarea#topic-content {
+   border: 1px solid black;
+   padding: 5px;
+   margin: 5px;
+   margin-top: 60px;
+   margin-bottom: 20px;
+   word-wrap: break-word;
+   resize: none;
+   width: 80%;
+   height: 200px;
+}
+
+.create-new-topic form input#create-topic {
+   padding: 5px;
+   margin: 5px;
 }

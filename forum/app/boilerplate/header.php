@@ -12,6 +12,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="content/scripts/main.js" defer></script>
    <link rel="stylesheet" href="content/styles/main.css">
    <link rel="stylesheet" href="content/styles/background.css">
    <link rel="stylesheet" href="content/styles/footer.css">
@@ -69,6 +70,7 @@
          <div class="account-buttons">
 
             <?php if (Auth::loggedIn()) : ?>
+               <a href="/">Home</a>
                <div class="dropdown">
                   <a href="">Profiel</a>
                   <div class="dropdown-content">
@@ -77,7 +79,6 @@
                      <a href="/app/helpers/logout.php">logout</a>
                   </div>
                </div>
-               <a href="/">Home</a>
             <?php endif; ?>
 
             <?php if (!Auth::loggedIn()) : ?>
