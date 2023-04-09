@@ -15,7 +15,7 @@ function Projects(siteLang) {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 mb-12 gap-2">
             <ProjectSquare
-              href="https://dhwesterdijk.nl/portfolio"
+              href="https://dhwesterdijk.nl"
               name="Portfolio"
               description="Mijn portfolio, orgineel gemaakt voor school maar later voor mezelf nagemaakt."
               language="React"
@@ -104,7 +104,7 @@ function Projects(siteLang) {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 mb-12 gap-2">
             <ProjectSquare
-              href="https://dhwesterdijk.nl/portfolio"
+              href="https://dhwesterdijk.nl"
               name="Portfolio"
               description="My portfolio, you're on it right now. Originally made for school but later rebuilt for personal use."
               language="React"
