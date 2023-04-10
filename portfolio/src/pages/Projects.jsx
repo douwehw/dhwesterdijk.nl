@@ -97,9 +97,9 @@ function Projects(siteLang) {
 
           <p className="text-red-300 text-md leading-5 mb-12 italic text-opacity-70">
             Note that due to me being Dutch and me going to a Dutch college mean that{" "}
-            <span className="font-extrabold">all</span> my school related projects will be in Dutch. If you can not read
-            a single word in Dutch I can only suggest a browser extension to translate the webpage for you. Aplogies for
-            the inconvinience.
+            <span className="font-extrabold">all</span> my school related projects will be in Dutch. If you are unable
+            to read Dutch, then I suggest a browser extension to translate the webpage for you. Aplogies for the
+            inconvinience.
           </p>
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 mb-12 gap-2">
