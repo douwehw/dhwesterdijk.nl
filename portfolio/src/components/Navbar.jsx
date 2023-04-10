@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Navbar({ SetSiteLang, siteLang }) {
   const NavIcons = () => {
     return (
-      <div className="grid float-right m-4">
+      <div className="md:grid hidden float-right m-4">
         <ul className="grid grid-cols-3 gap-3">
           <li>
             <a href="https://github.com/48exa" target="_blank">
@@ -31,7 +31,7 @@ function Navbar({ SetSiteLang, siteLang }) {
 
   const NavButton = ({ children }) => {
     return (
-      <li className="transition ease-in-out delay-[10] rounded-lg text-gray-300 hover:text-white hover:bg-[#2a2f3d] p-2 mt-2 cursor-pointer break-normal">
+      <li className="transition ease-in-out delay-[10] rounded-lg text-gray-300 hover:text-white hover:bg-[#2a2f3d] p-2 mt-2 cursor-pointer text-center">
         {children}
       </li>
     );
@@ -58,11 +58,11 @@ function Navbar({ SetSiteLang, siteLang }) {
           <Link to="/">
             <NavButton>{siteLang === "NL" ? "Over Mij" : "About Me"}</NavButton>
           </Link>
-          <p className="mt-3 p-1 text-opacity-40 text-white">•</p>
+          <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
           <Link to="/projects">
             <NavButton>{siteLang === "NL" ? "Projecten" : "Projects"}</NavButton>
           </Link>
-          <p className="mt-3 p-1 text-opacity-40 text-white">•</p>
+          <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
           <Link to="/experience">
             <NavButton>{siteLang === "NL" ? "Ervaring met coderen" : "Coding experience"}</NavButton>
           </Link>
@@ -72,7 +72,7 @@ function Navbar({ SetSiteLang, siteLang }) {
   };
 
   return (
-    <nav className="bg-[#212c3675] z-50 fixed m-3 backdrop-blur-[6px] rounded-md border-solid border-spacing-4 border border-[#425d72] w-[540px] md:w-[70%]">
+    <nav className="bg-[#212c3675] z-50 fixed m-3 backdrop-blur-[6px] rounded-md border-solid border-spacing-4 border border-[#425d72] w-[400px] md:w-[70%]">
       <NavPages />
       <NavIcons />
     </nav>
