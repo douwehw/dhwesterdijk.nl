@@ -1,8 +1,7 @@
 import { FiMail } from "react-icons/fi";
 import { SiGithub, SiDiscord } from "react-icons/si";
 import Flag from "react-world-flags";
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 function Navbar({ SetSiteLang, siteLang }) {
   const NavIcons = () => {
@@ -31,7 +30,7 @@ function Navbar({ SetSiteLang, siteLang }) {
 
   const NavButton = ({ children }) => {
     return (
-      <li className="transition ease-in-out delay-[10] rounded-lg text-gray-300 hover:text-white hover:bg-[#2a2f3d] p-2 mt-2 cursor-pointer text-center">
+      <li className="transition ease-in-out delay-[10] rounded-lg text-gray-300 hover:text-white hover:bg-[#2a2f3d] p-2 cursor-pointer text-center">
         {children}
       </li>
     );
@@ -55,17 +54,17 @@ function Navbar({ SetSiteLang, siteLang }) {
       <div className="float-left">
         <ul className="flex flex-row">
           <TranslateFlagButton />
-          <Link to="/">
+          <NavLink to="/" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[6px]" : "mt-2")}>
             <NavButton>{siteLang === "NL" ? "Over Mij" : "About Me"}</NavButton>
-          </Link>
+          </NavLink>
           <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
-          <Link to="/projects">
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[6px]" : "mt-2")}>
             <NavButton>{siteLang === "NL" ? "Projecten" : "Projects"}</NavButton>
-          </Link>
+          </NavLink>
           <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
-          <Link to="/experience">
+          <NavLink to="/experience" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[6px]" : "mt-2 hover:bg-transparent")}>
             <NavButton>{siteLang === "NL" ? "Ervaring met coderen" : "Coding experience"}</NavButton>
-          </Link>
+          </NavLink>
         </ul>
       </div>
     );
