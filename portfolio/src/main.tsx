@@ -5,21 +5,9 @@ import "./index.css";
 import 'react-tippy/dist/tippy.css';
 import { BrowserRouter } from "react-router-dom";
 
-// declare function require(name:string);
-
-// var express = require('express')
-// var cors = require('cors')
-// var app = express()
-
-// app.use(cors())
-
-// app.get('/products/:id', function (req, res, next) {
-//   res.json({msg: 'This is CORS-enabled for all origins!'})
-// })
-
-// app.listen(80, function () {
-//   console.log('CORS-enabled web server listening on port 80')
-// })
+// {document.body.classList.add("bg-gradient-[-45deg]")}
+// {document.body.classList.add("from-black")}
+// {document.body.classList.add("to-[#141c2e]")}
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

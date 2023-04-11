@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 function Navbar({ SetSiteLang, siteLang }) {
   const NavIcons = () => {
     return (
-      <div className="md:grid hidden float-right m-4">
+      <div className="md:grid hidden float-right m-[18px]">
         <ul className="grid grid-cols-3 gap-3">
           <li>
             <a href="https://github.com/48exa" target="_blank">
@@ -30,7 +30,7 @@ function Navbar({ SetSiteLang, siteLang }) {
 
   const NavButton = ({ children }) => {
     return (
-      <li className="transition ease-in-out delay-[10] rounded-lg text-gray-300 hover:text-white hover:bg-[#2a2f3d] p-2 cursor-pointer text-center">
+      <li className="transition ease-in-out delay-[10] rounded-lg text-gray-300 hover:text-white hover:bg-[#2a2f3d] p-[6px] cursor-pointer text-center">
         {children}
       </li>
     );
@@ -39,7 +39,7 @@ function Navbar({ SetSiteLang, siteLang }) {
   const TranslateFlagButton = () => {
     return (
       <button
-        className="transition ease-in-out delay-[10] rounded-lg hover:bg-[#2a2f3d] p-2 m-1 mt-2 cursor-pointer w-10 h-10"
+        className="transition ease-in-out delay-[10] rounded-lg hover:bg-[#2a2f3d] p-2 m-1 cursor-pointer w-10 h-10"
         onClick={() => {
           siteLang === "NL" ? SetSiteLang("GB") : SetSiteLang("NL");
         }}
@@ -51,18 +51,18 @@ function Navbar({ SetSiteLang, siteLang }) {
 
   const NavPages = () => {
     return (
-      <div className="float-left">
+      <div className="md:float-left flex items-center h-[60px]">
         <ul className="flex flex-row">
           <TranslateFlagButton />
-          <NavLink to="/" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[6px]" : "mt-2")}>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2")}>
             <NavButton>{siteLang === "NL" ? "Over Mij" : "About Me"}</NavButton>
           </NavLink>
           <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
-          <NavLink to="/projects" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[6px]" : "mt-2")}>
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2")}>
             <NavButton>{siteLang === "NL" ? "Projecten" : "Projects"}</NavButton>
           </NavLink>
           <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
-          <NavLink to="/experience" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[6px]" : "mt-2 hover:bg-transparent")}>
+          <NavLink to="/experience" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2 hover:bg-transparent")}>
             <NavButton>{siteLang === "NL" ? "Ervaring met coderen" : "Coding experience"}</NavButton>
           </NavLink>
         </ul>
@@ -71,7 +71,7 @@ function Navbar({ SetSiteLang, siteLang }) {
   };
 
   return (
-    <nav className="bg-[#212c3675] z-50 fixed m-3 backdrop-blur-[6px] rounded-md border-solid border-spacing-4 border border-[#425d72] w-[400px] md:w-[70%]">
+    <nav className="bg-[#212c3675] z-50 fixed m-3 backdrop-blur-[6px] rounded-md border-solid border-spacing-4 border border-[#425d72] w-[370px] md:w-[70%]">
       <NavPages />
       <NavIcons />
     </nav>

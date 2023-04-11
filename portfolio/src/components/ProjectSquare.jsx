@@ -4,7 +4,7 @@ import { AiOutlineTrophy } from "react-icons/ai"
 import { CgSandClock } from "react-icons/cg"
 
 const Languages = {
-   Javascript: "#f0db4f",
+   JavaScript: "#f0db4f",
    htmlcss: "#e34c26",
    React: "#61dbfb",
    PHP: "#787cb5",
@@ -30,7 +30,7 @@ function ProjectSquare({ href, name, description, language, rating, hours }) {
             <AiOutlineTrophy className="mr-1 w-4 h-4" /> {rating}/10
           </p>
           <p className="flex flex-row items-center justify-center">
-            <CgSandClock className="mr-1 w-4 h-4" /> {hours} hrs
+            <CgSandClock className="mr-1 w-4 h-4" /> {hours}
           </p>
         </div>
       </div>
