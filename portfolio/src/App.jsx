@@ -13,6 +13,10 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 
 function App() {
+  if (localStorage.getItem("lang") !== "NL" || localStorage.getItem("lang") !== "EN") {
+    localStorage.setItem("lang", "NL");
+  }
+
   const [siteLang, SetSiteLang] = React.useState(localStorage.getItem("lang"));
 
   return (
