@@ -1,16 +1,16 @@
 import SiteContainer from "../components/SiteContainer";
 import ProjectSquare from "../components/ProjectSquare";
 import Divider from "../components/Divider";
-import { AiOutlineTrophy } from "react-icons/ai"
+import scrollToTop from "../util/scrollToTop";
 
 function Projects(siteLang) {
   const ProjectsNL = () => {
     return (
       <SiteContainer>
         <>
-          <h1 className="mt-28 font-bold text-5xl mb-4">Projecten 📑</h1>
+          <h1 className="font-bold text-5xl mb-4">Projecten 📑</h1>
           <p className="text-gray-300 text-lg leading-6 mb-12">
-            Dit zijn mijn projecten, zowel schoolwerk als vrijetijd. Ik probeer dit zo veel mogelijk te updaten en zo
+            Dit zijn mijn projecten, zowel schoolwerk als vrije tijd. Ik probeer dit zo veel mogelijk te updaten en zo
             accuraat mogelijk te houden. Je kan hier zin welke taal ik (het meeste) heb gebruikt, mijn rating van het
             project en hoeveel tijd het mij (ongeveer) heeft gekost.
           </p>
@@ -97,7 +97,7 @@ function Projects(siteLang) {
     return (
       <SiteContainer>
         <>
-          <h1 className="mt-28 font-bold text-5xl mb-4">Projects 📑</h1>
+          <h1 className="font-bold text-5xl mb-4">Projects 📑</h1>
           <p className="text-gray-300 text-lg leading-6 mb-4">
             These are my projects, both school and spare time. I try to update this page as much as possible and to keep
             the ratings and time as accurate as I can. You can see on each widget what language I (mostly) used, my
@@ -188,6 +188,9 @@ function Projects(siteLang) {
       </SiteContainer>
     );
   };
+
+  scrollToTop();
+  sessionStorage.setItem("latestPage", "/projects")
 
   if (siteLang.siteLang === "NL") return <ProjectsNL />;
   else return <ProjectsEN />;

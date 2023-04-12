@@ -1,13 +1,14 @@
 import SiteContainer from "../components/SiteContainer";
 import ItalicLink from "../components/ItalicLink";
 import getAge from "../util/getAge";
+import scrollToTop from "../util/scrollToTop"
 
 function AboutMe(siteLang) {
   const AboutMeNL = () => {
     return (
       <SiteContainer>
         <>
-          <h1 className="mt-28 font-bold text-5xl mb-4">Hallo, ik ben Douwe 👋</h1>
+          <h1 className="font-bold text-5xl mb-4">Hallo, ik ben Douwe 👋</h1>
           <p className="text-gray-300 text-lg leading-6 mb-12">
             Ik ben een eerste-jaars student aan het Alfa-College als Software Developer. Ik volg deze opleiding sinds
             september 2022. Ik ben {getAge("2004/11/26")} jaar oud, mijn verjaardag is op 26 november en ik heb 3 honden
@@ -71,7 +72,7 @@ function AboutMe(siteLang) {
     return (
       <SiteContainer>
         <>
-          <h1 className="mt-28 font-bold text-5xl mb-4">Hi, I'm Douwe 👋</h1>
+          <h1 className="font-bold text-5xl mb-4">Hi, I'm Douwe 👋</h1>
           <p className="text-gray-300 text-lg leading-6 mb-12">
             I am a first year student at the Alfa-College where I study to become a Software Developer. I've been taking
             this course since September 2022. I am 18 years old, my birthday is on the 26th of November and I have 3
@@ -130,6 +131,9 @@ function AboutMe(siteLang) {
       </SiteContainer>
     );
   };
+
+  scrollToTop();
+  sessionStorage.setItem("latestPage", "/")
 
   if (siteLang.siteLang === "NL") return <AboutMeNL />;
   else return <AboutMeEN />;

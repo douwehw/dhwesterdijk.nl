@@ -24,6 +24,7 @@ import SiteContainer from "../components/SiteContainer";
 import ExperienceIcon from "../components/ExperienceIcon";
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tippy";
+import scrollToTop from "../util/scrollToTop";
 
 function Experience(siteLang) {
   const ExperienceList = () => {
@@ -57,7 +58,7 @@ function Experience(siteLang) {
     return (
       <SiteContainer>
         <>
-          <h1 className="mt-28 font-bold text-5xl mb-4">Ervaring met coderen 💻</h1>
+          <h1 className="font-bold text-5xl mb-4">Ervaring met coderen 💻</h1>
           <p className="text-gray-300 text-lg leading-6 mb-12">
             Ik programmeer sinds 2022. Ik ben destijds begonnen met het leren van Python, dit heeft mij erg veel
             geholpen om de denken op de manier die nodig is om te programmeren. Ik ben ook in September van datzelfde
@@ -92,7 +93,7 @@ function Experience(siteLang) {
     return (
       <SiteContainer>
         <>
-          <h1 className="mt-28 font-bold text-5xl mb-4">Coding experience 💻</h1>
+          <h1 className="font-bold text-5xl mb-4">Coding experience 💻</h1>
           <p className="text-gray-300 text-lg leading-6 mb-12">
             I started coding since 2022. In that year I picked up Python as my first programming language, this has
             helped me grasp the mindset required to code and problem solve. In September of the same year I started
@@ -122,6 +123,9 @@ function Experience(siteLang) {
       </SiteContainer>
     );
   };
+
+  scrollToTop();
+  sessionStorage.setItem("latestPage", "/experience")
 
   if (siteLang.siteLang === "NL") return <ExperienceNL />;
   else return <ExperienceEN />;

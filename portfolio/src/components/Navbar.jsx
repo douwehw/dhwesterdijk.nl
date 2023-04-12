@@ -41,7 +41,8 @@ function Navbar({ SetSiteLang, siteLang }) {
       <button
         className="transition ease-in-out delay-[10] rounded-lg hover:bg-[#2a2f3d] p-2 m-1 cursor-pointer w-10 h-10"
         onClick={() => {
-          siteLang === "NL" ? SetSiteLang("GB") : SetSiteLang("NL");
+          if (siteLang === "NL") {localStorage.setItem("lang", "GB")} else {localStorage.setItem("lang", "NL")}
+          SetSiteLang(localStorage.getItem("lang"))
         }}
       >
         <Flag code={siteLang} />
@@ -71,7 +72,7 @@ function Navbar({ SetSiteLang, siteLang }) {
   };
 
   return (
-    <nav className="bg-[#212c3675] z-50 fixed m-3 backdrop-blur-[6px] rounded-md border-solid border-spacing-4 border border-[#425d72] w-[370px] md:w-[70%]">
+    <nav className="bg-[#3f4d5a5d] z-50 fixed m-3 backdrop-blur-[6px] rounded-md border-solid border-spacing-4 border border-[#425d72] w-[370px] md:w-[70%]">
       <NavPages />
       <NavIcons />
     </nav>
