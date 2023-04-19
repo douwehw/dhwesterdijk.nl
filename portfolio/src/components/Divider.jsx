@@ -1,6 +1,6 @@
 import React from "react";
 
-function Divider({title}) {
+function Divider({ title }) {
   return (
     <>
       <h3 className="text-3xl mb-4 text-gray-200">{title}</h3>

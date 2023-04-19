@@ -190,7 +190,7 @@ function Projects(siteLang) {
   };
 
   scrollToTop();
-  sessionStorage.setItem("latestPage", "/projects")
+  sessionStorage.setItem("latestPage", "/projects");
 
   if (siteLang.siteLang === "NL") return <ProjectsNL />;
   else return <ProjectsEN />;

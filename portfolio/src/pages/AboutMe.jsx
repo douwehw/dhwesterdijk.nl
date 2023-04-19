@@ -1,7 +1,7 @@
 import SiteContainer from "../components/SiteContainer";
 import ItalicLink from "../components/ItalicLink";
 import getAge from "../util/getAge";
-import scrollToTop from "../util/scrollToTop"
+import scrollToTop from "../util/scrollToTop";
 
 function AboutMe(siteLang) {
   const AboutMeNL = () => {
@@ -133,7 +133,7 @@ function AboutMe(siteLang) {
   };
 
   scrollToTop();
-  sessionStorage.setItem("latestPage", "/")
+  sessionStorage.setItem("latestPage", "/");
 
   if (siteLang.siteLang === "NL") return <AboutMeNL />;
   else return <AboutMeEN />;

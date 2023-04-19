@@ -20,7 +20,7 @@ function App() {
   const [siteLang, SetSiteLang] = React.useState(localStorage.getItem("lang"));
 
   return (
-    <AppWrapper>
+    <AppWrapper> 
       <>
         <Navbar className="absolute" SetSiteLang={SetSiteLang} siteLang={siteLang} />
         <Routes>

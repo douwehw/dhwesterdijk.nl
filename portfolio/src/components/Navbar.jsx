@@ -41,8 +41,12 @@ function Navbar({ SetSiteLang, siteLang }) {
       <button
         className="transition ease-in-out delay-[10] rounded-lg hover:bg-[#2a2f3d] p-2 m-1 cursor-pointer w-10 h-10"
         onClick={() => {
-          if (siteLang === "NL") {localStorage.setItem("lang", "GB")} else {localStorage.setItem("lang", "NL")}
-          SetSiteLang(localStorage.getItem("lang"))
+          if (siteLang === "NL") {
+            localStorage.setItem("lang", "GB");
+          } else {
+            localStorage.setItem("lang", "NL");
+          }
+          SetSiteLang(localStorage.getItem("lang"));
         }}
       >
         <Flag code={siteLang} />
@@ -55,15 +59,30 @@ function Navbar({ SetSiteLang, siteLang }) {
       <div className="md:float-left flex items-center h-[60px]">
         <ul className="flex flex-row">
           <TranslateFlagButton />
-          <NavLink to="/" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2")}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2"
+            }
+          >
             <NavButton>{siteLang === "NL" ? "Over Mij" : "About Me"}</NavButton>
           </NavLink>
           <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
-          <NavLink to="/projects" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2")}>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2"
+            }
+          >
             <NavButton>{siteLang === "NL" ? "Projecten" : "Projects"}</NavButton>
           </NavLink>
           <p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
-          <NavLink to="/experience" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2 hover:bg-transparent")}>
+          <NavLink
+            to="/experience"
+            className={({ isActive }) =>
+              isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2 hover:bg-transparent"
+            }
+          >
             <NavButton>{siteLang === "NL" ? "Ervaring met coderen" : "Coding experience"}</NavButton>
           </NavLink>
         </ul>

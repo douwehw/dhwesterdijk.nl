@@ -1,8 +1,15 @@
 import { Tooltip } from "react-tippy";
+import { motion } from "framer-motion";
 
 function ExperienceIcon({ name, icon }) {
   return (
-    <li className="flex p-2">
+    <motion.li
+      whileHover={{
+        scale: 1.2,
+        transition: { duration: 0.2 },
+      }}
+      className="flex p-2"
+    >
       <Tooltip
         title={name}
         animation="shift"
@@ -16,7 +23,7 @@ function ExperienceIcon({ name, icon }) {
       >
         <span>{icon({ className: "h-6 w-6" })}</span>
       </Tooltip>
-    </li>
+    </motion.li>
   );
 }
 

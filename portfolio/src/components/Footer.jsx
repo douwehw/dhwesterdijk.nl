@@ -12,7 +12,7 @@ function Footer() {
         <Link to="/contact">
           <h2 className="text-white/30 text-base italic font-bold flex flex-row gap-1 items-center hover:underline">
             <FiMail />
-             Contact
+            Contact
           </h2>
         </Link>
       </div>

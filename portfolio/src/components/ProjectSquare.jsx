@@ -1,23 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { AiOutlineTrophy } from "react-icons/ai"
-import { CgSandClock } from "react-icons/cg"
+import { AiOutlineTrophy } from "react-icons/ai";
+import { CgSandClock } from "react-icons/cg";
 
 const Languages = {
-   JavaScript: "#f0db4f",
-   htmlcss: "#e34c26",
-   React: "#61dbfb",
-   PHP: "#787cb5",
-   Rust: "#8b0f4e",
-}
+  JavaScript: "#f0db4f",
+  htmlcss: "#e34c26",
+  React: "#61dbfb",
+  PHP: "#787cb5",
+  Rust: "#8b0f4e",
+};
 
 function ProjectSquare({ href, name, description, language, rating, hours }) {
   return (
-    <a href={href} rel="noreferrer" target="_blank">
-      <div className="flex flex-col h-36 p-4 bg-white/10 dark:bg-black/10 rounded-md border border-slate-400 hover:border-slate-700 dark:border-slate-800 dark:hover:border-slate-600 transition-colors duration-75 cursor-pointer">
+    <motion.a
+      whileHover={{
+        scale: 1.03,
+        transition: { duration: 0.2 },
+      }}
+      href={href}
+      rel="noreferrer"
+      target="_blank"
+    >
+      <div className="flex flex-col h-36 p-4 bg-black/10 rounded-md border border-slate-800 hover:border-slate-600 transition-colors duration-75 cursor-pointer">
         <h1 className="font-semibold mb-1">{name}</h1>
-        <p className="text-sm text-gray-800/70 dark:text-gray-100/70">{description}</p>
-        <div className="mt-auto flex flex-row gap-4 text-gray-700 dark:text-gray-300 text-sm">
+        <p className="text-sm text-gray-100/70">{description}</p>
+        <div className="mt-auto flex flex-row gap-4 text-gray-300 text-sm">
           <p className="flex flex-row items-center">
             <motion.div
               className="w-3 h-3 rounded-full mr-1"
@@ -34,7 +42,7 @@ function ProjectSquare({ href, name, description, language, rating, hours }) {
           </p>
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 }
 

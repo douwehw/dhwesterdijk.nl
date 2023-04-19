@@ -46,7 +46,7 @@ function Experience(siteLang) {
         <ExperienceIcon icon={SiVisualstudio} name="Visual Studio" />
         <ExperienceIcon icon={SiFigma} name="Figma" />
         <ExperienceIcon icon={SiAdobephotoshop} name="Photoshop" />
-        <ExperienceIcon icon={SiAdobepremierepro} name="Premiere" />
+        <ExperienceIcon icon={SiAdobepremierepro} name="Premiere Pro" />
         <ExperienceIcon icon={SiIntellijidea} name="Intelij IDEA" />
         <ExperienceIcon icon={SiGit} name="Git" />
         <ExperienceIcon icon={SiGithub} name="GitHub" />
@@ -125,7 +125,7 @@ function Experience(siteLang) {
   };
 
   scrollToTop();
-  sessionStorage.setItem("latestPage", "/experience")
+  sessionStorage.setItem("latestPage", "/experience");
 
   if (siteLang.siteLang === "NL") return <ExperienceNL />;
   else return <ExperienceEN />;
