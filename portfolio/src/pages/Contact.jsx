@@ -13,8 +13,8 @@ function Contact(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Stuur mij een email 📬</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Heb je een vraag over iets of wil je contact opnemen voor iets? Stuur mij graag een email! ik probeer altijd zo snel mogelijk te
-						reageren.
+						Heb je een vraag over iets of wil je contact opnemen voor iets? Stuur mij gerust een email! ik probeer altijd zo snel mogelijk
+						te reageren.
 					</p>
 
 					<div className="md:col-span-2 row-span-3 bg-opacity-50 bg-white/5 rounded-md p-4 border border-zinc-800/50 mb-10">
