@@ -18,11 +18,11 @@ function Navbar({ SetSiteLang, siteLang }) {
 							<SiDiscord className="w-6 h-6 transition ease-in-out delay-[10] hover:text-[#9aaddf] cursor-pointer" />
 						</li>
 					</a>
-					<Link to="/contact">
+					<NavLink to="/contact" className={({ isActive }) => isActive && "text-[#9aaddf]"}>
 						<li>
 							<FiMail className="w-6 h-6 transition ease-in-out delay-[10] hover:text-[#9aaddf] cursor-pointer" />
 						</li>
-					</Link>
+					</NavLink>
 				</ul>
 			</div>
 		);
@@ -59,20 +59,13 @@ function Navbar({ SetSiteLang, siteLang }) {
 			<div className="md:float-left flex items-center h-[60px]">
 				<ul className="flex flex-row">
 					<TranslateFlagButton />
-					<NavLink
-						to="/"
-						className={({ isActive }) =>
-							isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2"
-						}
-					>
+					<NavLink to="/" className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2")}>
 						<NavButton>{siteLang === "NL" ? "Over Mij" : "About Me"}</NavButton>
 					</NavLink>
 					<p className="mt-3 p-1 text-opacity-40 text-white hidden md:block">•</p>
 					<NavLink
 						to="/projects"
-						className={({ isActive }) =>
-							isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2"
-						}
+						className={({ isActive }) => (isActive ? "bg-[#2a2f3d] flex items-center rounded-lg h-11 mt-[2px]" : "mt-2")}
 					>
 						<NavButton>{siteLang === "NL" ? "Projecten" : "Projects"}</NavButton>
 					</NavLink>

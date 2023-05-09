@@ -147,7 +147,6 @@ function AboutMe(siteLang) {
 	};
 
 	scrollToTop();
-	sessionStorage.setItem("latestPage", "/");
 
 	if (siteLang.siteLang === "NL") return <AboutMeNL />;
 	else return <AboutMeEN />;
