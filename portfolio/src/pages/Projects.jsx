@@ -46,7 +46,7 @@ function Projects(siteLang) {
 							href="https://dhwesterdijk.nl/forum"
 							name="Forum"
 							description="Introductie in Backend Development, PHP en (My)SQL."
-							language="PHP"
+							language="React"
 							rating="5.5"
 							hours="8"
 						/>
