@@ -13,26 +13,26 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 
 function App() {
-  if (localStorage.getItem("lang") !== "NL" || localStorage.getItem("lang") !== "EN") {
-    localStorage.setItem("lang", "NL");
-  }
+	if (localStorage.getItem("lang") !== "NL" || localStorage.getItem("lang") !== "EN") {
+		localStorage.setItem("lang", "NL");
+	}
 
-  const [siteLang, SetSiteLang] = React.useState(localStorage.getItem("lang"));
+	const [siteLang, SetSiteLang] = React.useState(localStorage.getItem("lang"));
 
-  return (
-    <AppWrapper> 
-      <>
-        <Navbar className="absolute" SetSiteLang={SetSiteLang} siteLang={siteLang} />
-        <Routes>
-          <Route path="/" element={<AboutMe siteLang={siteLang} />} />
-          <Route path="/projects" element={<Projects siteLang={siteLang} />} />
-          <Route path="/experience" element={<Experience siteLang={siteLang} />} />
-          <Route path="/contact" element={<Contact siteLang={siteLang} />} />
-        </Routes>
-        <Footer />
-      </>
-    </AppWrapper>
-  );
+	return (
+		<AppWrapper>
+			<>
+				<Navbar className="absolute" SetSiteLang={SetSiteLang} siteLang={siteLang} />
+				<Routes>
+					<Route path="/" element={<AboutMe siteLang={siteLang} />} />
+					<Route path="/projects" element={<Projects siteLang={siteLang} />} />
+					<Route path="/experience" element={<Experience siteLang={siteLang} />} />
+					<Route path="/contact" element={<Contact siteLang={siteLang} />} />
+				</Routes>
+				<Footer />
+			</>
+		</AppWrapper>
+	);
 }
 
 export default App;
