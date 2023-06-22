@@ -1,0 +1,40 @@
+/*
+    Extra Styling
+*/
+p.last-post-timestamp {
+    width: 100%;
+    bottom: -10px !important;
+    right: -35%;
+}
+
+.reply-username {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.reply-timestamp {
+    display: block;
+    width: 100%;
+    font-size: 9px;
+    font-style: italic;
+}
+
+.dialog-window {
+    z-index: 10;
+    width: 60%;
+    border: none !important;
+    padding: 0px !important;
+}
+
+.textarea-height {
+    height: 100px;
+}
+
+.close-btn {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    float: right;
+}
