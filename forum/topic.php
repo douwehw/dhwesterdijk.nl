@@ -65,20 +65,16 @@ if (Database::query($sql, $placeholders)) {
 											<img src="http://www.gravatar.com/avatar/fc7d81525f7040b7e34b073f0218084d?s=50" alt="" class="square" />
 										</div>
 										<div class="col s9">
-											<!-- TODO: Make this the user who made the Topic -->
 											<p class="user-name"><?= $topic['username']  ?></p>
 										</div>
 									</div>
-									<!-- TODO: Make this accurately diplay the date of the Topic's creation -->
 									<p class="post-timestamp"><?= $topic['created_at'] ?></p>
 								</div>
 							</div>
 							<div class="col s9">
 								<div class="row last-row">
 									<div class="col s12">
-										<!-- TODO: Make this accurately display the title of the Topic -->
 										<h6 class="title"><?= $topic['title'] ?></h6>
-										<!-- TODO: Make this display the entire content of the Topic -->
 										<p>
 											<?= $topic['content'] ?>
 										</p>
@@ -86,7 +82,6 @@ if (Database::query($sql, $placeholders)) {
 								</div>
 								<div class="row last-row block-timestamp">
 									<div class="col s6 push-s6">
-										<!-- TODO: Make this show the most recent edit date -->
 										<p class="post-timestamp last-post-timestamp">
 											Laatst aangepast op: <?= !empty($topic['updated_at']) ? $topic['updated_at'] : $topic['created_at']; ?>
 
@@ -100,8 +95,6 @@ if (Database::query($sql, $placeholders)) {
 			</div>
 			<!-- EINDE TOPIC -->
 
-			<!-- TODO: Make it render all Replies using <php foreach(reply) ?> -->
-
 			<!-- BEGIN REPLY -->
 			<div class="card">
 				<div class="card-content">
@@ -113,40 +106,39 @@ if (Database::query($sql, $placeholders)) {
 							<div class="collection">
 								<div class="collection-item row">
 									<div class="col s2">
-										<!-- TODO: Make this accurately display the username of who reacted -->
 										<span class="reply-username"><?= $reply['username'] ?></span>
-										<!-- TODO: Make this accurately display when the comment was made -->
 										<span class="reply-timestamp"><?= $reply['created_at'] ?></span>
 									</div>
 									<div class="col s10">
-										<!-- TODO: Make this display the reply content -->
 										<p><?= $reply['content'] ?></p>
 									</div>
 								</div>
 							</div>
 						<?php endforeach; ?>
 					<?php endif; ?>
-					<?php if (Auth::loggedIn()) : ?>
+
 					<!-- TOEVOEGEN VAN EEN REPLY -->
-					<div class="card">
-						<div class="card-content">
-							<form method="POST" action="handlers/create_reply.php?topic_id=<?= $_GET['topic_id'] ?>">
-								<div class="row">
-									<div class="col s12">
-										<label for="body" class="active">Reactie</label>
-										<textarea id="message-body" name="body"></textarea>
+					<?php if (Auth::loggedIn()) : ?>
+						<div class="card">
+							<div class="card-content">
+								<form method="POST" action="handlers/create_reply.php?topic_id=<?= $_GET['topic_id'] ?>">
+									<div class="row">
+										<div class="col s12">
+											<label for="body" class="active">Reactie</label>
+											<textarea id="message-body" name="body"></textarea>
+										</div>
 									</div>
-								</div>
-								<div class="row">
-									<div class="col s6 push-s6">
-										<button type="submit" class="btn right cyan darken-1"> Bewaren </button>
+									<div class="row">
+										<div class="col s6 push-s6">
+											<button type="submit" class="btn right cyan darken-1"> Bewaren </button>
+										</div>
 									</div>
-								</div>
-							</form>
+								</form>
+							</div>
 						</div>
-					</div>
 					<?php endif; ?>
 					<!-- EINDE TOEVOEGEN VAN EEN REPLY -->
+
 				</div>
 			</div>
 		</div>

@@ -15,12 +15,13 @@ $thread_id = intval($_GET['thread_id']);
 $topics = [];
 
 $sql =
-  "SELECT `topics`.*, `users`.`name` AS `username`, COUNT(`replies`.`id`) AS `reply_count`
+  "SELECT `topics`.*, `threads`.`title` AS `thread_name`, `users`.`name` AS `username`, COUNT(`replies`.`id`) AS `reply_count`
   FROM topics
   LEFT JOIN `users` ON `users`.`id` = `topics`.`user_id`
   LEFT JOIN `replies` ON `replies`.`topic_id` = `topics`.`id`
+  LEFT JOIN `threads` ON `threads`.`id` = `topics`.`thread_id`
   WHERE `thread_id` = :thread_id
-  GROUP BY `topics`.`id`
+  GROUP BY `topics`.`id`;
 ";
 
 $placeholders = [
@@ -42,42 +43,41 @@ if (Database::query($sql, $placeholders)) {
     <div class="col s12">
       <div class="card">
         <div class="card-content">
-          <!-- TODO: Make this the name of the thread. -->
-          <span class="card-title">Topics</span>
-			<?php if ($_GET['thread_id'] > 2 || Auth::isAdmin()) : ?>
-			<?php if (Auth::loggedIn()) : ?>
-          <button onclick="openDialog()" class="btn right cyan darken-1">Nieuwe Topic</button>
+          <span class="card-title">Topics onder '<?= $topics[0]['thread_name'] ?>'</span>
+          <?php if ($_GET['thread_id'] > 2 || Auth::isAdmin()) : ?>
+            <?php if (Auth::loggedIn()) : ?>
+              <button onclick="openDialog()" class="btn right cyan darken-1">Nieuwe Topic</button>
 
-          <dialog id="dialog" class="dialog-window">
-            <form action="handlers/create_topic.php?thread_id=<?= $thread_id ?>" method="POST">
-              <div class="card">
-                <div class="card-content">
-                  <div class="row">
-                    <button type="button" onclick="closeDialog()" class="right btn circle cyan darken-1">X</button>
-                    <div class="input-field col s6 has-error">
-                      <input id="title" type="text" name="title" placeholder="Tik hier een titel voor het onderwerp in" />
-                      <label for="title" class="active">Titel van de Topic</label>
-                      <span>Titel is verplicht!</span>
+              <dialog id="dialog" class="dialog-window">
+                <form action="handlers/create_topic.php?thread_id=<?= $thread_id ?>" method="POST">
+                  <div class="card">
+                    <div class="card-content">
+                      <div class="row">
+                        <button type="button" onclick="closeDialog()" class="right btn circle cyan darken-1">X</button>
+                        <div class="input-field col s6 has-error">
+                          <input id="title" type="text" name="title" placeholder="Tik hier een titel voor het onderwerp in" />
+                          <label for="title" class="active">Titel van de Topic</label>
+                          <span>Titel is verplicht!</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12">
+                          <textarea id="message-body" class="textarea-height" name="body"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s6 push-s6">
+                          <button type="submit" name="action" class="btn right cyan darken-1"> Toevoegen </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col s12">
-                      <textarea id="message-body" class="textarea-height" name="body"></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col s6 push-s6">
-                      <button type="submit" name="action" class="btn right cyan darken-1"> Toevoegen </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </dialog>
-			
-					
-				<?php endif; ?>
-			<?php endif; ?>
+                </form>
+              </dialog>
+
+
+            <?php endif; ?>
+          <?php endif; ?>
 
           <div class="collection">
 
