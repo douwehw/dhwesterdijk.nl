@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row last-row">
       <div class="col s4">
-        <p>Copyright &copy; by Alfa-college AO, All rights reserved</p>
+        <p>Copyright &copy; by Douwe Westerdijk, All rights reserved</p>
       </div>
       <div class="col s8">
         <div class="footer-nav white">
