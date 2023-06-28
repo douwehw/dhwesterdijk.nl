@@ -44,6 +44,8 @@ if (Database::query($sql, $placeholders)) {
         <div class="card-content">
           <!-- TODO: Make this the name of the thread. -->
           <span class="card-title">Topics</span>
+			<?php if ($_GET['thread_id'] > 2 || Auth::isAdmin()) : ?>
+			<?php if (Auth::loggedIn()) : ?>
           <button onclick="openDialog()" class="btn right cyan darken-1">Nieuwe Topic</button>
 
           <dialog id="dialog" class="dialog-window">
@@ -72,6 +74,10 @@ if (Database::query($sql, $placeholders)) {
               </div>
             </form>
           </dialog>
+			
+					
+				<?php endif; ?>
+			<?php endif; ?>
 
           <div class="collection">
 

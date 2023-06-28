@@ -4,6 +4,7 @@ require_once("boilerplate/header.php");
 
 @require_once("helpers/Auth.php");
 @require_once("database/Database.php");
+@include_once("helpers/Auth.php");
 
 if (!isset($_GET['topic_id'])) {
 	header('location: index.php');
@@ -125,7 +126,7 @@ if (Database::query($sql, $placeholders)) {
 							</div>
 						<?php endforeach; ?>
 					<?php endif; ?>
-
+					<?php if (Auth::loggedIn()) : ?>
 					<!-- TOEVOEGEN VAN EEN REPLY -->
 					<div class="card">
 						<div class="card-content">
@@ -144,7 +145,7 @@ if (Database::query($sql, $placeholders)) {
 							</form>
 						</div>
 					</div>
-
+					<?php endif; ?>
 					<!-- EINDE TOEVOEGEN VAN EEN REPLY -->
 				</div>
 			</div>

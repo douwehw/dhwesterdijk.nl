@@ -11,7 +11,7 @@
       <div class="card">
         <div class="card-content">
           <div class="row">
-            <form class="col s12" method="POST" action="handlers/login.php">
+            <form class="col s12" method="POST" action="/forum/handlers/login.php">
               <h1 class="title">Inloggen</h1>
               <div class="row">
                 <div class="input-field col s12">

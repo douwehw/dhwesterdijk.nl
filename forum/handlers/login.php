@@ -14,17 +14,17 @@ if (!isset($_POST['email']) || !isset($_POST['password'])) {
 $email = htmlentities($_POST['email']);
 $password = htmlentities($_POST['password']);
 
-$sql = "SELECT * FROM `USERS` WHERE `email` = :email";
+$sql = "SELECT * FROM `users` WHERE `email` = :email";
 $placeholders = [':email' => $email];
 
-$users = [];
+$user = [];
 
 if (Database::query($sql, $placeholders)) {
    $user = Database::get();
 }
 
-if (empty($user)) {
-   header('location: ../../login.php');
+if (empty($email)) {
+   header('location: ../login.php');
    exit(0);
 }
 

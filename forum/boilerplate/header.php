@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="Lang" content="nl">
   <meta name="author" content="J.J. Strootman">
   <meta http-equiv="Reply-to" content="noreply@forum.ao-alfa.nl">
@@ -59,10 +59,12 @@
           </a>
           <ul id="theme-menu" class="dropdown-content">
             <!-- TODO: Create the dialog screen for editing profiles -->
-            <li><a href="">Profiel</a></li>
+			 <?php if (Auth::loggedIn()) : ?>
+            <li><a href="/forum">Profiel</a></li>
             <!-- TODO: Create the dialog screen that shows every thread, topic and reply made. -->
             <li><a href="">Beheer</a></li>
-            <li><a href="../helpers/logout.php">Afmelden</a></li>
+            <li><a href="../forum/helpers/logout.php">Afmelden</a></li>
+			  <?php endif; ?>
           </ul>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="index.php">Home</a></li>
@@ -71,9 +73,9 @@
               <li><a href="login.php">Inloggen</a></li>
             <?php endif; ?>
             <li>
-              <a href="/" data-activates="theme-menu" class="dropdown-button">
+              <a href="/forum" data-activates="theme-menu" class="dropdown-button">
                 <?php if (Auth::loggedIn()) : ?>
-                  <img src="../img/troll.png" width="20" height="20" alt="" class="square">
+                  <img src="../forum/img/troll.png" width="20" height="20" alt="" class="square">
                 <?php endif; ?> <?= Auth::getLoggedInUsername() ? Auth::getLoggedInUsername() : "Not logged in." ?> &dtrif;
               </a>
             </li>
