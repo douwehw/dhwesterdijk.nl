@@ -10,9 +10,9 @@ function Projects(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Projecten 📑</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Dit zijn mijn projecten, zowel schoolwerk als vrije tijd. Ik probeer dit zo veel mogelijk te updaten en zo accuraat mogelijk te
-						houden. Je kan hier zin welke taal ik (het meeste) heb gebruikt, mijn rating van het project en hoeveel tijd het mij (ongeveer)
-						heeft gekost.
+						Dit zijn mijn projecten, zowel schoolwerk als vrije tijd. Ik probeer dit zo veel mogelijk te updaten en zo
+						accuraat mogelijk te houden. Je kan hier zin welke taal ik (het meeste) heb gebruikt, mijn rating van het
+						project en hoeveel tijd het mij (ongeveer) heeft gekost.
 					</p>
 
 					<Divider title="Schoolprojecten" />
@@ -46,8 +46,8 @@ function Projects(siteLang) {
 							href="https://dhwesterdijk.nl/forum"
 							name="Forum"
 							description="Introductie in Backend Development, PHP en (My)SQL."
-							language="React"
-							rating="5.5"
+							language="PHP"
+							rating="6.5"
 							hours="8"
 						/>
 					</div>
@@ -99,16 +99,17 @@ function Projects(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Projects 📑</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-4">
-						These are my projects, both school and spare time. I try to update this page as much as possible and to keep the ratings and
-						time as accurate as I can. You can see on each widget what language I (mostly) used, my eventual rating of the project and how
-						much time I spent on it (estimate).
+						These are my projects, both school and spare time. I try to update this page as much as possible and to keep
+						the ratings and time as accurate as I can. You can see on each widget what language I (mostly) used, my
+						eventual rating of the project and how much time I spent on it (estimate).
 					</p>
 
 					<Divider title="School projects" />
 					<p className="text-red-300 text-md leading-5 mb-12 italic text-opacity-70">
-						Note that due to me being Dutch and me going to a Dutch college mean that <span className="font-extrabold">all</span> my school
-						related projects will be in Dutch. If you are unable to read Dutch, then I suggest a browser extension to translate the webpage
-						for you. Aplogies for the inconvenience.
+						Note that due to me being Dutch and me going to a Dutch college mean that{" "}
+						<span className="font-extrabold">all</span> my school related projects will be in Dutch. If you are unable
+						to read Dutch, then I suggest a browser extension to translate the webpage for you. Aplogies for the
+						inconvenience.
 					</p>
 
 					<div className="w-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 mb-12 gap-2">

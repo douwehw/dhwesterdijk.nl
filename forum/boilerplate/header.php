@@ -59,12 +59,12 @@
           </a>
           <ul id="theme-menu" class="dropdown-content">
             <!-- TODO: Create the dialog screen for editing profiles -->
-			 <?php if (Auth::loggedIn()) : ?>
-            <li><a href="/forum">Profiel</a></li>
-            <!-- TODO: Create the dialog screen that shows every thread, topic and reply made. -->
-            <li><a href="">Beheer</a></li>
-            <li><a href="../forum/helpers/logout.php">Afmelden</a></li>
-			  <?php endif; ?>
+            <?php if (Auth::loggedIn()) : ?>
+              <li><a href="/forum">Profiel</a></li>
+              <!-- TODO: Create the dialog screen that shows every thread, topic and reply made. -->
+              <li><a href="">Beheer</a></li>
+              <li><a href="../forum/helpers/logout.php">Afmelden</a></li>
+            <?php endif; ?>
           </ul>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="index.php">Home</a></li>

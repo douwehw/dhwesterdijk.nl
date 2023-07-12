@@ -13,8 +13,8 @@ function Contact(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Stuur mij een email 📬</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Heb je een vraag over iets of wil je contact opnemen voor iets? Stuur mij gerust een email! ik probeer altijd zo snel mogelijk
-						te reageren.
+						Heb je een vraag over iets of wil je contact opnemen voor iets? Stuur mij gerust een email! ik probeer
+						altijd zo snel mogelijk te reageren.
 					</p>
 
 					<div className="md:col-span-2 row-span-3 bg-opacity-50 bg-white/5 rounded-md p-4 border border-zinc-800/50 mb-10">
@@ -49,16 +49,52 @@ function Contact(siteLang) {
 
 					<h2 className="text-4xl mb-4">Liever contact op een andere manier?</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Ik ben te vinden op deze platforms, ik reageer hier mogelijk minder snel op. Als het dringend is stuur dan een email. Als je een
-						casual gesprek wil kan je mij misschien hier beter bereiken
+						Ik ben te vinden op deze platforms, ik reageer hier mogelijk minder snel op. Als het dringend is stuur dan
+						een email. Als je een casual gesprek wil kan je mij misschien hier beter bereiken
 					</p>
 					<div className="w-100% flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-black/10 mb-12">
 						<ContactIcon icon={SiGithub} name="GitHub" link="https://github.com/48exa" />
 						<ContactIcon icon={SiTwitter} name="Twitter" link="https://twitter.com/48exa" />
-						<ContactIcon icon={SiStackoverflow} name="StackOverflow" link="https://stackoverflow.com/users/21626728/48exa" />
-						<ContactIcon icon={SiLinkedin} name="LinkedIn" link="https://www.linkedin.com/in/douwe-westerdijk-263091276/" />
+						<ContactIcon
+							icon={SiStackoverflow}
+							name="StackOverflow"
+							link="https://stackoverflow.com/users/21626728/48exa"
+						/>
+						<ContactIcon
+							icon={SiLinkedin}
+							name="LinkedIn"
+							link="https://www.linkedin.com/in/douwe-westerdijk-263091276/"
+						/>
 						<ContactIcon icon={SiInstagram} name="Instagram" link="https://www.instagram.com/dhwdijk/" />
 					</div>
+
+					{/* TODO: this entire section & the entire DB schema lmfao */}
+					{/* mfw this entire section isn't implemented to work yet I committed it to the website */}
+					<form className="md:col-span-2 row-span-3 bg-opacity-50 bg-white/5 rounded-md p-4 border border-zinc-800/50 mb-10">
+						<h1 className="font-bold text-sm text-slate-500 mb-1">Laat een berichtje achter! (non-functioneel)</h1>
+						<div className="flex-row">
+							<input
+								name="msg"
+								placeholder="I love testing in production"
+								type="text"
+								className="w-3/4 float-left p-2 mb-4 rounded-md bg-slate-200/5 text-sm placeholder:text-slate-200/20"
+							/>
+							<div className="w-1/4 flex flex-row justify-between items-center">
+								<p className="text-gray-300 text-sm"></p>
+								<button
+									onClick={() => {
+										console.log(
+											"This button doesn't do anything, I could've commented out all this code but I didn't feel like doing that. I will eventually connect a DB to this and then have a pertty little display of all the messages, I'm thinking of using Prisma for it. Until then, enjoy this little console easter egg if you found it ;)"
+										);
+									}}
+									type="button" // Change this to submit instead of button when connecting the DB
+									className="border border-indigo-600/80 bg-indigo-600/70 hover:bg-indigo-500/70 flex items-center rounded-full px-5 py-2 text-sm font-medium transition-colors duration-75"
+								>
+									<span className="">Plaats</span>
+								</button>
+							</div>
+						</div>
+					</form>
 				</>
 			</SiteContainer>
 		);
@@ -72,8 +108,8 @@ function Contact(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Send me an email 📬</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Do you have a question or do you want to get in conact about something else? Feel free to send me an email! I try to respond as
-						fast as I possibly can.
+						Do you have a question or do you want to get in conact about something else? Feel free to send me an email!
+						I try to respond as fast as I possibly can.
 					</p>
 
 					<div className="md:col-span-2 row-span-3 bg-opacity-50 bg-white/5 rounded-md p-4 border border-zinc-800/50 mb-10">
@@ -108,14 +144,22 @@ function Contact(siteLang) {
 
 					<h2 className="text-4xl mb-4">Would you rather get in contact another way?</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						You can find me on these platforms, I might respond less quickly on here. If you are need a quick respond it is best to send an
-						email. If you want a more casual conversation than feel free to hit me up here.
+						You can find me on these platforms, I might respond less quickly on here. If you are need a quick respond it
+						is best to send an email. If you want a more casual conversation than feel free to hit me up here.
 					</p>
 					<div className="w-100% flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-black/10 mb-12">
 						<ContactIcon icon={SiGithub} name="GitHub" link="https://github.com/48exa" />
 						<ContactIcon icon={SiTwitter} name="Twitter" link="https://twitter.com/48exa" />
-						<ContactIcon icon={SiStackoverflow} name="StackOverflow" link="https://stackoverflow.com/users/21626728/48exa" />
-						<ContactIcon icon={SiLinkedin} name="LinkedIn" link="https://www.linkedin.com/in/douwe-westerdijk-263091276/" />
+						<ContactIcon
+							icon={SiStackoverflow}
+							name="StackOverflow"
+							link="https://stackoverflow.com/users/21626728/48exa"
+						/>
+						<ContactIcon
+							icon={SiLinkedin}
+							name="LinkedIn"
+							link="https://www.linkedin.com/in/douwe-westerdijk-263091276/"
+						/>
 						<ContactIcon icon={SiInstagram} name="Instagram" link="https://www.instagram.com/dhwdijk/" />
 					</div>
 				</>
