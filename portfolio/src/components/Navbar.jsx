@@ -45,9 +45,9 @@ function Navbar({ SetSiteLang, siteLang }) {
 				className="transition ease-in-out delay-[10] rounded-lg hover:bg-[#2a2f3d] p-2 m-1 cursor-pointer w-10 h-10"
 				onClick={() => {
 					if (siteLang === "NL") {
-						cookies.set('lang', "GB", {sameSite: "none", maxAge:"9999999999"})
+						cookies.set('lang', "GB", {maxAge:"9999999999"})
 					} else {
-						cookies.set('lang', "NL", {sameSite: "none", maxAge:"9999999999"})
+						cookies.set('lang', "NL", {maxAge:"9999999999"})
 					}
 					SetSiteLang(cookies.get('lang'))
 					console.log(siteLang)

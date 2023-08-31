@@ -19,7 +19,7 @@ const cookies = new Cookies(null, { path: '/' });
 
 function App() {
 	if (!cookies.get('lang')) {
-		cookies.set("lang", "NL", {sameSite: "none", maxAge:"9999999999"});
+		cookies.set("lang", "NL", {maxAge:"9999999999"});
 	}
 
 	const [siteLang, SetSiteLang] = React.useState(cookies.get('lang'));
