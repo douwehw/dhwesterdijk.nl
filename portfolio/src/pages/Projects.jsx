@@ -23,7 +23,7 @@ function Projects(siteLang) {
 							name="Irritante Onepager"
 							description="Een zo gebruikersonvriendelijk mogelijke OnePager."
 							language="JavaScript"
-							rating="6.8"
+							rating="6.5"
 							hours="4"
 						/>
 						<ProjectSquare
@@ -31,7 +31,7 @@ function Projects(siteLang) {
 							name="Webgame"
 							description="Webgame van Snake gemaakt om in je browser gespeelt te worden"
 							language="JavaScript"
-							rating="9"
+							rating="8"
 							hours="5"
 						/>
 						<ProjectSquare
@@ -68,7 +68,7 @@ function Projects(siteLang) {
 							name="Discord Bot"
 							description="Een kleine Discord bot gemaakt om de Developer Badge te krijgen op Discord."
 							language="JavaScript"
-							rating="10"
+							rating="8.5"
 							hours="2"
 						/>
 						<ProjectSquare
@@ -87,6 +87,14 @@ function Projects(siteLang) {
 							rating="10"
 							hours="2"
 						/>
+						<ProjectSquare
+							herf="https://github.com/48exa/projects/tree/main/python%20black%20hole%20calculator"
+							name="Black Hole Massa Calculator"
+							description="Heb je ooit willen weten hoe zwaar een zwart gat de grootte van een bowling bal is?"
+							language="Python"
+							rating="10"
+							hours="4"
+							/>
 					</div>
 				</>
 			</SiteContainer>
@@ -118,7 +126,7 @@ function Projects(siteLang) {
 							name="Irritante Onepager"
 							description="A OnePager designed to be as annoying / impossible to use."
 							language="JavaScript"
-							rating="6.8"
+							rating="6.5"
 							hours="4"
 						/>
 						<ProjectSquare
@@ -126,7 +134,7 @@ function Projects(siteLang) {
 							name="Webgame"
 							description="A game of snake made to be played in the browser."
 							language="JavaScript"
-							rating="9"
+							rating="8"
 							hours="5"
 						/>
 						<ProjectSquare
@@ -142,8 +150,8 @@ function Projects(siteLang) {
 							name="Forum"
 							description="Introduction into Backend Development, PHP and (My)SQL"
 							language="PHP"
-							rating="5.5"
-							hours="8"
+							rating="6.5"
+							hours="7.5"
 						/>
 					</div>
 
@@ -163,7 +171,7 @@ function Projects(siteLang) {
 							name="Discord Bot"
 							description="My own tiny Discord bot made to get the Developer Badge on Discord."
 							language="Javascript"
-							rating="10"
+							rating="8.5"
 							hours="2"
 						/>
 						<ProjectSquare
@@ -174,7 +182,6 @@ function Projects(siteLang) {
 							rating="7"
 							hours="1.5"
 						/>
-
 						<ProjectSquare
 							href="https://github.com/48exa/projects/releases/tag/array_gen"
 							name="Rust Array Generator"
@@ -183,6 +190,14 @@ function Projects(siteLang) {
 							rating="10"
 							hours="2"
 						/>
+						<ProjectSquare
+							herf="https://github.com/48exa/projects/tree/main/python%20black%20hole%20calculator"
+							name="Black Hole Mass Calculator"
+							description="Ever wanted to know how heavy a bowling ball sized black hole would be?"
+							language="Python"
+							rating="10"
+							hours="4"
+							/>
 					</div>
 				</>
 			</SiteContainer>

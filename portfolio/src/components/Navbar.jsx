@@ -2,6 +2,9 @@ import { FiMail } from "react-icons/fi";
 import { SiGithub, SiDiscord } from "react-icons/si";
 import Flag from "react-world-flags";
 import { NavLink } from "react-router-dom";
+import Cookies from 'universal-cookie'
+
+const cookies = new Cookies(null, { path: '/' });
 
 function Navbar({ SetSiteLang, siteLang }) {
 	const NavIcons = () => {
@@ -42,11 +45,13 @@ function Navbar({ SetSiteLang, siteLang }) {
 				className="transition ease-in-out delay-[10] rounded-lg hover:bg-[#2a2f3d] p-2 m-1 cursor-pointer w-10 h-10"
 				onClick={() => {
 					if (siteLang === "NL") {
-						localStorage.setItem("lang", "GB");
+						cookies.set('lang', "GB", {sameSite: "none", maxAge:"9999999999"})
 					} else {
-						localStorage.setItem("lang", "NL");
+						cookies.set('lang', "NL", {sameSite: "none", maxAge:"9999999999"})
 					}
-					SetSiteLang(localStorage.getItem("lang"));
+					SetSiteLang(cookies.get('lang'))
+					console.log(siteLang)
+					console.log(cookies.get('lang'))
 				}}
 			>
 				<Flag code={siteLang} />

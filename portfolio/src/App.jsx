@@ -12,12 +12,17 @@ import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 
+// Extras
+import Cookies from 'universal-cookie'
+
+const cookies = new Cookies(null, { path: '/' });
+
 function App() {
-	if (localStorage.getItem("lang") !== "NL" || localStorage.getItem("lang") !== "EN") {
-		localStorage.setItem("lang", "NL");
+	if (!cookies.get('lang')) {
+		cookies.set("lang", "NL", {sameSite: "none", maxAge:"9999999999"});
 	}
 
-	const [siteLang, SetSiteLang] = React.useState(localStorage.getItem("lang"));
+	const [siteLang, SetSiteLang] = React.useState(cookies.get('lang'));
 
 	return (
 		<AppWrapper>
