@@ -10,7 +10,7 @@ function AboutMe(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Hallo, ik ben Douwe 👋</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Ik ben een eerste-jaars student aan het Alfa-College als Software Developer. Ik volg deze opleiding sinds
+						Ik ben student aan het Alfa-College als Software Developer. Ik volg deze opleiding sinds
 						september 2022. Ik ben {getAge("2004/11/26")} jaar oud, mijn verjaardag is op 26 november, ik heb 3 honden
 						en 3 katten en ik woon in een appartement in Assen. Ik heb al sinds een jonge leeftijd een gezonde obsessie
 						met technologie, en ik kijk uit naar mijn toekomst.
@@ -81,7 +81,7 @@ function AboutMe(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Hi, I'm Douwe 👋</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						I am a first year student at the Alfa-College where I study to become a Software Developer. I've been taking
+						I am a student at the Alfa-College where I study to become a Software Developer. I've been taking
 						this course since September 2022. I am {getAge("2004/11/26")} years old, my birthday is on the 26th of
 						November and I have 3 dogs and 3 cats. From a young age I've always had a healthy obesssion with technology,
 						and I look forward to my future.
