@@ -88,13 +88,13 @@ function Projects(siteLang) {
 							hours="2"
 						/>
 						<ProjectSquare
-							herf="https://github.com/48exa/projects/tree/main/python%20black%20hole%20calculator"
+							href="https://github.com/48exa/projects/tree/main/python%20black%20hole%20calculator"
 							name="Black Hole Massa Calculator"
 							description="Heb je ooit willen weten hoe zwaar een zwart gat de grootte van een bowling bal is?"
 							language="Python"
 							rating="10"
 							hours="4"
-							/>
+						/>
 					</div>
 				</>
 			</SiteContainer>
@@ -191,13 +191,13 @@ function Projects(siteLang) {
 							hours="2"
 						/>
 						<ProjectSquare
-							herf="https://github.com/48exa/projects/tree/main/python%20black%20hole%20calculator"
+							href="https://github.com/48exa/projects/tree/main/python%20black%20hole%20calculator"
 							name="Black Hole Mass Calculator"
 							description="Ever wanted to know how heavy a bowling ball sized black hole would be?"
 							language="Python"
 							rating="10"
 							hours="4"
-							/>
+						/>
 					</div>
 				</>
 			</SiteContainer>
