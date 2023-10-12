@@ -95,6 +95,14 @@ function Projects(siteLang) {
 							rating="10"
 							hours="4"
 						/>
+						<ProjectSquare
+							href="https://github.com/48exa/projects/tree/main/hangman"
+							name="Galgje"
+							description="Gemaakt als oefening om goede en gedocumenteerde Rust code te schrijven."
+							language="Rust"
+							rating="10"
+							hours="6"
+						/>
 					</div>
 				</>
 			</SiteContainer>
@@ -197,6 +205,14 @@ function Projects(siteLang) {
 							language="Python"
 							rating="10"
 							hours="4"
+						/>
+						<ProjectSquare
+							href="https://github.com/48exa/projects/tree/main/hangman"
+							name="Hangman"
+							description="Made as an exercise to write clean and documented Rust code."
+							language="Rust"
+							rating="10"
+							hours="6"
 						/>
 					</div>
 				</>
