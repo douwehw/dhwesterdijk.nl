@@ -84,7 +84,7 @@ function Contact(siteLang) {
 								<button
 									onClick={() => {
 										console.log(
-											"This button doesn't do anything, I could've commented out all this code but I didn't feel like doing that. I will eventually connect a DB to this and then have a pertty little display of all the messages, I'm thinking of using Prisma for it. Until then, enjoy this little console easter egg if you found it ;)"
+											"This button doesn't do anything, I could've commented out all this code but I didn't feel like doing that. I will eventually connect a DB to this and then have a pretty little display of all the messages, I'm thinking of using Prisma for it. Until then, enjoy this little console easter egg if you found it ;)"
 										);
 									}}
 									type="button" // Change this to submit instead of button when connecting the DB

@@ -11,18 +11,19 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import Music from "./pages/Music";
 
 // Extras
-import Cookies from 'universal-cookie'
+import Cookies from "universal-cookie";
 
-const cookies = new Cookies(null, { path: '/' });
+const cookies = new Cookies(null, { path: "/" });
 
 function App() {
-	if (!cookies.get('lang')) {
-		cookies.set("lang", "NL", {maxAge:"9999999999"});
+	if (!cookies.get("lang")) {
+		cookies.set("lang", "NL", { maxAge: "9999999999" });
 	}
 
-	const [siteLang, SetSiteLang] = React.useState(cookies.get('lang'));
+	const [siteLang, SetSiteLang] = React.useState(cookies.get("lang"));
 
 	return (
 		<AppWrapper>
@@ -33,6 +34,7 @@ function App() {
 					<Route path="/projects" element={<Projects siteLang={siteLang} />} />
 					<Route path="/experience" element={<Experience siteLang={siteLang} />} />
 					<Route path="/contact" element={<Contact siteLang={siteLang} />} />
+					<Route path="/music" element={<Music siteLang={siteLang} />} />
 				</Routes>
 				<Footer />
 			</>

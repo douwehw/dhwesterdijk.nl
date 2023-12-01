@@ -2,6 +2,7 @@ import SiteContainer from "../components/SiteContainer";
 import ItalicLink from "../components/ItalicLink";
 import getAge from "../util/getAge";
 import scrollToTop from "../util/scrollToTop";
+import { Link } from "react-router-dom";
 
 function AboutMe(siteLang) {
 	const AboutMeNL = () => {
@@ -10,18 +11,19 @@ function AboutMe(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Hallo, ik ben Douwe 👋</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Ik ben student aan het Alfa-College als Software Developer. Ik volg deze opleiding sinds
-						september 2022. Ik ben {getAge("2004/11/26")} jaar oud, mijn verjaardag is op 26 november, ik heb 3 honden
-						en 3 katten en ik woon in een appartement in Assen. Ik heb al sinds een jonge leeftijd een gezonde obsessie
-						met technologie, en ik kijk uit naar mijn toekomst.
+						Ik ben student aan het Alfa-College als Software Developer. Ik volg deze opleiding sinds september 2022. Ik
+						ben {getAge("2004/11/26")} jaar oud, mijn verjaardag is op 26 november en ik woon in in Assen. Ik hou van
+						muziek en ik heb al sinds een jonge leeftijd een gezonde obsessie met technologie.
 					</p>
 
 					<h2 className="text-4xl mb-4">Wat ik doe 😶‍🌫️</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Naast mijn opleiding en het programmeren doe ik nog meer dingen. Ik wandel graag, alleen of met anderen, of
-						met mijn honden. Ik interesseer mij in media (ruime manier van zeggen dat ik graag Netflix kijk). Eens in de
-						zoveel tijd ga ik naar buiten om door het bos een rondje te hardlopen. Ik houd mij bezig met het huishouden.
-						En ik houd mij graag bezig met mijn hobbies.
+						Naast mijn opleiding en het programmeren doe ik nog meer dingen. Ik wandel graag, ik interesseer mij in
+						media (ruime manier van zeggen dat ik graag Netflix kijk), eens in de zoveel tijd ga ik naar buiten om door
+						het bos een rondje te hardlopen. Ik hou heel erg van muziek, zoveel dat ik hier een{" "}
+						{/* <ItalicLink title="/music"> */}
+						<Link to="/music">extra pagina voor heb aangemaakt op deze website.</Link>
+						{/* </ItalicLink> */}
 					</p>
 
 					<h2 className="text-4xl mb-4">Waarom Software Development ❓</h2>
@@ -81,18 +83,19 @@ function AboutMe(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Hi, I'm Douwe 👋</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						I am a student at the Alfa-College where I study to become a Software Developer. I've been taking
-						this course since September 2022. I am {getAge("2004/11/26")} years old, my birthday is on the 26th of
-						November and I have 3 dogs and 3 cats. From a young age I've always had a healthy obesssion with technology,
-						and I look forward to my future.
+						I am a student at the Alfa-College where I study to become a Software Developer. I've been taking this
+						course since September The Netherlands. I am {getAge("2004/11/26")} years old, my birthday is on the 26th of
+						November, and I live in Assen. From a young age I've always had a healthy obesssion with technology.
 					</p>
 
 					<h2 className="text-4xl mb-4">What I do 😶‍🌫️</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
 						Apart from my study and the coding I do a handful of other things in my life. I go on walks, alone or with
-						others, or with my dogs. I take part in the consumation of digital media (rich way of saying: I watch
-						Netflix). Once in a while I like to go on a run in the woods near my house. I keep up with the household. I
-						also enjoy spending my time on my hobbies.
+						others. I take part in the consumation of digital media (rich way of saying: I watch Netflix). Once in a
+						while I like to go on a run in the woods. I also really love music, so much that I made{" "}
+						{/* <ItalicLink title="/music"> */}
+						<Link to="/music">a seperate page on this site to talk about it.</Link>
+						{/* </ItalicLink> */}
 					</p>
 
 					<h2 className="text-4xl mb-4">Why Software Development ❓</h2>

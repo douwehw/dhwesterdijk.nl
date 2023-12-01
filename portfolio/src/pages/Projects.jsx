@@ -50,6 +50,14 @@ function Projects(siteLang) {
 							rating="6.5"
 							hours="8"
 						/>
+						<ProjectSquare
+							href="https://github.com/48exa/cube-defense-arduino"
+							name="Cube Defense Controller (code)"
+							description="Arduino code voor de controller van zelfgemaakte game 'Cube Defense'"
+							language="cpp"
+							rating="9.5"
+							hours="20"
+						/>
 					</div>
 
 					<Divider title="Persoonlijke projecten" />
@@ -160,6 +168,14 @@ function Projects(siteLang) {
 							language="PHP"
 							rating="6.5"
 							hours="7.5"
+						/>
+						<ProjectSquare
+							href="https://github.com/48exa/cube-defense-arduino"
+							name="Cube Defense Controller (code)"
+							description="Arduino code for the controller 'Cube Defense' made by me and classmates."
+							language="cpp"
+							rating="9.5"
+							hours="20"
 						/>
 					</div>
 

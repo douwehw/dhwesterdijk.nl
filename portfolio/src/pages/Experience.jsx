@@ -20,6 +20,8 @@ import {
 	SiCss3,
 	SiBootstrap,
 	SiCplusplus,
+	SiC,
+	SiUnity,
 } from "react-icons/si";
 import SiteContainer from "../components/SiteContainer";
 import ExperienceIcon from "../components/ExperienceIcon";
@@ -42,11 +44,13 @@ function Experience(siteLang) {
 				<ExperienceIcon icon={SiBootstrap} name="Bootstrap" />
 				<ExperienceIcon icon={SiPython} name="Python" />
 				<ExperienceIcon icon={SiKotlin} name="Kotlin" />
+				<ExperienceIcon icon={SiC} name="C" />
 				<ExperienceIcon icon={SiCsharp} name="C#" />
 				<ExperienceIcon icon={SiCplusplus} name="C++" />
 				<ExperienceIcon icon={SiRust} name="Rust" />
 				<ExperienceIcon icon={SiVisualstudiocode} name="VSCode" />
 				<ExperienceIcon icon={SiVisualstudio} name="Visual Studio" />
+				<ExperienceIcon icon={SiUnity} name="Unity" />
 				<ExperienceIcon icon={SiFigma} name="Figma" />
 				<ExperienceIcon icon={SiAdobephotoshop} name="Photoshop" />
 				<ExperienceIcon icon={SiAdobepremierepro} name="Premiere Pro" />
@@ -83,9 +87,9 @@ function Experience(siteLang) {
 					<ExperienceList />
 					<h2 className="text-4xl mb-4">Wat verder 🤔</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Ik ben op het moment aan het studeren om een Frontend Developer te worden. Ik heb ook mijn portfolio
-						herschreven in React om dit doel te bereiken. Ik hoop snel mijn stageplekken te bezoeken om het echte
-						werkleven te ervaren en mijn skills echt te perfecten om een nuttige toevoeging te zijn aan de samenleving.
+						Ik ben op het moment aan het studeren om een Software Developer te worden, gericht op C++ en C#. Ik hoop
+						snel mijn stageplekken te bezoeken om het echte werkleven te ervaren en mijn skills echt te perfecten om een
+						nuttige toevoeging te zijn aan de samenleving.
 					</p>
 
 					<p className="text-gray-300 opacity-50 text-md leading-6 mb-2">
@@ -129,9 +133,9 @@ function Experience(siteLang) {
 					<ExperienceList />
 					<h2 className="text-4xl mb-4">What next 🤔</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-2">
-						I am currently studying to become a Frontend Developer. This is why I decided to rewrite my entire portfolio
-						in React. I hope to get to my school internships fast so that I can experience what it is like to really
-						work in a job enviroment and further hone my skills to perfection.
+						I am currently studying to become a Software Developer specialised in C++ and C#. I hope to get to my school
+						internships fast so that I can experience what it is like to really work in a job enviroment and further
+						hone my skills to perfection.
 					</p>
 					<p className="text-gray-300 opacity-50 text-md leading-6 mb-12">
 						If you're using VSCode: I've created my own color theme for VSCode, you can download it{" "}
