@@ -54,7 +54,7 @@ function Projects(siteLang) {
 							href="https://github.com/48exa/cube-defense-arduino"
 							name="Cube Defense Controller (code)"
 							description="Arduino code voor de controller van zelfgemaakte game 'Cube Defense'"
-							language="cpp"
+							language="C++"
 							rating="9.5"
 							hours="20"
 						/>
@@ -173,7 +173,7 @@ function Projects(siteLang) {
 							href="https://github.com/48exa/cube-defense-arduino"
 							name="Cube Defense Controller (code)"
 							description="Arduino code for the controller 'Cube Defense' made by me and classmates."
-							language="cpp"
+							language="C++"
 							rating="9.5"
 							hours="20"
 						/>

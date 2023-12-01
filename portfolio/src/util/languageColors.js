@@ -33,7 +33,7 @@ export const languages = {
 	ColdFusion: "#ed2cd6",
 	"Common Lisp": "#3fb68b",
 	"Component Pascal": "#b0ce4e",
-	cpp: "#f34b7d",
+	"C++": "#f34b7d",
 	Crystal: "#776791",
 	CSS: "#563d7c",
 	D: "#ba595e",
