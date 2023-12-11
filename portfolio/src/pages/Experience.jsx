@@ -67,17 +67,16 @@ function Experience(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Ervaring met coderen 💻</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Ik programmeer sinds 2022. Ik ben destijds begonnen met het leren van Python, dit heeft mij erg veel
-						geholpen om de denken op de manier die nodig is om te programmeren. Ik ben ook in September van datzelfde
-						jaar begonnen aan een MBO Niveau 4 opleiding tot Software Developer aan het Alfa-College in Groningen. Ik
-						heb in een kort jaar enorm veel progressie gemaakt in wat ik kan met mijn code, als je wil zien wat ik voor
-						/ via school heb gemaakt. Kijk dan in het tabblad{" "}
+						Ik programmeer sinds 2022. Ik ben begonnen met het leren van Python. Ik ben in September van datzelfde jaar
+						begonnen aan een MBO Niveau 4 opleiding tot Software Developer aan het Alfa-College in Groningen. Ik heb
+						veel progressie gemaakt in wat ik kan met mijn code, als je wil zien wat ik voor / via school heb gemaakt.
+						Kijk dan in het tabblad{" "}
 						<Tooltip title="/projects" distance="5" position="bottom">
 							<Link to="/projects">
 								<span className="underline">projecten</span>
 							</Link>
 						</Tooltip>
-						. Hier post ik namelijk al mijn projecten
+						. Hier post ik al mijn projecten
 					</p>
 
 					<h2 className="text-4xl mb-4">Ervaringen met software 🖥️</h2>
@@ -113,11 +112,10 @@ function Experience(siteLang) {
 				<>
 					<h1 className="font-bold text-5xl mb-4">Coding experience 💻</h1>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
-						I started coding since 2022. In that year I picked up Python as my first programming language, this has
-						helped me grasp the mindset required to code and problem solve. In September of the same year I started
-						going to college to become a Software Devloper at the Alfa-College in Groningen. In one short year I have
-						made an enormous amount of progress in both my way of thinking, and the amount of programming languages I
-						can use. If you want to see what I have all made over the years, visit the tab{" "}
+						I started coding since 2022. In that year I picked up Python as my first programming language. In September
+						of the same year I started going to college to become a Software Devloper at the Alfa-College in Groningen.
+						I have made an enormous amount of progress in both my way of thinking, and the amount of programming
+						languages I can use. If you want to see what I have all made over the years, visit the tab{" "}
 						<Tooltip title="/projects" distance="5" position="bottom">
 							<Link to="/projects">
 								<span className="underline">projects</span>

@@ -11,7 +11,6 @@ import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
-import Music from "./pages/Music";
 
 // Extras
 import Cookies from "universal-cookie";
@@ -34,7 +33,6 @@ function App() {
 					<Route path="/projects" element={<Projects siteLang={siteLang} />} />
 					<Route path="/experience" element={<Experience siteLang={siteLang} />} />
 					<Route path="/contact" element={<Contact siteLang={siteLang} />} />
-					<Route path="/music" element={<Music siteLang={siteLang} />} />
 				</Routes>
 				<Footer />
 			</>
