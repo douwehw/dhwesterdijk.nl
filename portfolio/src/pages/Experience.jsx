@@ -79,12 +79,12 @@ function Experience(siteLang) {
 						. Hier post ik al mijn projecten
 					</p>
 
-					<h2 className="text-4xl mb-4">Ervaringen met software 🖥️</h2>
+					<h2 className="text-4xl mb-4">Ervaringen met software</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-2">
 						Dit is een lijst met alle software / programmeertalen die ik ken en kan gebruiken.
 					</p>
 					<ExperienceList />
-					<h2 className="text-4xl mb-4">Wat verder 🤔</h2>
+					<h2 className="text-4xl mb-4">Wat verder</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
 						Ik ben op het moment aan het studeren om een Software Developer te worden, gericht op C++ en C#. Ik hoop
 						snel mijn stageplekken te bezoeken om het echte werkleven te ervaren en mijn skills echt te perfecten om een
@@ -124,12 +124,12 @@ function Experience(siteLang) {
 						. This is where I post all of my projects
 					</p>
 
-					<h2 className="text-4xl mb-4">Experience with Software 🖥️</h2>
+					<h2 className="text-4xl mb-4">Experience with Software</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-2">
 						This is the list of all the applications / programming languages I can use and understand.
 					</p>
 					<ExperienceList />
-					<h2 className="text-4xl mb-4">What next 🤔</h2>
+					<h2 className="text-4xl mb-4">What next</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-2">
 						I am currently studying to become a Software Developer specialised in C++ and C#. I hope to get to my school
 						internships fast so that I can experience what it is like to really work in a job enviroment and further

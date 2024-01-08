@@ -16,12 +16,7 @@ function AboutMe(siteLang) {
 						technologie.
 					</p>
 
-					<h2 className="text-4xl mb-4">Wat ik doe 😶‍🌫️</h2>
-					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Naast programmeren doe ik nog meer dingen. Ik wandel graag en ik hou heel erg van muziek.
-					</p>
-
-					<h2 className="text-4xl mb-4">Waarom Software Development ❓</h2>
+					<h2 className="text-4xl mb-4">Waarom Software Development</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
 						Al vanaf jong gebruik ik een computer. Als jong kind speelde ik veel video games en hierdoor maakte ik
 						kennis met de communities van deze videogames, onder andere{" "}
@@ -33,7 +28,7 @@ function AboutMe(siteLang) {
 						heb ik uiteindelijk heb aangemeld voor de opleiding Software Developer.
 					</p>
 
-					<h2 className="text-4xl mb-4">Hobbies 🕹️</h2>
+					<h2 className="text-4xl mb-4">Hobbies</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
 						Ik speel voornamelijk graag video games, ik luister erg graag naar muziek en ik houd van lezen. Ook ben ik
 						graag bezig met coding en het leren hiervan. Ik heb in mijn vrije tijd mijzelf de basis van Python, HTML,
@@ -54,13 +49,7 @@ function AboutMe(siteLang) {
 						years old and I live in Assen. From a young age I've always had a healthy obesssion with technology.
 					</p>
 
-					<h2 className="text-4xl mb-4">What I do 😶‍🌫️</h2>
-					<p className="text-gray-300 text-lg leading-6 mb-12">
-						Aside from proramming I do a handful of other things in my life. I like to walk outside and I love listening
-						to music.
-					</p>
-
-					<h2 className="text-4xl mb-4">Why Software Development ❓</h2>
+					<h2 className="text-4xl mb-4">Why Software Development</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
 						I've been using a computer since I was very young. As a young child I played a lot of video games, and
 						through this I got into the communities of those games, namely{" "}
@@ -73,7 +62,7 @@ function AboutMe(siteLang) {
 						study Software Development.
 					</p>
 
-					<h2 className="text-4xl mb-4">Hobbies 🕹️</h2>
+					<h2 className="text-4xl mb-4">Hobbies</h2>
 					<p className="text-gray-300 text-lg leading-6 mb-12">
 						I enjoy playing video games a lot, I enjoy listening to music and I like reading. I also enjoy coding and
 						learning how to code better. As of now I've taught myself how to use various coding languages like Python,
