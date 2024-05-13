@@ -1,3 +1,5 @@
+/** @format */
+
 export const languages = {
 	ABAP: "#E8274B",
 	ActionScript: "#882B0F",
@@ -20,7 +22,7 @@ export const languages = {
 	BlitzMax: "#cd6400",
 	Boo: "#d4bec1",
 	Brainfuck: "#2F2530",
-	"C Sharp": "#178600",
+	"C#": "#178600",
 	C: "#555555",
 	Chapel: "#8dc63f",
 	Cirru: "#ccccff",
